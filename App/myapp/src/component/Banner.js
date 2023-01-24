@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { AiOutlineArrowRight } from 'react-icons/ai';
 
 const Banner = (props) => {
     return <div className="banner">
@@ -8,6 +10,9 @@ const Banner = (props) => {
         <div className="banner-content">
             <h2>{props.title} <img src={props.logoImage} alt="Item logo" /></h2>
             <p className="room-description">{props.description}</p>
+        </div>
+        <div className="banner-link">
+            <Link  to='/a-propos-de-nous'>DECOUVREZ {props.name} <AiOutlineArrowRight/></Link>
         </div>
     </div>
 }
