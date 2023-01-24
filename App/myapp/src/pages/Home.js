@@ -1,12 +1,8 @@
 import Footer from '../component/Footer.js';
-<<<<<<< HEAD
-import Navbar from '../component/Navbar.js';
+import CollapsibleNavbar from '../component/CollapsibleNavbar.js';
+import Banner from '../component/Banner.js';
 import { getUsers, insertUser } from '../api/user.js';
 import { useState, useEffect } from 'react';
-=======
-import CollapsibleNavbar from '../component/CollapsibleNavbar.js';
-import { getUsers } from '../api/user.js';
->>>>>>> 340e6b6b7094c765948a5c0616ac960f1a857bc6
 
 function Home() {
     const [users, setUsers] = useState([]);
@@ -23,8 +19,13 @@ function Home() {
     }
 
     return <div>
-<<<<<<< HEAD
-        <Navbar />
+        <CollapsibleNavbar />
+        <Banner
+            theme="light-room"
+            title="Qu'est ce que"
+            description="uwu"
+        />
+
         <p onClick={handleOnClick}>Prout</p>
         <h1>Liste de users</h1>
         <div>
@@ -34,14 +35,6 @@ function Home() {
                 })
             }
         </div>
-=======
-        {
-            users.map((user) => {{
-                <div>user.firstname</div>
-            }})
-        }
-        <CollapsibleNavbar />
->>>>>>> 340e6b6b7094c765948a5c0616ac960f1a857bc6
         <Footer />
     </div>
 }

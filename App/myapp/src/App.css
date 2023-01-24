@@ -1,3 +1,41 @@
+/** NAVBAR **/
+
+
+
+
+
+/** BANNER **/
+
+.banner {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.banner .light-room {
+    background-color: rgb(132, 196, 196);
+}
+
+.video-bubble {
+    width: 200px;
+    height: 200px;
+}
+
+.video-bubble iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: solid 10px;
+}
+
+.video-bubble iframe .light-room {
+    border-color: rgb(37, 204, 154);
+}
+
+/** FOOTER **/
+
 .footer {
     background-color: #3B4040;
     width: 100%;
@@ -60,3 +98,4 @@
     border-radius: 100%;
     margin-left: 5%;
 }
+
