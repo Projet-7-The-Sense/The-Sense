@@ -4,7 +4,7 @@ const cors = require("cors");
 const dbo = require("./db/db");
 const { ObjectId } = require("mongodb");
 const app = express();
-const port = 44446;
+const port = 4444;
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
