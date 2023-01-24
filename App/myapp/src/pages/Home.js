@@ -1,5 +1,5 @@
 import Footer from '../component/Footer.js';
-import Navbar from '../component/Navbar.js';
+import CollapsibleNavbar from '../component/CollapsibleNavbar.js';
 import { getUsers } from '../api/user.js';
 
 function Home() {
@@ -13,7 +13,7 @@ function Home() {
                 <div>user.firstname</div>
             }})
         }
-        <Navbar />
+        <CollapsibleNavbar />
         <Footer />
     </div>
 }
