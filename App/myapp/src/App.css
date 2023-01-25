@@ -62,23 +62,32 @@ link {
 
 .navbar a{
     color: black;
-    font-size: 125%;
+    font-size: 115%;
+}
+
+.navbar a.line-text{
+    white-space: nowrap;
 }
 
 .navbar a:hover{
     color: black;
-    font-size: 125%;
     text-decoration: underline;
 }
 
-.vr{
-    width: 2px !important;;
-    opacity: 3 !important;
-    height: 1.5em;
+.navbar button{
+    color: black;
 }
 
-@media screen and (max-width: 911px){
-    .vr{
+
+.vertical-line{
+    width: 2px;
+    background: black;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 992px){
+    .div.vertical-line{
         visibility: hidden !important;
     }
 }

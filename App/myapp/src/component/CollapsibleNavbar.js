@@ -12,15 +12,15 @@ function CollapsibleNavbar() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/News">NEWS</Nav.Link>
-              <div className='vr'></div>
-              <Nav.Link href="/Experiences">NOS ÉXPERIENCES</Nav.Link>
-              <div className='vr'></div>
-              <Nav.Link href="/AboutUs">À PROPOS DE NOUS</Nav.Link>
-              <div className='vr'></div>
-              <Nav.Link href="/Equipements">NOS ÉQUIPEMENTS</Nav.Link>
-              <div className='vr'></div>
-              <Nav.Link className='login-link' href="/Login">CONNEXION</Nav.Link>
+              <Nav.Link className='line-text' href="/News">NEWS</Nav.Link>
+              <div className='vertical-line'></div>
+              <Nav.Link className='line-text' href="/Experiences">NOS ÉXPERIENCES</Nav.Link>
+              <div className='vertical-line'></div>
+              <Nav.Link className='line-text' href="/AboutUs">À PROPOS DE NOUS</Nav.Link>
+              <div className='vertical-line'></div>
+              <Nav.Link className='line-text' href="/Equipements">NOS ÉQUIPEMENTS</Nav.Link>
+              <div className='vertical-line'></div>
+              <Nav.Link className='login-link line-text' href="/Login">CONNEXION</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </div>
