@@ -3,14 +3,11 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Abel', sans-serif;
-    font-weight: 400;
-    color: #646363;
 }
 
 h1, h2, h3, h4, h5, h6, .amiko-bold {
     font-family: 'Amiko', sans-serif;
-    font-weight: 700;
+    font-weight: 700 !important;
     color: #3B4040;
 }
 
@@ -19,7 +16,13 @@ h1, h2, h3, h4, h5, h6, .amiko-bold {
     font-weight: 400;
 }
 
-Link {
+.abel {
+    font-family: 'Abel', sans-serif;
+    font-weight: 400;
+    color: #646363;
+}
+
+link {
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
 }
@@ -66,12 +69,6 @@ Link {
 
 /**  **/
 
-body{
-    background-image: url('upload/DESIGN\ DE\ FOND.svg');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    
-}
 /** BANNER **/
 
 .banner-wrapper {
@@ -89,21 +86,20 @@ body{
     justify-content: space-between;
     align-items: center;
     background-color: #EAFFFB;
-    font-family: Abel;
 }
 
 .banner-flex .banner-bubble {
-    width: 30%;
+    width: 40%;
     display: inline-flex;
     justify-content: space-around;
     align-items: center;
 }
 
 .banner-flex .banner-bubble .image-wrapper {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 100%;
-    border: solid 10px;
+    border: solid #bbccc9 10px;
     display: inline-flex;
     justify-content: space-around;
     align-items: center;
@@ -111,74 +107,100 @@ body{
 }
 
 .banner-flex .banner-bubble .image-wrapper img {
-    margin-top: 100%;
+    object-fit: fill;
+    height: 100%;
 }
 
 .banner-flex .banner-content {
     width: 60%;
 }
 
-/* .banner-wrapper {
-    width: 100%;
-    height: 250px;
-}
-
-.banner-wrapper .banner-flex {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.video-wrapper {
-    width: 25%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.video-wrapper .video-bubble {
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
-    border: solid 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    overflow: hidden;
-}
-
-.video-wrapper .video-bubble img {
-    width: 200%;
-    height: 200%;
-    margin-top: 15%;
-}
-
-.video-bubble.the-sense {
-    border-color: rgb(182, 182, 182);
-}
-
-.video-bubble.light-room {
-    border-color: rgb(37, 204, 154);
-}
-
-.video-bubble.dark-room {
-    border-color: rgb(153, 20, 20);
-}
-
-.banner-content {
-    width: 100%;
-}
-
 .banner-content .banner-title {
     text-transform: uppercase;
+    font-size: 2rem;
 }
 
 .banner-content .banner-title img {
-    width: 100px;
-} */
+    width: 125px;
+    padding-bottom: 12px;
+}
+
+.banner-content .banner-description {
+    font-size: 1.2rem;
+    color: #3B4040;
+}
+
+.banner-content .banner-link {
+    text-decoration: none;
+    color: #3B4040;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
+.banner-content .banner-link div {
+    padding-right: 8px;
+}
+
+/** CARD **/
+
+.cardblock{
+    margin-top: 2%;
+}
+
+
+.cardtextc{
+    background-color: #CDFFF3  ;
+    border-color: #CDFFF3;
+}
+.cardtitle{
+    display: flex;
+    margin-bottom: 0%;
+    margin-top: 2%;
+}
+.desctitle{
+    margin-bottom: 0%;
+}
+.cardtitle p{
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 40px;
+    margin-top: 0%;
+}
+
+#sub{
+    color:     #FA8072;
+    font-size: 25px;
+    margin: 0%;
+}
+
+.titlecard{
+    margin-left: 2%;
+
+}
+
+.cardtext{
+    margin-left: 2%;
+}
+
+.contentcard{
+    font-size: 25px;
+}
+.link2{
+    text-decoration: none;
+    font-family: 'Poppins';
+    color: gray;
+}
+
+/** NEWS **/
+
+.news-section {
+    background-image: url("");
+}
 
 /** FOOTER **/
 
@@ -244,4 +266,3 @@ body{
     border-radius: 100%;
     margin-left: 5%;
 }
-

@@ -1,7 +1,10 @@
+import CollapsibleNavbar from '../component/CollapsibleNavbar.js';
+
 const News = () => {
-    return (
-        <h1>News</h1>
-    );
+    return <section className="news-session">
+        <CollapsibleNavbar/>
+        
+    </section>
 }
 
 export default News;
