@@ -21,9 +21,11 @@ function Home() {
     return <div>
         <CollapsibleNavbar />
         <Banner
-            theme="light-room"
+            theme="the-sense"
             title="Qu'est ce que"
-            description="uwu"
+            logoImage="img/SENSE.svg"
+            description="Préparez-vous pour une expérience unique qui vous  emmènera dans un autre univers. Vivez vos émotions comme vous ne l'avez jamais fait auparavant. Avec THE SENSE explorez d'autres dimensions et vivez l'impossible en interragissant avec un environnement dynamique et virtuel. Ce n'est pas une expérience en réalité virtuelle que vous vivez, c'est la réalité."
+            prezImg="img/image 123.svg"
         />
 
         <p onClick={handleOnClick}>Prout</p>
