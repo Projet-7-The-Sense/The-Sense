@@ -20,6 +20,9 @@ function Home() {
 
     return <div>
         <CollapsibleNavbar />
+        <body>
+
+        
         <Banner
             theme="the-sense"
             title="Qu'est ce que"
@@ -37,6 +40,7 @@ function Home() {
                 })
             }
         </div>
+        </body>
         <Footer />
     </div>
 }

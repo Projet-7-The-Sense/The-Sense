@@ -38,7 +38,12 @@ Link {
 
 
 
-
+body{
+    background-image: url('upload/DESIGN\ DE\ FOND.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
 /** BANNER **/
 
 .banner-wrapper {
@@ -55,6 +60,8 @@ Link {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #EAFFFB;
+    font-family: Abel;
 }
 
 .banner-flex .banner-bubble {

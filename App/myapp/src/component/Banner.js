@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { AiOutlineArrowRight } from 'react-icons/ai';
 
 const Banner = (props) => {
     return <>
