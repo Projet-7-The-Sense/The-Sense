@@ -42,19 +42,26 @@ Link {
     backdrop-filter: blur(5px);
 
 }
-
 .navbar a{
     color: black;
-    font-weight: bold;
-    font-size: 200%;
-    text-decoration: none;
+    font-size: 175%;
 }
 
 .home_logo_holder{
     height: 100%;
 }
-.bold{
-    font-weight: bold;
+
+.navbar-links{
+    align-items: right;
+    text-align-last: end;
+}
+
+.black-separation-bar{
+    color: black;
+}
+
+.login-link{
+    font-weight: bold !important;
 }
 
 /**  **/
