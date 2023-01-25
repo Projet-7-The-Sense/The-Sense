@@ -1,4 +1,5 @@
 /** GENERAL **/
+
 * {
     margin: 0px;
     padding: 0px;
@@ -37,6 +38,7 @@ link {
 }
 
 /** NAVBAR **/
+
 .navbar{
     width: 100%;
     margin: 0 !important;
@@ -45,29 +47,48 @@ link {
     backdrop-filter: blur(5px);
 
 }
-.navbar a{
-    color: black;
-    font-size: 175%;
-}
 
 .home_logo_holder{
     height: 100%;
 }
 
 .navbar-links{
-    align-items: right;
     text-align-last: end;
 }
 
-.black-separation-bar{
+.navbar-links button{
+    border: none;
+}
+
+.navbar a{
     color: black;
+    font-size: 125%;
+}
+
+.navbar a:hover{
+    color: black;
+    font-size: 125%;
+    text-decoration: underline;
+}
+
+.vr{
+    width: 2px !important;;
+    opacity: 3 !important;
+    height: 1.5em;
+}
+
+@media screen and (max-width: 911px){
+    .vr{
+        visibility: hidden !important;
+    }
 }
 
 .login-link{
     font-weight: bold !important;
 }
 
-/**  **/
+/** HEADER **/
+
 
 /** BANNER **/
 
