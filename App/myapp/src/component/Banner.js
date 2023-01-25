@@ -15,6 +15,7 @@ const Banner = (props) => {
                     <div className="banner-content">
                         <h2 className="banner-title">{props.title}<img src={props.logoImage} alt="Item logo"/> ?</h2>
                         <p className="banner-description">{props.description}</p>
+                        <Link to=""></Link>
                     </div>
                 </div>
             </div>
