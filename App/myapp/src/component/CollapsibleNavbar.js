@@ -17,7 +17,7 @@ function CollapsibleNavbar() {
               <Nav.Link href="/Experiences">NOS ÉXPERIENCES</Nav.Link>
               <Nav.Link href="/AboutUs">À PROPOS DE NOUS</Nav.Link>
               <Nav.Link href="/Equipements">NOS ÉQUIPEMENTS</Nav.Link>
-              <Nav.Link href="/Login">CONNEXION</Nav.Link>
+              <Nav.Link className='bold' href="/Login">CONNEXION</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </div>
