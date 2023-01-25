@@ -3,7 +3,7 @@ import Parallax from "";
 
 function CollapsibleNavbar() {
   return (
-
+    <></>
   );
 }
 
