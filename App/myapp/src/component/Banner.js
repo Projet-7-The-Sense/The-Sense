@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { AiOutlineArrowRight } from 'react-icons/ai';
 
 const Banner = (props) => {
     return <>
-        <div class={"banner-wrapper "+props.theme}>
+        <div className={"banner-wrapper "+props.theme}>
             <div className="container">
                 <div className="banner-flex">
                     <div className="banner-bubble">
