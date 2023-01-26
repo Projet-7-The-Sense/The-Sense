@@ -12,6 +12,8 @@ import {
   Route,
   Switch
 } from "react-router-dom";
+import Sign from './pages/Sign';
+import AuthenticatedRoute from './component/AuthenticatedRoute';
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -27,7 +29,8 @@ const App = () => {
           <Route exact path="/experiences"> {<Experiences />} </Route>
           <Route exact path="/equipements"> {<Equipments />} </Route>
           <Route exact path="/a-propos-de-nous"> {<AboutUs />} </Route>
-          <Route exact path="/connexion"> {<Login />} </Route>
+          <Route exact path="/sign"> {<Sign />} </Route>
+          
         </UserContext.Provider>
       </Switch>
     </Router>
