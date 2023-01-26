@@ -43,7 +43,7 @@ const CardRoom = (props) => {
                         </Card.Text>
                         <Row>
                             <Col xs={{ span: 12, offset: 0 }} md={{ span: 6, offset: 3 }} lg={{ span: 4, offset: 5 }}>
-                                <Card.Link href="#" ><img src="img/Bouton.svg"></img></Card.Link>
+                                <Card.Link href="#" ><img src="../../public/img/BoutonRes.svg"></img></Card.Link>
                             </Col>
                             <Col  xs={{ span: 0, offset: 0 }} md={{ span: 5, offset: 4 }} lg={{ span: 3, offset: 0 }}>
                                 <Card.Link href="#" className="link2">Decouvrez la dark room <BsArrowRightShort/></Card.Link>

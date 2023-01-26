@@ -3,6 +3,9 @@ import CollapsibleNavbar from '../component/CollapsibleNavbar.js';
 import HomeParallax from '../component/HomeParallax.js';
 import Banner from '../component/Banner.js';
 import Card from '../component/Card.js';
+import Regroup from '../component/Regroup-faq.js';
+
+
 
 function Home() {
     return <div>
@@ -18,6 +21,8 @@ function Home() {
         />
 
         <Card/>
+
+        <Regroup/>
 
         <Footer />
     </div>

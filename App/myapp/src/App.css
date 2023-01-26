@@ -305,6 +305,37 @@ link {
     color: gray;
 }
 
+/** FAQ **/
+
+.regroup-faq{
+    margin-top: 3%;
+}
+
+.regroup-faq h2{
+    margin-left: 5%;
+}
+
+.faq-button{
+    width: 100%;
+    border: none;
+    margin-top: 1%;
+
+    font-size: 20px;
+    background-color: white;
+    
+}
+
+.faq-button p{
+    font-size: 20px;
+    color: #646363;
+    font-family: Abel;
+    text-align: left;
+}
+
+.desc-faq p{
+    color: #beb9b9;
+}
+
 /** NEWS **/
 
 .news-header {
@@ -381,7 +412,7 @@ link {
 /** SIGN**/
 
 .img-sign{
-    /*background-image: url("img/image 42.svg");*/
+    background-image: url("../public/img/image 42.svg");
     background-size: 100%;
     background-repeat: no-repeat;
     height: 500px;
@@ -398,7 +429,7 @@ link {
 .form-sign{
     height: 400px;
     background-color: white;
-    /*background-image: url("img/Logo.svg");*/
+    background-image: url("../public/img/Logo.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 50%;
