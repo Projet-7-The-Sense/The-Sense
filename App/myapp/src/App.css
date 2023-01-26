@@ -171,11 +171,23 @@ link {
     background-color: #EAFFFB
 }
 
+.banner-wrapper.dark-room {
+    background-color: #000;
+    color: #fff;
+}
+
 .banner-wrapper .banner-flex {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.banner-wrapper.the-sense .banner-flex {
     background-color: #EAFFFB;
+}
+
+.banner-wrapper.dark-room .banner-flex {
+    background-color: #000;
 }
 
 .banner-flex .banner-bubble {
@@ -189,11 +201,19 @@ link {
     width: 300px;
     height: 300px;
     border-radius: 100%;
-    border: solid #bbccc9 10px;
+    border: solid 10px;
     display: inline-flex;
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
+}
+
+.banner-flex .banner-bubble .image-wrapper.the-sense {
+    border-color: #bbccc9;
+}
+
+.banner-flex .banner-bubble .image-wrapper.dark-room {
+    border-color: #430000;
 }
 
 .banner-flex .banner-bubble .image-wrapper img {
@@ -361,7 +381,7 @@ link {
 /** SIGN**/
 
 .img-sign{
-    background-image: url("img/image 42.svg");
+    /*background-image: url("img/image 42.svg");*/
     background-size: 100%;
     background-repeat: no-repeat;
     height: 500px;
@@ -378,7 +398,7 @@ link {
 .form-sign{
     height: 400px;
     background-color: white;
-    background-image: url("img/Logo.svg");
+    /*background-image: url("img/Logo.svg");*/
     background-repeat: no-repeat;
     background-position: center;
     background-size: 50%;

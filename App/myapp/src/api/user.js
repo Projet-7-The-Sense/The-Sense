@@ -2,7 +2,7 @@ export const getUsers = async () => {
     const response = await fetch(
         'http://localhost:4444/user/list', {
             method: 'GET',
-            'headers': {
+            headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }
@@ -17,6 +17,33 @@ export const insertUser = async (id, password, firstname, lastname, phone_number
         'http://localhost:4444/user/insert', {
             method: 'POST',
             body: JSON.stringify({id, password, firstname, lastname, phone_number, age, reduction_points}),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        }
+    )
+    return response.status;
+}
+
+export const updateUser = async (id, updates) => {
+    const response = await fetch(
+        'http://localhost:4444/user/update?id='+id, {
+            method: 'POST',
+            body: JSON.stringify({...updates}),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        }
+    )
+    return response.status;
+}
+
+export const deleteUser = async (id) => {
+    const response = await fetch(
+        'http://localhost:4444/user/delete?id='+id, {
+            method: 'DELETE',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
