@@ -1,7 +1,24 @@
+import { useContext } from "react";
+import { UserContext } from "../component/UserContext";
+
 const Experiences = () => {
-    return (
-        <h1>News</h1>
-    );
+    const { user } = useContext(UserContext);
+
+    return <>
+        <pre>{JSON.stringify(user, null, 2)}</pre>
+        <h1>
+            {user ? (
+                <pre>
+                    {JSON.stringify(user, null, 2)}
+                </pre>
+            ) : (
+                <pre>
+                    Not connected you slut!
+                </pre>
+            )
+            }
+        </h1>
+    </>;
 }
 
 export default Experiences;

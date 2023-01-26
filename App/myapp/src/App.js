@@ -10,18 +10,25 @@ import {
   Route,
   Switch
 } from "react-router-dom";
-
+import { useState, useMemo } from 'react';
+import { UserContext } from './component/UserContext';
 
 const App = () => {
+  const [user, setUser] = useState(null);
+
+  const value = useMemo(() => ({ user, setUser }), [user, setUser]);
+
   return (
     <Router>
       <Switch>
-        <Route exact path="/"> {<Home />} </Route>
-        <Route exact path="/news"> {<News />} </Route>
-        <Route exact path="/experiences"> {<Experiences />} </Route>
-        <Route exact path="/equipements"> {<Equipments />} </Route>
-        <Route exact path="/a-propos-de-nous"> {<AboutUs />} </Route>
-        <Route exact path="/connexion"> {<Login />} </Route>
+        <UserContext.Provider value={value}>
+          <Route exact path="/"> {<Home />} </Route>
+          <Route exact path="/news"> {<News />} </Route>
+          <Route exact path="/experiences"> {<Experiences />} </Route>
+          <Route exact path="/equipements"> {<Equipments />} </Route>
+          <Route exact path="/a-propos-de-nous"> {<AboutUs />} </Route>
+          <Route exact path="/connexion"> {<Login />} </Route>
+        </UserContext.Provider>
       </Switch>
     </Router>
   )

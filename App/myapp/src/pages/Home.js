@@ -2,18 +2,11 @@ import Footer from '../component/Footer.js';
 import CollapsibleNavbar from '../component/CollapsibleNavbar.js';
 import Banner from '../component/Banner.js';
 import Card from '../component/Card.js';
-import { getUsers, insertUser } from '../api/user.js';
-import { useState, useEffect } from 'react';
+import { useContext } from 'react';
+import { UserContext } from '../component/UserContext.js';
 
 function Home() {
-    const [users, setUsers] = useState([]);
-
-    useEffect(() => {
-        const usersFetched = getUsers();
-        usersFetched
-            .then(result => setUsers(result))
-            .catch(err => console.error("Erreur avec l'API:", err.message));
-    });
+    const { user, setUser } = useContext(UserContext);
 
     return <div>
         <CollapsibleNavbar />
@@ -27,11 +20,28 @@ function Home() {
             linkHidden={false}
         />
 
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
+        <pre>{JSON.stringify(user, null, 2)}</pre>
+
+        {user != null ?
+            (
+                <button onClick={() => {
+                    setUser(null);
+                }}>Log out</button>
+            )
+            : (
+                <button onClick={() => {
+                    setUser({
+                        id:"avollet@gaming.tech",
+                        firstname:"Antoine",
+                        lastname:"Vollet",
+                        password:"Cookie Clicker"
+                    });
+                }}>Login</button>
+            )
+        }
         
+        <Card/>
+
         <Footer />
     </div>
 }
