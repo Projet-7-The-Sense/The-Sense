@@ -29,7 +29,7 @@ const App = () => {
           <Route exact path="/experiences"> {<Experiences />} </Route>
           <Route exact path="/equipements"> {<Equipments />} </Route>
           <Route exact path="/a-propos-de-nous"> {<AboutUs />} </Route>
-          <Route exact path="/sign"> {<Sign />} </Route>
+          <Route exact path="/connection"> {<Sign />} </Route>
           
         </UserContext.Provider>
       </Switch>

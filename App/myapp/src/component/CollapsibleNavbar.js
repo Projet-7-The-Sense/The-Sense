@@ -9,7 +9,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 import Button from "react-bootstrap/esm/Button";
-import { Link } from "react-router-dom";
 
 function CollapsibleNavbar() {
   const {isAuthenticated} = useContext(Auth);
@@ -41,7 +40,7 @@ function CollapsibleNavbar() {
   return (
     <Navbar collapseOnSelect fixed='top' expand="lg" >
       <Container fluid>
-        <Navbar.Brand href="/"><div className='home_logo_holder'><img href="home_logo" src='./img/logo_black.png' alt='The_sense_logo'/></div></Navbar.Brand>
+        <Navbar.Brand as={Link} to="/"><div className='home_logo_holder'><img src='./img/logo_black.png' alt='The_sense_logo'/></div></Navbar.Brand>
         <div className="navbar-links">
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -54,7 +53,7 @@ function CollapsibleNavbar() {
               <div className='vertical-line'></div>
               <Nav.Link className='line-text' as={Link} to="/equipements">NOS ÉQUIPEMENTS</Nav.Link>
               <div className='vertical-line'></div>
-              <Nav.Link className='login-link line-text' href="/Login">CONNEXION</Nav.Link>
+              <Nav.Link className='login-link line-text' as={Link} to="/connexion">CONNEXION</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </div>
