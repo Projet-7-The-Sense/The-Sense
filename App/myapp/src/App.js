@@ -5,13 +5,13 @@ import Experiences from './pages/Experiences';
 import Equipments from './pages/Equipments';
 import AboutUs from './pages/AboutUs';
 import Login from './pages/Login';
+import { useState, useMemo } from 'react';
+import { UserContext } from './component/UserContext';
 import {
   BrowserRouter as Router,
   Route,
   Switch
 } from "react-router-dom";
-import { useState, useMemo } from 'react';
-import { UserContext } from './component/UserContext';
 
 const App = () => {
   const [user, setUser] = useState(null);

@@ -3,12 +3,8 @@ import CollapsibleNavbar from '../component/CollapsibleNavbar.js';
 import HomeParallax from '../component/HomeParallax.js';
 import Banner from '../component/Banner.js';
 import Card from '../component/Card.js';
-import { useContext } from 'react';
-import { UserContext } from '../component/UserContext.js';
 
 function Home() {
-    const { user, setUser } = useContext(UserContext);
-
     return <div>
         <CollapsibleNavbar />
         <HomeParallax />
@@ -21,26 +17,6 @@ function Home() {
             linkHidden={false}
         />
 
-        <pre>{JSON.stringify(user, null, 2)}</pre>
-
-        {user != null ?
-            (
-                <button onClick={() => {
-                    setUser(null);
-                }}>Log out</button>
-            )
-            : (
-                <button onClick={() => {
-                    setUser({
-                        id:"avollet@gaming.tech",
-                        firstname:"Antoine",
-                        lastname:"Vollet",
-                        password:"Cookie Clicker"
-                    });
-                }}>Login</button>
-            )
-        }
-        
         <Card/>
 
         <Footer />
