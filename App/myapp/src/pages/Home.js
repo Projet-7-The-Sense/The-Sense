@@ -5,6 +5,8 @@ import Banner from '../component/Banner.js';
 import Card from '../component/Card.js';
 import { useContext } from 'react';
 import { UserContext } from '../component/UserContext.js';
+import Faq from '../component/Faq.js';
+import Regroup from '../component/Regroup-faq.js';
 
 function Home() {
     const { user, setUser } = useContext(UserContext);
@@ -42,7 +44,8 @@ function Home() {
         }
         
         <Card/>
-
+        <Regroup/>
+        <Card/>
         <Footer />
     </div>
 }
