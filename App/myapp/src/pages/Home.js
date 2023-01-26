@@ -9,8 +9,6 @@ import Faq from '../component/Faq.js';
 import Regroup from '../component/Regroup-faq.js';
 
 function Home() {
-    const { user, setUser } = useContext(UserContext);
-
     return <div>
         <CollapsibleNavbar />
         <HomeParallax />
@@ -23,26 +21,6 @@ function Home() {
             linkHidden={false}
         />
 
-        <pre>{JSON.stringify(user, null, 2)}</pre>
-
-        {user != null ?
-            (
-                <button onClick={() => {
-                    setUser(null);
-                }}>Log out</button>
-            )
-            : (
-                <button onClick={() => {
-                    setUser({
-                        id:"avollet@gaming.tech",
-                        firstname:"Antoine",
-                        lastname:"Vollet",
-                        password:"Cookie Clicker"
-                    });
-                }}>Login</button>
-            )
-        }
-        
         <Card/>
         <Regroup/>
         <Card/>

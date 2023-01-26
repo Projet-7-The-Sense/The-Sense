@@ -40,87 +40,20 @@ function CollapsibleNavbar() {
   return (
     <Navbar collapseOnSelect fixed='top' expand="lg" >
       <Container fluid>
-        <Navbar.Brand href="/"><div className='home_logo_holder'><img href="home_logo" src='./img/logo_black.png' alt='The_sense_logo'/></div></Navbar.Brand>
+        <Navbar.Brand as={Link} to="/"><div className='home_logo_holder'><img src='./img/logo_black.png' alt='The_sense_logo'/></div></Navbar.Brand>
         <div className="navbar-links">
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link className='line-text' href="/News">NEWS</Nav.Link>
+              <Nav.Link className='line-text' as={Link} to="/news">NEWS</Nav.Link>
               <div className='vertical-line'></div>
-              <Nav.Link className='line-text' href="/Experiences">NOS ÉXPERIENCES</Nav.Link>
+              <Nav.Link className='line-text' as={Link} to="/experiences">NOS ÉXPERIENCES</Nav.Link>
               <div className='vertical-line'></div>
-              <Nav.Link className='line-text' href="/AboutUs">À PROPOS DE NOUS</Nav.Link>
+              <Nav.Link className='line-text' as={Link} to="/a-propos-de-nous">À PROPOS DE NOUS</Nav.Link>
               <div className='vertical-line'></div>
-              <Nav.Link className='line-text' href="/Equipements">NOS ÉQUIPEMENTS</Nav.Link>
+              <Nav.Link className='line-text' as={Link} to="/equipements">NOS ÉQUIPEMENTS</Nav.Link>
               <div className='vertical-line'></div>
-              
-              <NavDropdown className='login-link line-text' title="CONNEXION" id="collasible-nav-dropdown">
-              {(!isAuthenticated && (
-                <>
-                <div className="tab-content">
-                  <form className="form-profile" onSubmit={handleSubmit}>
-                    <fieldset>
-                      <legend>Connexion</legend>
-                      <div className="form-group">
-                        <Row>
-                          <Col lg='3'>
-                            <label htmlFor="email">email</label>
-                          </Col>
-                          <Col lg='9'>
-                              <input
-                              type="text"
-                              name="username"
-                              className="form-control"
-                              id="email"
-                              placeholder="mail@mail.fr"
-                              onChange={handleChange}
-                            />
-                          </Col>
-                        </Row>
-
-                      </div>
-                      <div className="form-group">
-                        <Row>
-                            <Col lg='3'>
-                              <label htmlFor="password">password</label>
-                            </Col>
-                            <Col lg='9'>
-                                <input
-                                type="password"
-                                name="password"
-                                className="form-control"
-                                id="password"
-                                placeholder="Password"
-                                onChange={handleChange}
-                              />
-                            </Col>
-                          </Row>
-                      </div>
-                      <div className="footer-connect">
-                        <Row >
-                          <Col lg={{ span: 4, offset: 3 }}>
-                            <Link className="sign" to='/sign'>Créer un compte</Link>
-                          </Col>
-                          <Col lg='5'>
-                            <Button type='submit'  variant="dark">Connexion</Button>
-                          </Col>
-                        </Row>
-                      </div>
-                      
-                      
-                    </fieldset>
-                  </form>
-                </div>
-                </>
-              )) || (
-                <>
-                <NavDropdown.Item to="/profile">Profile</NavDropdown.Item>
-                <NavDropdown.Item ><button className="btn btn-danger" onClick={handleLogout}>Déconnexion</button></NavDropdown.Item>
-                </>
-              )}
-              
-              <NavDropdown.Divider />
-            </NavDropdown>
+              <Nav.Link className='login-link line-text' as={Link} to="/connexion">CONNEXION</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </div>
