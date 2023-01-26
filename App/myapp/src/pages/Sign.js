@@ -1,7 +1,6 @@
 import CollapsibleNavbar from "../component/CollapsibleNavbar";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Link } from 'react-router-dom';
 import Button from "react-bootstrap/esm/Button";
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';

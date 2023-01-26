@@ -54,6 +54,73 @@ function CollapsibleNavbar() {
               <Nav.Link className='line-text' as={Link} to="/equipements">NOS ÉQUIPEMENTS</Nav.Link>
               <div className='vertical-line'></div>
               <Nav.Link className='login-link line-text' as={Link} to="/connexion">CONNEXION</Nav.Link>
+              <NavDropdown title="CONNEXION" className='login-link line-text' id="collasible-nav-dropdown">
+              {(!isAuthenticated && (
+                <>
+                <div className="tab-content">
+                  <form className="form-profile" onSubmit={handleSubmit}>
+                    <fieldset>
+                      <legend>Connexion</legend>
+                      <div className="form-group">
+                        <Row>
+                          <Col lg='3'>
+                            <label htmlFor="email">email</label>
+                          </Col>
+                          <Col lg='9'>
+                              <input
+                              type="text"
+                              name="username"
+                              className="form-control"
+                              id="email"
+                              placeholder="mail@mail.fr"
+                              onChange={handleChange}
+                            />
+                          </Col>
+                        </Row>
+
+                      </div>
+                      <div className="form-group">
+                        <Row>
+                            <Col lg='3'>
+                              <label htmlFor="password">password</label>
+                            </Col>
+                            <Col lg='9'>
+                                <input
+                                type="password"
+                                name="password"
+                                className="form-control"
+                                id="password"
+                                placeholder="Password"
+                                onChange={handleChange}
+                              />
+                            </Col>
+                          </Row>
+                      </div>
+                      <div className="footer-connect">
+                        <Row >
+                          <Col lg={{ span: 4, offset: 3 }}>
+                            <Link className="sign" to='/sign'>Créer un compte</Link>
+                          </Col>
+                          <Col lg='5'>
+                            <Button type='submit'  variant="dark">Connexion</Button>
+                          </Col>
+                        </Row>
+                      </div>
+                      
+                      
+                    </fieldset>
+                  </form>
+                </div>
+                </>
+              )) || (
+                <>
+                <NavDropdown.Item to="/profile">Profile</NavDropdown.Item>
+                <NavDropdown.Item ><button className="btn btn-danger" onClick={handleLogout}>Déconnexion</button></NavDropdown.Item>
+                </>
+              )}
+              
+              <NavDropdown.Divider />
+            </NavDropdown>
             </Nav>
           </Navbar.Collapse>
         </div>

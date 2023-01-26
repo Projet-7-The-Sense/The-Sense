@@ -1,11 +1,7 @@
 import React, { useState } from "react";
-import Container from "react-bootstrap/esm/Container";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
-import { BsArrowRightShort } from 'react-icons/bs';
 import Collapse from 'react-bootstrap/Collapse';
-import Button from 'react-bootstrap/Button';
 import { BiZoomIn,BiZoomOut } from "react-icons/bi";
 
 

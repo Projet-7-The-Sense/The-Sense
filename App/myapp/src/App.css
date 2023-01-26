@@ -392,7 +392,7 @@ link {
 /** SIGN**/
 
 .img-sign{
-    background-image: url("img/image 42.svg");
+    background-image: url("../public/img/image 42.svg");
     background-size: 100%;
     background-repeat: no-repeat;
     height: 500px;
@@ -409,7 +409,7 @@ link {
 .form-sign{
     height: 400px;
     background-color: white;
-    background-image: url("img/Logo.svg");
+    background-image: url("../public/img/Logo.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 50%;
