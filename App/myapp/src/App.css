@@ -1,5 +1,15 @@
 /** GENERAL **/
 
+
+.example {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+.example::-webkit-scrollbar {
+    display: none;
+  }
+
 * {
     margin: 0px;
     padding: 0px;
@@ -37,7 +47,9 @@ link {
     margin: 0% 10%;
 }
 
+
 /** NAVBAR **/
+
 
 .navbar{
     width: 100%;
@@ -62,23 +74,31 @@ link {
 
 .navbar a{
     color: black;
-    font-size: 125%;
+    font-size: 115%;
+}
+
+.navbar a.line-text{
+    white-space: nowrap;
 }
 
 .navbar a:hover{
     color: black;
-    font-size: 125%;
     text-decoration: underline;
 }
 
-.vr{
-    width: 2px !important;;
-    opacity: 3 !important;
-    height: 1.5em;
+.navbar button{
+    color: black;
 }
 
-@media screen and (max-width: 911px){
-    .vr{
+.vertical-line{
+    width: 2px;
+    background: black;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 992px){
+    .div.vertical-line{
         visibility: hidden !important;
     }
 }
@@ -87,8 +107,28 @@ link {
     font-weight: bold !important;
 }
 
-/** HEADER **/
+/** HomeParallax **/
 
+
+.parallax{
+  background-image: url("../public/img/Logo\ Haut\ de\ Page.png");
+  height: 100vh;
+  width: auto;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.discover-button{
+    height: 7.5vh;
+    width: auto;
+    margin-left: 40vw;
+    margin-top: 80vh;
+}
+
+.discover-button:hover{
+    cursor: pointer;
+}
 
 /** BANNER **/
 
