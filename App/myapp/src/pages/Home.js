@@ -9,15 +9,15 @@ import { UserContext } from '../component/UserContext.js';
 function Home() {
     const { user, setUser } = useContext(UserContext);
 
-    return <div>
+    return <div id="banner">
         <CollapsibleNavbar />
         <HomeParallax />
         <Banner
             theme="the-sense"
             title="Qu'est ce que "
-            logoImage="img/SENSE.svg"
+            logoImage="./img/SENSE.svg"
             description="Préparez-vous pour une expérience unique qui vous  emmènera dans un autre univers. Vivez vos émotions comme vous ne l'avez jamais fait auparavant. Avec THE SENSE explorez d'autres dimensions et vivez l'impossible en interragissant avec un environnement dynamique et virtuel. Ce n'est pas une expérience en réalité virtuelle que vous vivez, c'est la réalité."
-            prezImg="img/image 42.svg"
+            prezImg="./img/image 42.svg"
             linkHidden={false}
         />
 
@@ -43,7 +43,7 @@ function Home() {
         
         <Card/>
 
-        <Footer />
+        {/* <Footer /> */}
     </div>
 }
 
