@@ -1,22 +1,7 @@
-export const getUsers = async () => {
+export const getQuestion = async () => {
     const response = await fetch(
-        'http://localhost:4444/user/list', {
+        'http://localhost:4444/FAQ/list', {
             method: 'GET',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        }
-    )
-    const users = await response.json();
-    return users;
-}
-
-export const insertUser = async (id, password, firstname, lastname, phone_number, age, reduction_points=0) => {
-    const response = await fetch(
-        'http://localhost:4444/user/insert', {
-            method: 'POST',
-            body: JSON.stringify({id, password, firstname, lastname, phone_number, age, reduction_points}),
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
@@ -26,9 +11,23 @@ export const insertUser = async (id, password, firstname, lastname, phone_number
     return response.status;
 }
 
-export const updateUser = async (id, updates) => {
+export const insertQuestion = async (question, answer) => {
     const response = await fetch(
-        'http://localhost:4444/user/update?id='+id, {
+        'http://localhost:4444/FAQ/insert', {
+            method: 'POST',
+            body: JSON.stringify({question, answer}),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        }
+    )
+    return response.status;
+}
+
+export const updateQuestion = async (id, updates) => {
+    const response = await fetch(
+        'http://localhost:4444/FAQ/update?id='+id, {
             method: 'POST',
             body: JSON.stringify({...updates}),
             headers: {
@@ -40,9 +39,9 @@ export const updateUser = async (id, updates) => {
     return response.status;
 }
 
-export const deleteUser = async (id) => {
+export const deleteQuestion = async (id) => {
     const response = await fetch(
-        'http://localhost:4444/user/delete?id='+id, {
+        'http://localhost:4444/FAQ/delete?id='+id, {
             method: 'DELETE',
             headers: {
                 'Accept': 'application/json',

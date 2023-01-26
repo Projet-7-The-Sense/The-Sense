@@ -8,7 +8,7 @@ const Banner = (props) => {
             <div className="container">
                 <div className="banner-flex">
                     <div className="banner-bubble">
-                        <div className="image-wrapper">
+                        <div className={"image-wrapper "+props.theme}>
                             <img src={props.prezImg} alt="Presentation Image" />
                         </div>
                     </div>
