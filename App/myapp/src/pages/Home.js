@@ -1,5 +1,6 @@
 import Footer from '../component/Footer.js';
 import CollapsibleNavbar from '../component/CollapsibleNavbar.js';
+import HomeParallax from '../component/HomeParallax.js';
 import Banner from '../component/Banner.js';
 import Card from '../component/Card.js';
 import { getUsers, insertUser } from '../api/user.js';
@@ -17,7 +18,7 @@ function Home() {
 
     return <div>
         <CollapsibleNavbar />
-        
+        <HomeParallax />
         <Banner
             theme="the-sense"
             title="Qu'est ce que "

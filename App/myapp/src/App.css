@@ -1,5 +1,15 @@
 /** GENERAL **/
 
+
+.example {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+.example::-webkit-scrollbar {
+    display: none;
+  }
+
 * {
     margin: 0px;
     padding: 0px;
@@ -37,7 +47,9 @@ link {
     margin: 0% 10%;
 }
 
+
 /** NAVBAR **/
+
 
 .navbar{
     width: 100%;
@@ -78,7 +90,6 @@ link {
     color: black;
 }
 
-
 .vertical-line{
     width: 2px;
     background: black;
@@ -96,8 +107,28 @@ link {
     font-weight: bold !important;
 }
 
-/** HEADER **/
+/** HomeParallax **/
 
+
+.parallax{
+  background-image: url("../public/img/Logo\ Haut\ de\ Page.png");
+  height: 100vh;
+  width: auto;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.discover-button{
+    height: 7.5vh;
+    width: auto;
+    margin-left: 40vw;
+    margin-top: 80vh;
+}
+
+.discover-button:hover{
+    cursor: pointer;
+}
 
 /** BANNER **/
 
