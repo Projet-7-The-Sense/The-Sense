@@ -50,36 +50,6 @@ link {
 
 /** NAVBAR **/
 
-.form-profile legend{
-    margin-left: 60%;
-}
-.dropdown-menu.show{
-
-    width: 400%;
-    padding-left: 50%;
-    padding-right: 40%;
-}
-.form-group{
-    
-    margin-top: 5%;
-    font-weight: bold;
-    
-}
-
-.sign{
-    text-decoration: none;
-    font-size: 12px;
-    color: black;
-    
-    
-}
-
-.footer-connect{
-    margin-top: 5%;
-    
-}
-
-
 .navbar{
     width: 100%;
     margin: 0 !important;
@@ -89,7 +59,7 @@ link {
 
 }
 
-.home_logo_holder{
+.home-logo-holder{
     height: 100%;
 }
 
@@ -113,7 +83,7 @@ link {
 .navbar a:hover{
     color: black;
     text-decoration: underline;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .navbar button{
@@ -135,6 +105,33 @@ link {
 
 .login-link{
     font-weight: bold !important;
+}
+
+
+.form-profile legend{
+    margin-left: 60%;
+}
+
+.dropdown-menu.show{
+    width: 400%;
+    padding-left: 50%;
+    padding-right: 40%;
+}
+
+.form-group{
+    
+    margin-top: 5%;
+    font-weight: bold;
+}
+
+.sign{
+    text-decoration: none;
+    font-size: 12px;
+    color: black;
+}
+
+.footer-connect{
+    margin-top: 5%;   
 }
 
 /** HomeParallax **/

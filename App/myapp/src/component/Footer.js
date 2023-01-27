@@ -1,4 +1,4 @@
-/*import React from 'react';
+import React from 'react';
 import { CDBFooter, CDBFooterLink, CDBBox, CDBBtn, CDBIcon, CDBContainer } from 'cdbreact';
 
 export const Footer = () => {
@@ -40,4 +40,4 @@ export const Footer = () => {
   );
 };
 
-export default Footer;*/
+export default Footer;

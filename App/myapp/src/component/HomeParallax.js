@@ -5,7 +5,7 @@ import { Parallax, Background } from 'react-parallax';
 function HomeParallax() {
   return (
     <Parallax className='parallax'>
-      <img className='discover-button' href='#banner' src='./img/DECOUVRIR.svg' alt='button discover image'/>
+      <img className='discover-button image-fluid' href='#banner' src='./img/DECOUVRIR.svg' alt='button discover image'/>
     </Parallax>
   );
 }

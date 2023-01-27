@@ -24,7 +24,7 @@ function Home() {
 
         <Regroup/>
 
-        {/* <Footer /> */}
+        <Footer />
     </div>
 }
 
