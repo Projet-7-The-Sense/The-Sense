@@ -20,7 +20,9 @@ function Home() {
             linkHidden={false}
         />
 
-        <Card/>
+        <Card
+            image="img/image 2.svg"    
+        />
 
         <Regroup/>
 
