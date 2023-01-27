@@ -4,7 +4,7 @@ import { BsArrowRight } from 'react-icons/bs';
 
 const Banner = (props) => {
     return <>
-        <div id='banner' className={"banner-wrapper "+props.theme}>
+        <div  className={"banner-wrapper "+props.theme}>
             <div className="container">
                 <div className="banner-flex">
                     <div className="banner-bubble">

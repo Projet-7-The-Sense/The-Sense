@@ -259,10 +259,39 @@ link {
 /** CARD **/
 
 
-.heart-button{
-    background-color: rgba(169, 169, 169, 0);
-    color: red;
+.icon{  
+    text-align: center;
+    font-family: Abel;
+    font-size: 25px;
+    
+}
 
+@media only screen and (min-width: 600px) {
+    .icon{
+        margin-top: 33%;   
+        
+    }
+  }
+
+
+@media only screen and (max-width: 600px) {
+    .icon{
+        font-size: 10px;   
+        margin-top: 20%;
+
+        
+    }
+
+    .icon img{
+        width: 50%;
+    }
+}
+
+.back-icon{
+    background-color: rgba(255, 255, 255, 0.01);
+    padding-top: 1%;
+    backdrop-filter: blur(5px);
+    
 }
 
 .cardblock{
@@ -272,39 +301,50 @@ link {
 .cardtextc{
     background-color: lightgrey;  ;
     border-color: lightgrey;
+    border-radius: 0px 0 10px 10px;
+    
+    
 }
 .cardtitle{
     display: flex;
     margin-bottom: 0%;
     margin-top: 2%;
+    margin-left: 2%;
 }
 .desctitle{
     margin-bottom: 0%;
 }
-.cardtitle p{
-    margin-left: 2%;
-    margin-right: 2%;
-    font-size: 40px;
-    margin-top: 0%;
-}
+
 
 #sub{
     color:     #FA8072;
-    font-size: 25px;
+    font-size: 20px;
     margin: 0%;
-}
-
-.titlecard{
     margin-left: 2%;
+    font-family: Abel;
+    padding-top: 0%;
+}
+
+.titlecard1{
+    font-family: 'amiko', sans-serif;
 
 }
+
+.titlecard2{
+    margin-left: 2%;
+    font-family: 'Poppins', sans-serif;
+}
+
+
 
 .cardtext{
     margin-left: 2%;
 }
 
 .contentcard{
-    font-size: 25px;
+    font-size: 20px;
+    font-family: Abel;
+    margin-left: 2%;
 }
 .link2{
     text-decoration: none;

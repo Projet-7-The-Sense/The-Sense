@@ -17,10 +17,23 @@ const CardRoom = (props) => {
                     <Card.Img src={props.image} alt="Card image" />
                     <Card.ImgOverlay>
                         <Row>
-                            <Col lg={{span:1 , offset:11}}>
+                            <Col lg={{span:1 , offset:11}} xs={{span:1 , offset:10}}>
                                 <img src="./img/Vector.svg"></img>
-                        </Col>
-                    </Row>
+                            </Col>
+                        </Row>
+                        <div className="icon">
+                            <Row >
+                                <Col lg={{span:1 , offset:10}} xs={{span:2 , offset:8}} className="back-icon">
+                                    <img src="./img/timer.png"></img>
+                                    <p>{props.timer}</p>
+                                </Col>
+                                <Col lg={{span:1 , offset:0}} xs={{span:2 , offset:0}} className="back-icon" >
+                                    <img src="./img/Icone.svg"></img>
+                                    <p>{props.player}</p>
+                                </Col>
+                            </Row>
+                        </div>
+
                         
                     </Card.ImgOverlay>
                 </Card>
@@ -33,21 +46,20 @@ const CardRoom = (props) => {
                 <Card style={{ width: '100%' }} >
                     <Card.Body  className="cardtextc">
                         <div className="cardtitle">
-                            <h2>The conjuring expérience &#124;</h2>
+                            <h2 className="titlecard1">{props.slogan} &#124;</h2>
                 
-                            <h2 className="titlecard poppins-thin"> Dark Room</h2>
+                            <h2 className="titlecard2"> {props.title}</h2>
                         </div>
-                        <p id="sub" >Card Subtitle</p>
+                        <p id="sub" >{props.age}</p>
                         <Card.Text className="contentcard">
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                            {props.content}
                         </Card.Text>
                         <Row>
                             <Col xs={{ span: 12, offset: 0 }} md={{ span: 6, offset: 3 }} lg={{ span: 4, offset: 5 }}>
                                 <Card.Link href="#" ><img src="./img/BoutonRes.svg"></img></Card.Link>
                             </Col>
                             <Col  xs={{ span: 0, offset: 0 }} md={{ span: 5, offset: 4 }} lg={{ span: 3, offset: 0 }}>
-                                <Card.Link href="#" className="link2">Decouvrez la dark room <BsArrowRightShort/></Card.Link>
+                                <Card.Link href="#" className="link2">Decouvrez la {props.title} <BsArrowRightShort/></Card.Link>
                             </Col>
                         </Row>
                     </Card.Body>
