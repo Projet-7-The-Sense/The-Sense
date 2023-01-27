@@ -1,4 +1,6 @@
 import "../App.css";
+import {Link} from 'react-router-dom';
+import { Parallax, Background } from 'react-parallax';
 
 function HomeParallax() {
   return (
@@ -8,4 +10,4 @@ function HomeParallax() {
   );
 }
 
-export default HomeParallax;
+export default HomeParallax

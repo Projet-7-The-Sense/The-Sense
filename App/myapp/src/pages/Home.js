@@ -8,16 +8,16 @@ import Regroup from '../component/Regroup-faq.js';
 
 
 function Home() {
-    return <div>
+    return <div id="banner">
         <CollapsibleNavbar />
         <HomeParallax />
         <Banner
-            theme="the-sense"
-            title="Qu'est ce que "
-            logoImage="img/SENSE.svg"
-            description="Préparez-vous pour une expérience unique qui vous  emmènera dans un autre univers. Vivez vos émotions comme vous ne l'avez jamais fait auparavant. Avec THE SENSE explorez d'autres dimensions et vivez l'impossible en interragissant avec un environnement dynamique et virtuel. Ce n'est pas une expérience en réalité virtuelle que vous vivez, c'est la réalité."
-            prezImg="img/image 42.svg"
-            linkHidden={false}
+            theme="dark-room"
+            title="Qu'est ce que la"
+            logoImage="%PUBLIC_URL%/img/DARK ROOM (1).svg"
+            description="Vous pensez ne pas avoir peur du noir ? Que rien ne pourra vous effrayer ? Vous avez tord. Avec la DARK ROOM, toutes vos peurs deviendront réelles et en rien de temps, il ne vous restera plus que vos jambes pour vous enfuir. Vous vous penser suffisament fort pour affronter vos peurs ? Franchissez donc le seuil de la DARK ROOM. Vous avez hâte d'y entrer mais dans le noir... Personne nous verra mourir."
+            prezImg="../img/image 84.svg"
+            linkHidden={true}
         />
 
         <Card

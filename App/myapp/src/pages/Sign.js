@@ -14,7 +14,7 @@ const Sign = () => {
         <h1>MON COMPTE</h1>
     </div>
     <div className="form-sign">
-        <form  >
+        <form>
             <fieldset>
             <legend>Créer un compte</legend>
             <div className="form-space">
