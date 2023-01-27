@@ -5,7 +5,6 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import { BsArrowRightShort } from 'react-icons/bs';
 
-
 const CardRoom = (props) => {
     return <>
     <div className="cardblock">

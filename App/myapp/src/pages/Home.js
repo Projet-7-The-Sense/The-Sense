@@ -5,8 +5,6 @@ import Banner from '../component/Banner.js';
 import Card from '../component/Card.js';
 import Regroup from '../component/Regroup-faq.js';
 
-
-
 function Home() {
     return <div id="banner">
         <CollapsibleNavbar />
