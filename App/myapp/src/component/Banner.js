@@ -4,7 +4,7 @@ import { BsArrowRight } from 'react-icons/bs';
 
 const Banner = (props) => {
     return <>
-        <div id='#banner' className={"banner-wrapper "+props.theme}>
+        <div  className={"banner-wrapper "+props.theme}>
             <div className="container">
                 <div className="banner-flex">
                     <div className="banner-bubble">
@@ -24,6 +24,7 @@ const Banner = (props) => {
                 </div>
             </div>
         </div>
+        <img className='vecteur1' src='./img/BRYCE FORME.svg' alt='element de design vecteur'/>
     </>
 }
 

@@ -50,18 +50,6 @@ link {
 
 /** NAVBAR **/
 
-.navbar{
-    width: 100%;
-    margin: 0 !important;
-    position: fixed !important;
-    background-color:rgba(255, 255, 255,0.5);
-    backdrop-filter: blur(5px);
-
-}
-
-.home-logo-holder{
-    height: 100%;
-}
 
 .navbar-links{
     text-align-last: end;
@@ -73,7 +61,10 @@ link {
 
 .navbar a{
     color: black;
+    text-decoration: underline transparent;
     font-size: 115%;
+    transform: scale(1);
+    transition: 0.75s;
 }
 
 .navbar a.line-text{
@@ -83,7 +74,8 @@ link {
 .navbar a:hover{
     color: black;
     text-decoration: underline;
-    transform: scale(1.1);
+    transform: scale(1.05);
+    transition: 0.75s;
 }
 
 .navbar button{
@@ -107,32 +99,48 @@ link {
     font-weight: bold !important;
 }
 
-
 .form-profile legend{
     margin-left: 60%;
 }
-
 .dropdown-menu.show{
+
     width: 400%;
     padding-left: 50%;
     padding-right: 40%;
 }
-
 .form-group{
     
     margin-top: 5%;
     font-weight: bold;
+    
 }
 
 .sign{
     text-decoration: none;
     font-size: 12px;
     color: black;
+    
+    
 }
 
 .footer-connect{
-    margin-top: 5%;   
+    margin-top: 5%;
 }
+
+
+.navbar{
+    width: 100%;
+    margin: 0 !important;
+    position: fixed !important;
+    background-color:rgba(255, 255, 255,0.5);
+    backdrop-filter: blur(5px);
+
+}
+
+.home-logo-holder{
+    height: 100%;
+}
+
 
 /** HomeParallax **/
 
@@ -188,7 +196,7 @@ link {
 }
 
 .banner-flex .banner-bubble {
-    width: 40%;
+    width: 100%;
     display: inline-flex;
     justify-content: space-around;
     align-items: center;
@@ -253,48 +261,111 @@ link {
     padding-right: 8px;
 }
 
+@media screen and (max-width: 992px){
+    .banner-flex{
+        flex-direction: column;
+        padding: 0px !important;
+    }
+    .banner-content{
+        width: 100% !important;
+        text-align: center;
+    }
+}
+
+.vecteur1 {
+    width: 100%;
+    margin-top: -400px;
+}
+
 /** CARD **/
+
+
+.icon{  
+    text-align: center;
+    font-family: Abel;
+    font-size: 25px;
+    
+}
+
+@media only screen and (min-width: 600px) {
+    .icon{
+        margin-top: 33%;   
+        
+    }
+  }
+
+
+@media only screen and (max-width: 600px) {
+    .icon{
+        font-size: 10px;   
+        margin-top: 20%;
+
+        
+    }
+
+    .icon img{
+        width: 50%;
+    }
+}
+
+.back-icon{
+    background-color: rgba(255, 255, 255, 0.01);
+    padding-top: 1%;
+    backdrop-filter: blur(5px);
+    
+}
 
 .cardblock{
     margin-top: 2%;
 }
 
 .cardtextc{
-    background-color: #CDFFF3  ;
-    border-color: #CDFFF3;
+    background-color: lightgrey;  ;
+    border-color: lightgrey;
+    border-radius: 0px 0 10px 10px;
+    
+    
 }
 .cardtitle{
     display: flex;
     margin-bottom: 0%;
     margin-top: 2%;
+    margin-left: 2%;
 }
 .desctitle{
     margin-bottom: 0%;
 }
-.cardtitle p{
-    margin-left: 2%;
-    margin-right: 2%;
-    font-size: 40px;
-    margin-top: 0%;
-}
+
 
 #sub{
     color:     #FA8072;
-    font-size: 25px;
+    font-size: 20px;
     margin: 0%;
-}
-
-.titlecard{
     margin-left: 2%;
+    font-family: Abel;
+    padding-top: 0%;
+}
+
+.titlecard1{
+    font-family: 'amiko', sans-serif;
 
 }
+
+.titlecard2{
+    margin-left: 2%;
+    font-family: 'Poppins', sans-serif;
+}
+
+
 
 .cardtext{
     margin-left: 2%;
 }
 
 .contentcard{
-    font-size: 25px;
+    font-size: 20px;
+    font-family: Abel;
+    margin-left: 2%;
 }
 .link2{
     text-decoration: none;
@@ -506,4 +577,19 @@ link {
 #you{
     border-radius: 100%;
     margin-left: 5%;
+}
+
+/** DROP-DOWN EDITS **/
+
+.dropdown-menu {
+    right: 0;
+    left: auto !important;
+}
+
+
+/** Footer **/
+
+
+.text-right-icons{
+    float: right !important;
 }
