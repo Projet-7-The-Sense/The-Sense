@@ -6,7 +6,7 @@ import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Footer from "../component/Footer";
 
-const Sign = () => {
+const Account = () => {
     return (<>
     
     <CollapsibleNavbar />
@@ -23,7 +23,7 @@ const Sign = () => {
                     <label htmlFor="name">Nom et prénom</label>
                 </Col>
                 <Col lg="1">
-                    <input
+                    <input 
                     type="text"
                     name="name"
                     className="form-input"
@@ -107,4 +107,4 @@ const Sign = () => {
     );
 }
 
-export default Sign;
+export default Account;

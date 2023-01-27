@@ -557,3 +557,10 @@ link {
     border-radius: 100%;
     margin-left: 5%;
 }
+
+/** DROP-DOWN EDITS **/
+
+.dropdown-menu {
+    right: 0;
+    left: auto !important;
+}
