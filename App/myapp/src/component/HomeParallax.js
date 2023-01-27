@@ -4,9 +4,9 @@ import { Parallax, Background } from 'react-parallax';
 
 function HomeParallax() {
   return (
-    <Parallax className='parallax'>
-      <img className='discover-button' href='#banner' src='./img/DECOUVRIR.svg' alt='button discover image'/>
-    </Parallax>
+    <div className='parallax'>
+      <button className='discover-button center' href='#banner'><img src='./img/DECOUVRIR.svg' alt='button discover image'/></button>
+    </div>
   );
 }
 

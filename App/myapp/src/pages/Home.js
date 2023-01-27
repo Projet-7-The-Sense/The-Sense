@@ -18,11 +18,13 @@ function Home() {
             linkHidden={true}
         />
 
-        <Card/>
+        <Card
+            image="img/image 2.svg"    
+        />
 
         <Regroup/>
 
-        {/* <Footer /> */}
+        <Footer />
     </div>
 }
 

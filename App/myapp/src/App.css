@@ -258,13 +258,20 @@ link {
 
 /** CARD **/
 
+
+.heart-button{
+    background-color: rgba(169, 169, 169, 0);
+    color: red;
+
+}
+
 .cardblock{
     margin-top: 2%;
 }
 
 .cardtextc{
-    background-color: #CDFFF3  ;
-    border-color: #CDFFF3;
+    background-color: lightgrey;  ;
+    border-color: lightgrey;
 }
 .cardtitle{
     display: flex;
