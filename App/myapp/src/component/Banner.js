@@ -24,6 +24,7 @@ const Banner = (props) => {
                 </div>
             </div>
         </div>
+        <img className='vecteur1' src='./img/BRYCE FORME.svg' alt='element de design vecteur'/>
     </>
 }
 

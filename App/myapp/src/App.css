@@ -196,7 +196,7 @@ link {
 }
 
 .banner-flex .banner-bubble {
-    width: 40%;
+    width: 100%;
     display: inline-flex;
     justify-content: space-around;
     align-items: center;
@@ -259,6 +259,22 @@ link {
 
 .banner-content .banner-link div {
     padding-right: 8px;
+}
+
+@media screen and (max-width: 992px){
+    .banner-flex{
+        flex-direction: column;
+        padding: 0px !important;
+    }
+    .banner-content{
+        width: 100% !important;
+        text-align: center;
+    }
+}
+
+.vecteur1 {
+    width: 100%;
+    margin-top: -400px;
 }
 
 /** CARD **/
