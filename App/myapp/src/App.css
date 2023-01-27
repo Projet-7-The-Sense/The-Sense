@@ -50,6 +50,55 @@ link {
 
 /** NAVBAR **/
 
+
+.navbar-links{
+    text-align-last: end;
+}
+
+.navbar-links button{
+    border: none;
+}
+
+.navbar a{
+    color: black;
+    text-decoration: underline transparent;
+    font-size: 115%;
+    transform: scale(1);
+    transition: 0.75s;
+}
+
+.navbar a.line-text{
+    white-space: nowrap;
+}
+
+.navbar a:hover{
+    color: black;
+    text-decoration: underline;
+    transform: scale(1.05);
+    transition: 0.75s;
+}
+
+.navbar button{
+    color: black;
+}
+
+.vertical-line{
+    width: 2px;
+    background: black;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 992px){
+    .div.vertical-line{
+        visibility: hidden !important;
+    }
+}
+
+.login-link{
+    font-weight: bold !important;
+}
+
 .form-profile legend{
     margin-left: 60%;
 }
@@ -76,7 +125,6 @@ link {
 
 .footer-connect{
     margin-top: 5%;
-    
 }
 
 
@@ -93,49 +141,6 @@ link {
     height: 100%;
 }
 
-.navbar-links{
-    text-align-last: end;
-}
-
-.navbar-links button{
-    border: none;
-}
-
-.navbar a{
-    color: black;
-    font-size: 115%;
-}
-
-.navbar a.line-text{
-    white-space: nowrap;
-}
-
-.navbar a:hover{
-    color: black;
-    text-decoration: underline;
-    transform: scale(1.2);
-}
-
-.navbar button{
-    color: black;
-}
-
-.vertical-line{
-    width: 2px;
-    background: black;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-@media screen and (max-width: 992px){
-    .div.vertical-line{
-        visibility: hidden !important;
-    }
-}
-
-.login-link{
-    font-weight: bold !important;
-}
 
 /** HomeParallax **/
 
@@ -509,4 +514,12 @@ link {
 #you{
     border-radius: 100%;
     margin-left: 5%;
+}
+
+
+/** Footer **/
+
+
+.text-right-icons{
+    float: right !important;
 }
