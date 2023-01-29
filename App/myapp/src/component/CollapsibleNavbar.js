@@ -9,7 +9,7 @@ function CollapsibleNavbar() {
   return (
     <Navbar collapseOnSelect fixed='top' expand="lg" >
       <Container fluid>
-        <Navbar.Brand as={Link} to="/"><div className='home_logo_holder'><img src='./img/logo_black.png' alt='The_sense_logo'/></div></Navbar.Brand>
+        <Navbar.Brand as={Link} to="/"><div className='home-logo-holder'><img src='./img/logo_black.png' alt='The_sense_logo'/></div></Navbar.Brand>
         <div className="navbar-links">
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

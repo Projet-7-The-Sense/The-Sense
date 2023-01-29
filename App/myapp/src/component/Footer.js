@@ -74,4 +74,6 @@ export default function App() {
       </div>
     </MDBFooter>
   );
-}
+};
+
+export default Footer;
