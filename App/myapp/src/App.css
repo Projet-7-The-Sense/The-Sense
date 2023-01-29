@@ -17,7 +17,7 @@
 }
 
 h1, h2, h3, h4, h5, h6, .amiko-bold {
-    font-family: 'Amiko', sans-serif;
+    font-family: 'Amiko', sans-serif !important;
     font-weight: 700 !important;
     color: #3B4040;
 }
@@ -71,7 +71,7 @@ link {
     white-space: nowrap;
 }
 
-.navbar a:hover{
+.navbar a:not(.account-button):hover{
     color: black;
     text-decoration: underline;
     transform: scale(1.05);
@@ -105,7 +105,7 @@ link {
 .dropdown-menu.show{
 
     width: 400%;
-    padding-left: 50%;
+    padding-left: 40%;
     padding-right: 40%;
 }
 .form-group{
@@ -592,4 +592,117 @@ link {
 
 .text-right-icons{
     float: right !important;
+}
+
+.login-field {
+    text-align-last: start;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items:baseline;
+}
+
+.login-field .field-title {
+    width: 25%;
+}
+
+.login-field .field-control {
+    width: 75%
+}
+
+/** Login Dropdown **/
+
+.login-dropdown {
+    padding-top: 5%;
+}
+
+/* Overriding Bootstrap Focus Border Color */
+.form-control {
+    border: solid 2px #82ffe1 !important;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgb(130 255 255 / 40%) !important;
+}
+
+.account-button {
+    font-family: 'Abel', sans-serif !important;
+    font-weight: 400 !important;
+    margin-right: 1%;
+    color: #646363 !important;
+    text-decoration: underline transparent;
+    transition: text-decoration 0.5s;
+}
+
+.account-button:hover {
+    text-decoration: underline solid #646363;
+    transition: text-decoration 0.75;
+}
+
+#login-button {
+    background-color: #000 !important;
+    color: #fff !important;
+    transition: 0.75;
+}
+
+#login-button:hover {
+    background-color: #82ffe1 !important;
+    color: #3B4040 !important;
+    transition: 0.5s;
+}
+
+#hello-user{
+    text-align-last:right;
+    font-size: 1.5rem;
+}
+
+.account-preview-buttons {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cog {
+    transform: rotate(0deg);
+    transition: 1s;
+}
+
+#cog:hover {
+    transform: rotate(135deg);
+    transition: 1s;
+}
+
+#cog-holder:hover #cog {
+    transform: rotate(135deg);
+    transition: 1s;
+}
+
+.account-preview-data-inline {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.account-preview-data-inline .title {
+    width: 30%;
+    font-size: 1.25rem;
+    text-align-last: left;
+}
+
+.account-preview-data-inline .reservation, .account-preview-data-inline .points {
+    text-align-last: left;
+    width: 70%;
+    font-size: 1.15;
+}
+
+.account-preview-data-inline.points {
+    margin-top: 0.5rem;
+}
+
+.account-preview-data-inline .points {
+    font-family: 'Abel', sans-serif;
+    font-weight: 400;
+    color: #646363;
 }
