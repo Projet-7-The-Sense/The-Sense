@@ -550,6 +550,22 @@ link {
     left: auto !important;
 }
 
+.login-field {
+    text-align-last: start;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items:baseline;
+}
+
+.login-field .field-title {
+    width: 25%;
+}
+
+.login-field .field-control {
+    width: 75%
+}
+
 /** Login Dropdown **/
 
 .login-dropdown {

@@ -26,7 +26,21 @@ export const logUser = async (id, psw) => {
     return user;
 }
 
-export const insertUser = async (id, password, firstname, lastname, phone_number, age, reduction_points=0) => {
+export const alreadyExist = async (id) => {
+    const response = await fetch(
+        'http://localhost:4444/user/alreadyExist?id='+id, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        }
+    )
+    const exist = await response.json();
+    return exist;
+}
+
+export const insertUser = async (id, password, firstname, lastname, phone_number, age, reduction_points=0, admin=false) => {
     const response = await fetch(
         'http://localhost:4444/user/insert', {
             method: 'POST',

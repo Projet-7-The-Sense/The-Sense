@@ -48,6 +48,16 @@ app.get('/user/login', (req, res) => {
         .catch(err => res.sendStatus(400, "Failed to fetch the user"));
 })
 
+app.get('/user/alreadyExist', (req, res) => {
+    const dbConnect = dbo.getDb();
+
+    dbConnect
+        .collection('user')
+        .findOne({id: {$eq: req.query.id}})
+        .then(result => res.status(200).json(result!=null))
+        .catch(err => res.sendStatus(400, "Failed to fetch the user"));
+})
+
 app.post('/user/insert', jsonParser, (req, res) => {
     const dbConnect = dbo.getDb();
 

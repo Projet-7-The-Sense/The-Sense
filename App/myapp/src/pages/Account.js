@@ -5,18 +5,33 @@ import Button from "react-bootstrap/esm/Button";
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Footer from "../component/Footer";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { UserContext } from "../contexts/UserContext";
 import { useForm } from "react-hook-form";
-import { insertUser } from "../api/user";
+import { insertUser, alreadyExist } from "../api/user";
 
 const Account = () => {
     const { user, userSet } = useContext(UserContext);
     const { register, handleSubmit } = useForm();
+    const [ errorMessage, setErrorMessage ] = useState("");
 
     const onSubmit = (data) => {
-        const insertedUser = insertUser(data.id, data.password, data.firstname, data.lastname, data.phone_number, data.age, data.reduction_points);
-        // Request the id of the created user to login instantly
+        // Check if there is already an existing account under this email-adress
+        const existFetched = alreadyExist(data.id);
+        existFetched
+            .then(result => {
+                if (result) {
+                    console.log("There is already an existing account under the following adress email: " + data.id);
+                } else {
+                    const response = insertUser(data.id, data.password, data.firstname, data.lastname, data.phone_number, data.age, data.reduction_points);
+                    console.log("New account created!");
+                    // Request the id of the created user to login instantly
+                }
+            }) 
+            .catch(err => {
+                console.error("There was an error fetching if there is already an existing account under the following email: " + data.id)
+                return;
+            });
     }
 
     return <>
@@ -67,7 +82,7 @@ const Account = () => {
                             <label htmlFor="email">Adress e-mail</label>
                         </Col>
                         <Col lg="1">
-                            <input {...register('email')}
+                            <input {...register('id')}
                             type="text"
                             className="form-input"
                             id="email"
@@ -118,6 +133,7 @@ const Account = () => {
             </div>
         ) : (
             <>
+            <h1>{user.firstname} {user.lastname}</h1>
             </>
         ) }
 
