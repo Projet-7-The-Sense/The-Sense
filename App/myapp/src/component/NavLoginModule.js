@@ -23,8 +23,6 @@ const NavLoginModule = () => {
           console.log("Failed to login");
         })
     }
-    
-    console.log("UPDATE HERE");
 
     const onLogout = () => {
       setUser(null);
