@@ -54,7 +54,7 @@ const CardRoom = (props) => {
                             {props.content}
                         </Card.Text>
                         <Row>
-                            <Col xs={{ span: 12, offset: 0 }} md={{ span: 6, offset: 3 }} lg={{ span: 4, offset: 5 }}>
+                            <Col xs={{ span: 8, offset: 2 }} md={{ span: 6, offset: 3 }} lg={{ span: 4, offset: 5 }}>
                                 <Card.Link href="#" ><img src="./img/BoutonRes.svg"></img></Card.Link>
                             </Col>
                             <Col  xs={{ span: 0, offset: 0 }} md={{ span: 5, offset: 4 }} lg={{ span: 3, offset: 0 }}>

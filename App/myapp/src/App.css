@@ -137,7 +137,7 @@ link {
 
 }
 
-.home_logo_holder{
+.home-logo-holder{
     height: 100%;
 }
 
@@ -196,7 +196,7 @@ link {
 }
 
 .banner-flex .banner-bubble {
-    width: 40%;
+    width: 100%;
     display: inline-flex;
     justify-content: space-around;
     align-items: center;
@@ -261,6 +261,22 @@ link {
     padding-right: 8px;
 }
 
+@media screen and (max-width: 992px){
+    .banner-flex{
+        flex-direction: column;
+        padding: 0px !important;
+    }
+    .banner-content{
+        width: 100% !important;
+        text-align: center;
+    }
+}
+
+.vecteur1 {
+    width: 100%;
+    margin-top: -400px;
+}
+
 /** CARD **/
 
 
@@ -273,7 +289,8 @@ link {
 
 @media only screen and (min-width: 600px) {
     .icon{
-        margin-top: 33%;   
+        margin-top: 33%; 
+          
         
     }
   }
@@ -290,6 +307,10 @@ link {
     .icon img{
         width: 50%;
     }
+
+    .link2{
+        padding-top: 2%;
+    }
 }
 
 .back-icon{
@@ -303,6 +324,9 @@ link {
     margin-top: 2%;
 }
 
+.cardblock img{
+    border-radius: 0px 0 10px 10px;
+}
 .cardtextc{
     background-color: lightgrey;  ;
     border-color: lightgrey;
@@ -355,6 +379,10 @@ link {
     text-decoration: none;
     font-family: 'Poppins';
     color: gray;
+}
+
+.link2:hover{
+    color: black;
 }
 
 /** FAQ **/
@@ -498,6 +526,59 @@ link {
 .form-space{
     margin-bottom: 1%;
 }
+
+
+/** ADMIN**/
+
+.img-sign{
+    background-image: url("../public/img/image\ 120.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 500px;
+    text-align: center;
+}
+
+.img-sign h1{
+    color: white;
+    font-size: 120px;
+    padding-top: 15%;
+
+}
+
+
+/** Maintaining **/
+
+.maintaining{
+    background-image: url("../public/img/Logo.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.maintaining-head{
+    text-align: center;
+    padding-top: 2%;
+}
+
+.maintaining-head h1{
+    padding-top: 10%;
+    font-size: 70px;
+    font-family: Amiko;
+}
+
+.maintaining-text{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    align-items: center;
+}
+
+.maintaining-text img{
+    border-radius:  10px ;
+}
+
+.maintaining-text h2{
+    padding-top: 20%;
+    font-family: Abel;
+}
+
 /** FOOTER **/
 
 .footer {

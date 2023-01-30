@@ -310,3 +310,40 @@ app.delete('/FAQ/delete', jsonParser, (req, res) => {
 });
 
 // #endregion
+
+// #experiences
+
+app.get('/experience/list', (req, res) => {
+    const dbConnect = dbo.getDb();
+
+    dbConnect
+        .collection('FAQ')
+        .find({}) // Return all
+        .toArray((err, result) => {
+            if (err) {
+                res.status(400).send("Error fetching reservations!");
+            } else {
+                res.status(200).json(result);
+            }
+        });
+});
+
+app.post('/experience/update', jsonParser, (req, res) => {
+    const dbConnect = dbo.getDb();
+
+    dbConnect
+        .collection('FAQ')
+        .updateOne(
+            { _id: { $eq: ObjectId(req.body._id) } },
+            {
+                $set: { ...req.body.updates },
+                $currentDate: { lastModified: true }
+            }
+        )
+        .then(result => {
+            res.status(200).json(result);
+        })
+        .catch(err => {
+            res.status(500).json({err: 'Could not update the news'});
+        });
+});
