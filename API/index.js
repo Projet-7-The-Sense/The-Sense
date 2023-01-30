@@ -33,6 +33,16 @@ app.get('/user/list', (req, res) => {
         });
 });
 
+app.get('/user/get_user_by_id', (req, res) => {
+    const dbConnect = dbo.getDb();
+
+    dbConnect
+        .collection('user')
+        .findOne({_id: {$eq: ObjectId(req.query._id)}})
+        .then(result => res.status(200).json(result))
+        .catch(err => console.error(err));
+});
+
 app.get('/user/login', (req, res) => {
     const dbConnect = dbo.getDb();
 
@@ -46,7 +56,7 @@ app.get('/user/login', (req, res) => {
         })
         .then(result => res.status(200).json(result))
         .catch(err => res.sendStatus(400, "Failed to fetch the user"));
-})
+});
 
 app.get('/user/alreadyExist', (req, res) => {
     const dbConnect = dbo.getDb();
@@ -56,7 +66,7 @@ app.get('/user/alreadyExist', (req, res) => {
         .findOne({id: {$eq: req.query.id}})
         .then(result => res.status(200).json(result!=null))
         .catch(err => res.sendStatus(400, "Failed to fetch the user"));
-})
+});
 
 app.post('/user/insert', jsonParser, (req, res) => {
     const dbConnect = dbo.getDb();
