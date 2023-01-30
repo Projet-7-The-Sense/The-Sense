@@ -12,6 +12,8 @@ import {
   Route,
   Switch
 } from "react-router-dom";
+import Admin from './pages/AdminPanel';
+import { Maintaining } from './pages/Maintaining';
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -28,6 +30,9 @@ const App = () => {
           <Route exact path="/equipements"> {<Equipments />} </Route>
           <Route exact path="/a-propos-de-nous"> {<AboutUs />} </Route>
           <Route exact path="/mon-compte"> {<Account />} </Route>
+          <Route exact path="/equipment"> {<Equipments />} </Route>
+          <Route exact path="/admin"> {<Admin />} </Route>
+          <Route exact path="/maintaining"> {<Maintaining />} </Route>
         </UserContext.Provider>
       </Switch>
     </Router>
