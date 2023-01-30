@@ -8,13 +8,15 @@ import Footer from "../component/Footer";
 import { useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
 import { useForm } from "react-hook-form";
+import { insertUser } from "../api/user";
 
 const Account = () => {
     const { user, userSet } = useContext(UserContext);
     const { register, handleSubmit } = useForm();
 
     const onSubmit = (data) => {
-        console.log(data);
+        const insertedUser = insertUser(data.id, data.password, data.firstname, data.lastname, data.phone_number, data.age, data.reduction_points);
+        // Request the id of the created user to login instantly
     }
 
     return <>
