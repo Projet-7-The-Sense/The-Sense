@@ -39,8 +39,11 @@ export default function Admin ()  {
         //     .then(result => setExperiences(result))
         //     .catch(error=>console.error("Erreur avec notre API :",error.message));
     },[deleted]);
+    if (!user){
+        return <Redirect to="/"></Redirect>
+    }
     return (<>
-    {!user ?(
+    { !user.admin?(
         <Redirect to="/"></Redirect>
     ):(
         <>
