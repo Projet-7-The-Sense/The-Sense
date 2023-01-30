@@ -1,5 +1,6 @@
 /** GENERAL **/
 
+
 .example {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -16,7 +17,7 @@
 }
 
 h1, h2, h3, h4, h5, h6, .amiko-bold {
-    font-family: 'Amiko', sans-serif !important;
+    font-family: 'Amiko', sans-serif;
     font-weight: 700 !important;
     color: #3B4040;
 }
@@ -50,20 +51,6 @@ link {
 /** NAVBAR **/
 
 
-/* BESOIN DE LE RETIRER ? */
-
-.navbar{
-    width: 100%;
-    margin: 0 !important;
-    position: fixed !important;
-    background-color:rgba(255, 255, 255,0.5);
-    backdrop-filter: blur(5px);
-}
-
-.home_logo_holder{
-    height: 100%;
-}
-
 .navbar-links{
     text-align-last: end;
 }
@@ -84,7 +71,7 @@ link {
     white-space: nowrap;
 }
 
-.navbar a:not(.account-button):hover{
+.navbar a:hover{
     color: black;
     text-decoration: underline;
     transform: scale(1.05);
@@ -118,7 +105,7 @@ link {
 .dropdown-menu.show{
 
     width: 400%;
-    padding-left: 40%;
+    padding-left: 50%;
     padding-right: 40%;
 }
 .form-group{
@@ -178,18 +165,6 @@ link {
 }
 
 /** BANNER **/
-
-.banner-wrapper.the-sense {
-    --banner-bg-color: rgb(77, 155, 142);
-    --banner-text-color: #fff;
-    --banner-secondary-color: rgb(94, 148, 195);
-}
-
-.banner-wrapper.dark-room {
-    --banner-bg-color: rgb(92, 14, 14);
-    --banner-text-color: #fff;
-    --banner-secondary-color: rgb(38, 10, 10);
-}
 
 .banner-wrapper {
     width: 100%;
@@ -314,7 +289,8 @@ link {
 
 @media only screen and (min-width: 600px) {
     .icon{
-        margin-top: 33%;   
+        margin-top: 33%; 
+          
         
     }
   }
@@ -331,6 +307,10 @@ link {
     .icon img{
         width: 50%;
     }
+
+    .link2{
+        padding-top: 2%;
+    }
 }
 
 .back-icon{
@@ -344,6 +324,9 @@ link {
     margin-top: 2%;
 }
 
+.cardblock img{
+    border-radius: 0px 0 10px 10px;
+}
 .cardtextc{
     background-color: lightgrey;  ;
     border-color: lightgrey;
@@ -396,6 +379,10 @@ link {
     text-decoration: none;
     font-family: 'Poppins';
     color: gray;
+}
+
+.link2:hover{
+    color: black;
 }
 
 /** FAQ **/
@@ -539,12 +526,66 @@ link {
 .form-space{
     margin-bottom: 1%;
 }
+
+
+/** ADMIN**/
+
+.img-sign{
+    background-image: url("../public/img/image\ 120.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 500px;
+    text-align: center;
+}
+
+.img-sign h1{
+    color: white;
+    font-size: 120px;
+    padding-top: 15%;
+
+}
+
+
+/** Maintaining **/
+
+.maintaining{
+    background-image: url("../public/img/Logo.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.maintaining-head{
+    text-align: center;
+    padding-top: 2%;
+}
+
+.maintaining-head h1{
+    padding-top: 10%;
+    font-size: 70px;
+    font-family: Amiko;
+}
+
+.maintaining-text{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    align-items: center;
+}
+
+.maintaining-text img{
+    border-radius:  10px ;
+}
+
+.maintaining-text h2{
+    padding-top: 20%;
+    font-family: Abel;
+}
+
 /** FOOTER **/
 
 .footer {
     background-color: #3B4040;
     width: 100%;
     display: flex;
+    
 }
     
 .leftfooter{
@@ -559,6 +600,7 @@ link {
     text-decoration: none;
     color: #82FFE1 ;
     font-size: 15px;
+    
 }
 
 .centerfooter{
@@ -615,117 +657,4 @@ link {
 
 .text-right-icons{
     float: right !important;
-}
-
-.login-field {
-    text-align-last: start;
-    width: 100%;
-    display: inline-flex;
-    justify-content: space-between;
-    align-items:baseline;
-}
-
-.login-field .field-title {
-    width: 25%;
-}
-
-.login-field .field-control {
-    width: 75%
-}
-
-/** Login Dropdown **/
-
-.login-dropdown {
-    padding-top: 5%;
-}
-
-/* Overriding Bootstrap Focus Border Color */
-.form-control {
-    border: solid 2px #82ffe1 !important;
-}
-
-.form-control:focus {
-    box-shadow: 0 0 0 0.25rem rgb(130 255 255 / 40%) !important;
-}
-
-.account-button {
-    font-family: 'Abel', sans-serif !important;
-    font-weight: 400 !important;
-    margin-right: 1%;
-    color: #646363 !important;
-    text-decoration: underline transparent;
-    transition: text-decoration 0.5s;
-}
-
-.account-button:hover {
-    text-decoration: underline solid #646363;
-    transition: text-decoration 0.75;
-}
-
-#login-button {
-    background-color: #000 !important;
-    color: #fff !important;
-    transition: 0.75;
-}
-
-#login-button:hover {
-    background-color: #82ffe1 !important;
-    color: #3B4040 !important;
-    transition: 0.5s;
-}
-
-#hello-user{
-    text-align-last:right;
-    font-size: 1.5rem;
-}
-
-.account-preview-buttons {
-    width: 100%;
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#cog {
-    transform: rotate(0deg);
-    transition: 1s;
-}
-
-#cog:hover {
-    transform: rotate(135deg);
-    transition: 1s;
-}
-
-#cog-holder:hover #cog {
-    transform: rotate(135deg);
-    transition: 1s;
-}
-
-.account-preview-data-inline {
-    width: 100%;
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-.account-preview-data-inline .title {
-    width: 30%;
-    font-size: 1.25rem;
-    text-align-last: left;
-}
-
-.account-preview-data-inline .reservation, .account-preview-data-inline .points {
-    text-align-last: left;
-    width: 70%;
-    font-size: 1.15;
-}
-
-.account-preview-data-inline.points {
-    margin-top: 0.5rem;
-}
-
-.account-preview-data-inline .points {
-    font-family: 'Abel', sans-serif;
-    font-weight: 400;
-    color: #646363;
 }

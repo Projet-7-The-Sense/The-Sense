@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Collapse from 'react-bootstrap/Collapse';
 import { BiZoomIn,BiZoomOut } from "react-icons/bi";
 
+
 const Faq = (props) => {
     const [open, setOpen] = useState(false);
     return <>
@@ -24,6 +25,8 @@ const Faq = (props) => {
                     <p>{props.question}</p>
                 </Col>
             </Row>
+            
+            
             </>
         )) || (
             <>
