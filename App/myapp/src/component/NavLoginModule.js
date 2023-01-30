@@ -1,4 +1,4 @@
-import Row from 'react-bootstrap/Row';
+/*import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
@@ -24,9 +24,51 @@ const NavLoginModule = () => {
     const { user, setUser } = useContext(UserContext);
     const { register, handleSubmit } = useForm();
 
-    return <NavDropdown title={user ? "MON COMPTE" : "CONNEXION"} className='login-link line-text' id="collasible-nav-dropdown">
-    {(!false && (
-      <Form>
+    const onSubmit = (data) => {
+      const userFetched = logUser(data.id, data.password);
+      userFetched
+        .then(user => {
+          setUser(user);
+        })
+        .catch(err => {
+          console.log("Failed to login");
+        })
+    }
+    
+    console.log("UWU");
+
+    const onLogout = () => {
+      setUser(null);
+      console.log("Logged out");
+    }
+
+    const formatedReservation = (user) => {
+      return "DARK ROOM - The Conjuring Experience";
+    }
+
+    const numberDict = [
+      "une",
+      "deux",
+      "trois",
+      "quatre",
+      "cinq"
+    ]
+    
+    const formatedCoupons = (number_coupons) => {
+      if (number_coupons >= 10) {
+        return "Votre prochaine réservation vous est offerte!";
+      }
+      else if (number_coupons == 5) {
+        return "Profitez d'une réduction de 50% pour votre prochaine réservation!";
+      }
+      else {
+        return "Plus qu" + (number_coupons == 1 ? "'une" : "e "+ (number_coupons < 5 ? numberDict[4-number_coupons] : numberDict[9-number_coupons]) ) + " réservation" + (number_coupons > 1 ? "s" : "") + " avant d'obtenir une " + (number_coupons < 5 ? " réduction de 50%" : " expérience gratuite") + "!";
+      }
+    }
+
+    return <NavDropdown title={user ? "MON COMPTE" : "SE CONNECTER"} className='login-link line-text' id="collasible-nav-dropdown" autoClose="false">
+    {!user ? (
+      <Form className="login-dropdown" onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="loginId">
           <div className="login-field">
             <Form.Label>Identifiant</Form.Label>
@@ -110,4 +152,4 @@ const NavLoginModule = () => {
     </NavDropdown>
 }
 
-export default NavLoginModule;
+export default NavLoginModule;*/
