@@ -1,6 +1,5 @@
 /** GENERAL **/
 
-
 .example {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -57,7 +56,6 @@ link {
     position: fixed !important;
     background-color:rgba(255, 255, 255,0.5);
     backdrop-filter: blur(5px);
-
 }
 
 .home_logo_holder{
@@ -131,6 +129,18 @@ link {
 }
 
 /** BANNER **/
+
+.banner-wrapper.the-sense {
+    --banner-bg-color: rgb(77, 155, 142);
+    --banner-text-color: #fff;
+    --banner-secondary-color: rgb(94, 148, 195);
+}
+
+.banner-wrapper.dark-room {
+    --banner-bg-color: rgb(92, 14, 14);
+    --banner-text-color: #fff;
+    --banner-secondary-color: rgb(38, 10, 10);
+}
 
 .banner-wrapper {
     width: 100%;
@@ -240,7 +250,6 @@ link {
 
 .titlecard{
     margin-left: 2%;
-
 }
 
 .cardtext{
@@ -336,7 +345,6 @@ link {
     background-color: #3B4040;
     width: 100%;
     display: flex;
-    
 }
     
 .leftfooter{
@@ -351,7 +359,6 @@ link {
     text-decoration: none;
     color: #82FFE1 ;
     font-size: 15px;
-    
 }
 
 .centerfooter{
