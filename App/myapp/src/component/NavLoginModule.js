@@ -24,6 +24,8 @@ const NavLoginModule = () => {
         })
     }
     
+    console.log("UPDATE HERE");
+
     const onLogout = () => {
       setUser(null);
       console.log("Logged out");
