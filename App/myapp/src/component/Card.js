@@ -6,6 +6,8 @@ import Card from 'react-bootstrap/Card';
 import { BsArrowRightShort } from 'react-icons/bs';
 import {AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
+
+
 const CardRoom = (props) => {
     return <>
     <div className="cardblock">

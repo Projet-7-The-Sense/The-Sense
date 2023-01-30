@@ -1,112 +1,102 @@
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { logUser } from '../api/user';
 import { Link } from 'react-router-dom';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { UserContext } from '../contexts/UserContext';
 import { useForm } from 'react-hook-form';
-
-const onSubmit = (data) => {
-  console.log(data);
-}
-
-const handleChange = () => {
-
-}
-
-const handleLogout = () => {
-  
-}
+import { FaCog } from 'react-icons/fa';
+import {BsArrowRight} from 'react-icons/bs';
 
 const NavLoginModule = () => {
     const { user, setUser } = useContext(UserContext);
     const { register, handleSubmit } = useForm();
 
-    return <NavDropdown title={user ? "MON COMPTE" : "CONNEXION"} className='login-link line-text' id="collasible-nav-dropdown">
-    {(!false && (
-      <Form>
+    const onSubmit = (data) => {
+      const userFetched = logUser(data.id, data.password);
+      userFetched
+        .then(user => {
+          setUser(user);
+        })
+        .catch(err => {
+          console.log("Failed to login");
+        })
+    }
+    
+    const onLogout = () => {
+      setUser(null);
+      console.log("Logged out");
+    }
+
+    const formatedReservation = (user) => {
+      return "DARK ROOM - The Conjuring Experience";
+    }
+
+    const numberDict = [
+      "une",
+      "deux",
+      "trois",
+      "quatre",
+      "cinq"
+    ]
+    
+    const formatedCoupons = (number_coupons) => {
+      if (number_coupons >= 10) {
+        return "Votre prochaine réservation vous est offerte!";
+      }
+      else if (number_coupons == 5) {
+        return "Profitez d'une réduction de 50% pour votre prochaine réservation!";
+      }
+      else {
+        return "Plus qu" + (number_coupons == 1 ? "'une" : "e "+ (number_coupons < 5 ? numberDict[4-number_coupons] : numberDict[9-number_coupons]) ) + " réservation" + (number_coupons > 1 ? "s" : "") + " avant d'obtenir une " + (number_coupons < 5 ? " réduction de 50%" : " expérience gratuite") + "!";
+      }
+    }
+
+    return <NavDropdown title={user ? "MON COMPTE" : "SE CONNECTER"} className='login-link line-text' id="collasible-nav-dropdown" autoClose="false">
+    {!user ? (
+      <Form className="login-dropdown" onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="loginId">
           <div className="login-field">
-            <Form.Label>Identifiant</Form.Label>
-            <Form.Control {...register("id")} placeHolder="email" />
+            <Form.Label className="field-title amiko-bold">Identifiant</Form.Label>
+            <Form.Control className="field-control abel" {...register("id")} type="email" placeholder="email" />
           </div>
         </Form.Group>
         <Form.Group className="mb-3" controlId="password">
           <div className="login-field">
-            <Form.Label>Mot de passe</Form.Label>
-            <Form.Control {...register("password")} placeHolder="password" />
+            <Form.Label className="field-title amiko-bold">Mot de passe</Form.Label>
+            <Form.Control className="field-control abel" {...register("password")} type="password" placeholder="password" />
           </div>
         </Form.Group>
-        <Button variant="dark" type="submit">Connexion</Button>
+
+        <NavDropdown.Divider />
+        
+        <Button as={Link} to="/mon-compte" className="account-button" variant="white" type="redirect">Créer un compte</Button>
+        <Button variant="dark" className="amiko-bold" id="login-button" type="submit">Se connecter</Button>
       </Form>
-    )
-      (<>
-      <div className="tab-content">
-        <form className="form-profile" onSubmit={handleSubmit}>
-          <fieldset>
-            <legend>Connexion</legend>
-            <div className="form-group">
-              <Row>
-                <Col lg='3'>
-                  <label htmlFor="email">Identifiant</label>
-                </Col>
-                <Col lg='9'>
-                    <input
-                    type="text"
-                    name="username"
-                    className="form-control"
-                    id="email"
-                    placeholder="mail@mail.fr"
-                    onChange={handleChange}
-                  />
-                </Col>
-              </Row>
-
-            </div>
-            <div className="form-group">
-              <Row>
-                  <Col lg='3'>
-                    <label htmlFor="password">Mot de passe</label>
-                  </Col>
-                  <Col lg='9'>
-                      <input
-                      type="password"
-                      name="password"
-                      className="form-control"
-                      id="password"
-                      placeholder="Password"
-                      onChange={handleChange}
-                    />
-                  </Col>
-                </Row>
-            </div>
-            <div className="footer-connect">
-              <Row >
-                <Col lg={{ span: 4, offset: 3 }}>
-                  <Link className="sign" to='/mon-compte'>Créer un compte</Link>
-                </Col>
-                <Col lg='5'>
-                  <Button type='submit' variant="dark">Connexion</Button>
-                </Col>
-              </Row>
-            </div>
-            
-            
-          </fieldset>
-        </form>
-      </div>
-      </>
-    )) || (
+    ) : (
       <>
-      <NavDropdown.Item to="/profile">Profile</NavDropdown.Item>
-      <NavDropdown.Item ><button className="btn btn-danger" onClick={handleLogout}>Déconnexion</button></NavDropdown.Item>
-      </>
-    )}
-    
-    <NavDropdown.Divider />
+        <div id="hello-user" className="amiko-bold">{"Bonjour, "+user.firstname}</div>
 
+        <NavDropdown.Divider />
+
+        <div className="account-preview-data-inline">
+          <div className="title amiko-bold">Réservation</div>
+          <Link><div className="reservation amiko">{formatedReservation(user)} <BsArrowRight /></div></Link>
+        </div>
+
+        <div className="account-preview-data-inline points">
+          <div className="title amiko-bold">Mes points</div>
+          <div className="points amiko">{formatedCoupons(9)}</div>
+        </div>
+
+        <NavDropdown.Divider />
+
+        <div className="account-preview-buttons">
+          <Button as={Link} to="/mon-compte" id="cog-holder" className="account-button" variant="white" type="redirect">Accéder aux paramètres du compte <FaCog id="cog"/></Button>
+          <Button variant="danger" className="amiko-bold" onClick={onLogout}>Se déconnecter</Button>
+        </div>
+      </>)}
     </NavDropdown>
 }
 

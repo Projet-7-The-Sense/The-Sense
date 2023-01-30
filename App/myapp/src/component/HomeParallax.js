@@ -1,7 +1,4 @@
 import "../App.css";
-import {Link} from 'react-router-dom';
-import { Parallax, Background } from 'react-parallax';
-import { HashLink } from 'react-router-hash-link';
 
 function HomeParallax() {
   return (
