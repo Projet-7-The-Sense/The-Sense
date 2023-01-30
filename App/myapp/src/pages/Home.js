@@ -3,45 +3,36 @@ import CollapsibleNavbar from '../component/CollapsibleNavbar.js';
 import HomeParallax from '../component/HomeParallax.js';
 import Banner from '../component/Banner.js';
 import Card from '../component/Card.js';
-import { useContext } from 'react';
-import { UserContext } from '../component/UserContext.js';
+import Regroup from '../component/Regroup-faq.js';
 
 function Home() {
-    const { user, setUser } = useContext(UserContext);
-
     return <div>
         <CollapsibleNavbar />
         <HomeParallax />
-        <Banner
-            theme="the-sense"
-            title="Qu'est ce que "
-            logoImage="img/SENSE.svg"
-            description="Préparez-vous pour une expérience unique qui vous  emmènera dans un autre univers. Vivez vos émotions comme vous ne l'avez jamais fait auparavant. Avec THE SENSE explorez d'autres dimensions et vivez l'impossible en interragissant avec un environnement dynamique et virtuel. Ce n'est pas une expérience en réalité virtuelle que vous vivez, c'est la réalité."
-            prezImg="img/image 42.svg"
-            linkHidden={false}
+        <div id='banner'>
+            <Banner
+                
+                theme="dark-room"
+                title="Qu'est ce que la"
+                logoImage="/img/DARK ROOM (1).svg"
+                description="Vous pensez ne pas avoir peur du noir ? Que rien ne pourra vous effrayer ? Vous avez tord. Avec la DARK ROOM, toutes vos peurs deviendront réelles et en rien de temps, il ne vous restera plus que vos jambes pour vous enfuir. Vous vous penser suffisament fort pour affronter vos peurs ? Franchissez donc le seuil de la DARK ROOM. Vous avez hâte d'y entrer mais dans le noir... Personne nous verra mourir."
+                prezImg="../img/image 84.svg"
+                linkHidden={true}
+            />
+
+        </div>
+
+
+        <Card
+            image="img/image 2.svg" 
+            player="2-6-8"   
+            timer="40 MIN"
+            title="Dark room"
+            content="Wow c'est trop bien"
+            slogan="The conjuring experience"
         />
 
-        <pre>{JSON.stringify(user, null, 2)}</pre>
-
-        {user != null ?
-            (
-                <button onClick={() => {
-                    setUser(null);
-                }}>Log out</button>
-            )
-            : (
-                <button onClick={() => {
-                    setUser({
-                        id:"avollet@gaming.tech",
-                        firstname:"Antoine",
-                        lastname:"Vollet",
-                        password:"Cookie Clicker"
-                    });
-                }}>Login</button>
-            )
-        }
-        
-        <Card/>
+        <Regroup/>
 
         <Footer />
     </div>

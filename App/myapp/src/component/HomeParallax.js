@@ -3,9 +3,9 @@ import "../App.css";
 function HomeParallax() {
   return (
     <div className='parallax'>
-      <button className='discover-button center' href='/#banner'><img src='./img/DECOUVRIR.svg' alt='button discover image'/></button>
+      <a href='#banner'><button className='discover-button center' ><img src='./img/DECOUVRIR.svg' alt='button discover image'/></button></a>
     </div>
   );
 }
 
-export default HomeParallax;
+export default HomeParallax

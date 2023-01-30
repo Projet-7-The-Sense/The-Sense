@@ -16,7 +16,7 @@
 }
 
 h1, h2, h3, h4, h5, h6, .amiko-bold {
-    font-family: 'Amiko', sans-serif;
+    font-family: 'Amiko', sans-serif !important;
     font-weight: 700 !important;
     color: #3B4040;
 }
@@ -50,6 +50,8 @@ link {
 /** NAVBAR **/
 
 
+BESOIN DE LE RETIRER ?
+
 .navbar{
     width: 100%;
     margin: 0 !important;
@@ -72,16 +74,21 @@ link {
 
 .navbar a{
     color: black;
+    text-decoration: underline transparent;
     font-size: 115%;
+    transform: scale(1);
+    transition: 0.75s;
 }
 
 .navbar a.line-text{
     white-space: nowrap;
 }
 
-.navbar a:hover{
+.navbar a:not(.account-button):hover{
     color: black;
     text-decoration: underline;
+    transform: scale(1.05);
+    transition: 0.75s;
 }
 
 .navbar button{
@@ -105,14 +112,56 @@ link {
     font-weight: bold !important;
 }
 
+.form-profile legend{
+    margin-left: 60%;
+}
+.dropdown-menu.show{
+
+    width: 400%;
+    padding-left: 40%;
+    padding-right: 40%;
+}
+.form-group{
+    
+    margin-top: 5%;
+    font-weight: bold;
+    
+}
+
+.sign{
+    text-decoration: none;
+    font-size: 12px;
+    color: black;
+    
+    
+}
+
+.footer-connect{
+    margin-top: 5%;
+}
+
+
+.navbar{
+    width: 100%;
+    margin: 0 !important;
+    position: fixed !important;
+    background-color:rgba(255, 255, 255,0.5);
+    backdrop-filter: blur(5px);
+
+}
+
+.home-logo-holder{
+    height: 100%;
+}
+
+
 /** HomeParallax **/
 
 
 .parallax{
   background-image: url("../public/img/Logo\ Haut\ de\ Page.png");
   height: 100vh;
-  width: auto;
-  background-attachment: fixed;
+  width: 99vw;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -152,15 +201,27 @@ link {
     background-color: #EAFFFB
 }
 
+.banner-wrapper.dark-room {
+    background-color: #000;
+    color: #fff;
+}
+
 .banner-wrapper .banner-flex {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.banner-wrapper.the-sense .banner-flex {
     background-color: #EAFFFB;
 }
 
+.banner-wrapper.dark-room .banner-flex {
+    background-color: #000;
+}
+
 .banner-flex .banner-bubble {
-    width: 40%;
+    width: 100%;
     display: inline-flex;
     justify-content: space-around;
     align-items: center;
@@ -170,11 +231,19 @@ link {
     width: 300px;
     height: 300px;
     border-radius: 100%;
-    border: solid #bbccc9 10px;
+    border: solid 10px;
     display: inline-flex;
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
+}
+
+.banner-flex .banner-bubble .image-wrapper.the-sense {
+    border-color: #bbccc9;
+}
+
+.banner-flex .banner-bubble .image-wrapper.dark-room {
+    border-color: #430000;
 }
 
 .banner-flex .banner-bubble .image-wrapper img {
@@ -217,52 +286,147 @@ link {
     padding-right: 8px;
 }
 
+@media screen and (max-width: 992px){
+    .banner-flex{
+        flex-direction: column;
+        padding: 0px !important;
+    }
+    .banner-content{
+        width: 100% !important;
+        text-align: center;
+    }
+}
+
+.vecteur1 {
+    width: 100%;
+    margin-top: -400px;
+}
+
 /** CARD **/
+
+
+.icon{  
+    text-align: center;
+    font-family: Abel;
+    font-size: 25px;
+    
+}
+
+@media only screen and (min-width: 600px) {
+    .icon{
+        margin-top: 33%;   
+        
+    }
+  }
+
+
+@media only screen and (max-width: 600px) {
+    .icon{
+        font-size: 10px;   
+        margin-top: 20%;
+
+        
+    }
+
+    .icon img{
+        width: 50%;
+    }
+}
+
+.back-icon{
+    background-color: rgba(255, 255, 255, 0.01);
+    padding-top: 1%;
+    backdrop-filter: blur(5px);
+    
+}
 
 .cardblock{
     margin-top: 2%;
 }
 
 .cardtextc{
-    background-color: #CDFFF3  ;
-    border-color: #CDFFF3;
+    background-color: lightgrey;  ;
+    border-color: lightgrey;
+    border-radius: 0px 0 10px 10px;
+    
+    
 }
 .cardtitle{
     display: flex;
     margin-bottom: 0%;
     margin-top: 2%;
+    margin-left: 2%;
 }
 .desctitle{
     margin-bottom: 0%;
 }
-.cardtitle p{
-    margin-left: 2%;
-    margin-right: 2%;
-    font-size: 40px;
-    margin-top: 0%;
-}
+
 
 #sub{
     color:     #FA8072;
-    font-size: 25px;
+    font-size: 20px;
     margin: 0%;
+    margin-left: 2%;
+    font-family: Abel;
+    padding-top: 0%;
 }
 
-.titlecard{
-    margin-left: 2%;
+.titlecard1{
+    font-family: 'amiko', sans-serif;
+
 }
+
+.titlecard2{
+    margin-left: 2%;
+    font-family: 'Poppins', sans-serif;
+}
+
+
 
 .cardtext{
     margin-left: 2%;
 }
 
 .contentcard{
-    font-size: 25px;
+    font-size: 20px;
+    font-family: Abel;
+    margin-left: 2%;
 }
 .link2{
     text-decoration: none;
     font-family: 'Poppins';
     color: gray;
+}
+
+/** FAQ **/
+
+.regroup-faq{
+    margin-top: 3%;
+}
+
+.regroup-faq h2{
+    margin-left: 5%;
+}
+
+.faq-button{
+    width: 100%;
+    border: none;
+    margin-top: 1%;
+
+    font-size: 20px;
+    background-color: white;
+    
+}
+
+.faq-button p{
+    font-size: 20px;
+    color: #646363;
+    font-family: Abel;
+    text-align: left;
+}
+
+.desc-faq p{
+    color: #beb9b9;
 }
 
 /** NEWS **/
@@ -338,7 +502,43 @@ link {
     justify-content: space-evenly;
     align-items: center;
 }
+/** SIGN**/
 
+.img-sign{
+    background-image: url("../public/img/image\ 42.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 500px;
+    text-align: center;
+}
+
+.img-sign h1{
+    color: white;
+    font-size: 120px;
+    padding-top: 10%;
+
+}
+
+.form-sign{
+    height: 400px;
+    background-color: white;
+    background-image: url("../public/img/Logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    text-align: center;
+    
+}
+
+.form-sign legend{
+    font-weight: bold;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+.form-space{
+    margin-bottom: 1%;
+}
 /** FOOTER **/
 
 .footer {
@@ -400,4 +600,132 @@ link {
 #you{
     border-radius: 100%;
     margin-left: 5%;
+}
+
+/** DROP-DOWN EDITS **/
+
+.dropdown-menu {
+    right: 0;
+    left: auto !important;
+}
+
+
+/** Footer **/
+
+
+.text-right-icons{
+    float: right !important;
+}
+
+.login-field {
+    text-align-last: start;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items:baseline;
+}
+
+.login-field .field-title {
+    width: 25%;
+}
+
+.login-field .field-control {
+    width: 75%
+}
+
+/** Login Dropdown **/
+
+.login-dropdown {
+    padding-top: 5%;
+}
+
+/* Overriding Bootstrap Focus Border Color */
+.form-control {
+    border: solid 2px #82ffe1 !important;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgb(130 255 255 / 40%) !important;
+}
+
+.account-button {
+    font-family: 'Abel', sans-serif !important;
+    font-weight: 400 !important;
+    margin-right: 1%;
+    color: #646363 !important;
+    text-decoration: underline transparent;
+    transition: text-decoration 0.5s;
+}
+
+.account-button:hover {
+    text-decoration: underline solid #646363;
+    transition: text-decoration 0.75;
+}
+
+#login-button {
+    background-color: #000 !important;
+    color: #fff !important;
+    transition: 0.75;
+}
+
+#login-button:hover {
+    background-color: #82ffe1 !important;
+    color: #3B4040 !important;
+    transition: 0.5s;
+}
+
+#hello-user{
+    text-align-last:right;
+    font-size: 1.5rem;
+}
+
+.account-preview-buttons {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cog {
+    transform: rotate(0deg);
+    transition: 1s;
+}
+
+#cog:hover {
+    transform: rotate(135deg);
+    transition: 1s;
+}
+
+#cog-holder:hover #cog {
+    transform: rotate(135deg);
+    transition: 1s;
+}
+
+.account-preview-data-inline {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.account-preview-data-inline .title {
+    width: 30%;
+    font-size: 1.25rem;
+    text-align-last: left;
+}
+
+.account-preview-data-inline .reservation, .account-preview-data-inline .points {
+    text-align-last: left;
+    width: 70%;
+    font-size: 1.15;
+}
+
+.account-preview-data-inline.points {
+    margin-top: 0.5rem;
+}
+
+.account-preview-data-inline .points {
+    font-family: 'Abel', sans-serif;
+    font-weight: 400;
+    color: #646363;
 }

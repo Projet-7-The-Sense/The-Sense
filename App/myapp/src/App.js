@@ -4,14 +4,14 @@ import News from './pages/News';
 import Experiences from './pages/Experiences';
 import Equipments from './pages/Equipments';
 import AboutUs from './pages/AboutUs';
-import Login from './pages/Login';
+import Account from './pages/Account';
+import { useState, useMemo } from 'react';
+import { UserContext } from './contexts/UserContext';
 import {
   BrowserRouter as Router,
   Route,
   Switch
 } from "react-router-dom";
-import { useState, useMemo } from 'react';
-import { UserContext } from './component/UserContext';
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -27,7 +27,7 @@ const App = () => {
           <Route exact path="/experiences"> {<Experiences />} </Route>
           <Route exact path="/equipements"> {<Equipments />} </Route>
           <Route exact path="/a-propos-de-nous"> {<AboutUs />} </Route>
-          <Route exact path="/connexion"> {<Login />} </Route>
+          <Route exact path="/mon-compte"> {<Account />} </Route>
         </UserContext.Provider>
       </Switch>
     </Router>

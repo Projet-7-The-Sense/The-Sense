@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/esm/Container";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import { BsArrowRightShort } from 'react-icons/bs';
+import {AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+
 
 
 const CardRoom = (props) => {
@@ -13,14 +15,27 @@ const CardRoom = (props) => {
             <Row>
             <Col xs={{ span: 12, offset: 0 }} md={{ span: 10, offset: 1 }} lg={{ span: 12, offset: 0 }}>
                 <Card className="bg-dark text-white">
-                    <Card.Img src="img/image 2.svg" alt="Card image" />
+                    <Card.Img src={props.image} alt="Card image" />
                     <Card.ImgOverlay>
-                        <Card.Title>Card title</Card.Title>
-                        <Card.Text>
-                        This is a wider card with supporting text below as a natural lead-in
-                        to additional content. This content is a little bit longer.
-                        </Card.Text>
-                        <Card.Text>Last updated 3 mins ago</Card.Text>
+                        <Row>
+                            <Col lg={{span:1 , offset:11}} xs={{span:1 , offset:10}}>
+                                <img src="./img/Vector.svg"></img>
+                            </Col>
+                        </Row>
+                        <div className="icon">
+                            <Row >
+                                <Col lg={{span:1 , offset:10}} xs={{span:2 , offset:8}} className="back-icon">
+                                    <img src="./img/timer.png"></img>
+                                    <p>{props.timer}</p>
+                                </Col>
+                                <Col lg={{span:1 , offset:0}} xs={{span:2 , offset:0}} className="back-icon" >
+                                    <img src="./img/Icone.svg"></img>
+                                    <p>{props.player}</p>
+                                </Col>
+                            </Row>
+                        </div>
+
+                        
                     </Card.ImgOverlay>
                 </Card>
             </Col>
@@ -28,25 +43,24 @@ const CardRoom = (props) => {
         </Container>
         <Container  >
             <Row >
-            <Col xs={{ span: 10, offset: 1 }} md={{ span: 8, offset: 2 }} lg={{ span: 10, offset: 1 }}  >
+            <Col xs={{ span: 10, offset: 1 }} md={{ span: 10, offset: 1 }} lg={{ span: 10, offset: 1 }}  >
                 <Card style={{ width: '100%' }} >
                     <Card.Body  className="cardtextc">
                         <div className="cardtitle">
-                            <h2>The conjuring expérience &#124;</h2>
+                            <h2 className="titlecard1">{props.slogan} &#124;</h2>
                 
-                            <h2 className="titlecard poppins-thin"> Dark Room</h2>
+                            <h2 className="titlecard2"> {props.title}</h2>
                         </div>
-                        <p id="sub" >Card Subtitle</p>
+                        <p id="sub" >{props.age}</p>
                         <Card.Text className="contentcard">
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                            {props.content}
                         </Card.Text>
                         <Row>
                             <Col xs={{ span: 12, offset: 0 }} md={{ span: 6, offset: 3 }} lg={{ span: 4, offset: 5 }}>
-                                <Card.Link href="#" ><img src="img/Bouton.svg"></img></Card.Link>
+                                <Card.Link href="#" ><img src="./img/BoutonRes.svg"></img></Card.Link>
                             </Col>
                             <Col  xs={{ span: 0, offset: 0 }} md={{ span: 5, offset: 4 }} lg={{ span: 3, offset: 0 }}>
-                                <Card.Link href="#" className="link2">Decouvrez la dark room <BsArrowRightShort/></Card.Link>
+                                <Card.Link href="#" className="link2">Decouvrez la {props.title} <BsArrowRightShort/></Card.Link>
                             </Col>
                         </Row>
                     </Card.Body>
