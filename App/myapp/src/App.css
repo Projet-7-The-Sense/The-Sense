@@ -504,6 +504,48 @@ link {
     justify-content: space-evenly;
     align-items: center;
 }
+
+/** EQUIPMENT **/
+
+
+.img-equipment{
+    background-image: url("../public/img/image\ 120.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 700px;
+    text-align: center;
+}
+
+.img-equipment h1{
+    color: white;
+    font-size: 120px;
+    padding-top: 18%;
+
+}
+
+.button-equipment{
+    padding-top: 10%;
+    padding-bottom: 7%;
+
+    text-align: center;
+}
+
+.header-equip{
+    background-image: url("../public/img/bryce.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+}
+
+.discover-equipement{
+    height: 7.5vh;
+    width: auto;
+}
+
+.discover-equipement:hover{
+    cursor: pointer;
+}
+
 /** SIGN**/
 
 .img-sign{
@@ -541,6 +583,58 @@ link {
 .form-space{
     margin-bottom: 1%;
 }
+
+/** ADMIN**/
+
+.img-admin{
+    background-image: url("../public/img/image\ 120.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 500px;
+    text-align: center;
+}
+
+.img-admin h1{
+    color: white;
+    font-size: 120px;
+    padding-top: 15%;
+
+}
+
+
+/** Maintaining **/
+
+.maintaining{
+    background-image: url("../public/img/Logo.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.maintaining-head{
+    text-align: center;
+    padding-top: 2%;
+}
+
+.maintaining-head h1{
+    padding-top: 10%;
+    font-size: 70px;
+    font-family: Amiko;
+}
+
+.maintaining-text{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    align-items: center;
+}
+
+.maintaining-text img{
+    border-radius:  10px ;
+}
+
+.maintaining-text h2{
+    padding-top: 20%;
+    font-family: Abel;
+}
+
 /** FOOTER **/
 
 /** DROP-DOWN EDITS **/
