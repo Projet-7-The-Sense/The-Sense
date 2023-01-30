@@ -31,6 +31,7 @@ function Home() {
             title="Dark room"
             content="Wow c'est trop bien"
             slogan="The conjuring experience"
+            age="Interdit aux moins de 18 ans"
         />
 
         <CriticCarousel/>
