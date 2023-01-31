@@ -1,5 +1,6 @@
 /** GENERAL **/
 
+
 .example {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -15,8 +16,10 @@
     box-sizing: border-box;
 }
 
+
+
 h1, h2, h3, h4, h5, h6, .amiko-bold {
-    font-family: 'Amiko', sans-serif !important;
+    font-family: 'Amiko', sans-serif;
     font-weight: 700 !important;
     color: #3B4040;
 }
@@ -50,20 +53,6 @@ link {
 /** NAVBAR **/
 
 
-/* BESOIN DE LE RETIRER ? */
-
-.navbar{
-    width: 100%;
-    margin: 0 !important;
-    position: fixed !important;
-    background-color:rgba(255, 255, 255,0.5);
-    backdrop-filter: blur(5px);
-}
-
-.home_logo_holder{
-    height: 100%;
-}
-
 .navbar-links{
     text-align-last: end;
 }
@@ -84,7 +73,7 @@ link {
     white-space: nowrap;
 }
 
-.navbar a:not(.account-button):hover{
+.navbar a:hover{
     color: black;
     text-decoration: underline;
     transform: scale(1.05);
@@ -118,7 +107,7 @@ link {
 .dropdown-menu.show{
 
     width: 400%;
-    padding-left: 40%;
+    padding-left: 50%;
     padding-right: 40%;
 }
 .form-group{
@@ -164,32 +153,23 @@ link {
   width: 99vw;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 40%;
 }
 
 .discover-button{
     height: 7.5vh;
     width: auto;
-    margin-left: 40vw;
-    margin-top: 80vh;
+    margin-left: 43vw;
 }
 
+.discover-button a{
+    margin-top: 5%;
+}
 .discover-button:hover{
     cursor: pointer;
 }
 
 /** BANNER **/
-
-.banner-wrapper.the-sense {
-    --banner-bg-color: rgb(77, 155, 142);
-    --banner-text-color: #fff;
-    --banner-secondary-color: rgb(94, 148, 195);
-}
-
-.banner-wrapper.dark-room {
-    --banner-bg-color: rgb(92, 14, 14);
-    --banner-text-color: #fff;
-    --banner-secondary-color: rgb(38, 10, 10);
-}
 
 .banner-wrapper {
     width: 100%;
@@ -251,6 +231,7 @@ link {
 .banner-flex .banner-bubble .image-wrapper img {
     object-fit: fill;
     height: 100%;
+    
 }
 
 .banner-flex .banner-content {
@@ -265,6 +246,7 @@ link {
 .banner-content .banner-title img {
     width: 125px;
     padding-bottom: 12px;
+    margin-left: 2%;
 }
 
 .banner-content .banner-description {
@@ -299,6 +281,11 @@ link {
     }
 }
 
+
+.vecteur-holder{
+    overflow: hidden;
+}
+
 .vecteur1 {
     width: 100%;
     margin-top: -22%;
@@ -316,7 +303,8 @@ link {
 
 @media only screen and (min-width: 600px) {
     .icon{
-        margin-top: 33%;   
+        margin-top: 33%; 
+          
         
     }
   }
@@ -333,6 +321,10 @@ link {
     .icon img{
         width: 50%;
     }
+
+    .link2{
+        padding-top: 2%;
+    }
 }
 
 .back-icon{
@@ -346,6 +338,9 @@ link {
     margin-top: 2%;
 }
 
+.cardblock img{
+    border-radius: 0px 0 10px 10px;
+}
 .cardtextc{
     background-color: lightgrey;  ;
     border-color: lightgrey;
@@ -400,6 +395,10 @@ link {
     color: gray;
 }
 
+.link2:hover{
+    color: black;
+}
+
 /** FAQ **/
 
 .regroup-faq{
@@ -437,7 +436,7 @@ link {
     width: 100%;
     height: 510px;
     background-image: url("../public/img/image\ 137.svg");
-    background-size: contain;
+    background-size: 100%;
     background-repeat: no-repeat;
     display: inline-flex;
     justify-content:space-around;
@@ -504,6 +503,163 @@ link {
     justify-content: space-evenly;
     align-items: center;
 }
+
+/** EQUIPMENT **/
+
+
+
+.button-equipment{
+    padding-top: 10%;
+    padding-bottom: 7%;
+
+    text-align: center;
+}
+
+.discover-equipement{
+    height: 7.5vh;
+    width: auto;
+}
+
+.discover-equipement:hover{
+    cursor: pointer;
+}
+
+.equipments-contents{
+    background-image: url("../public/img/TRUC\ COOL.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media only screen and (min-width: 600px) {
+    
+    .img-equipment{
+        background-image: url("../public/img/image\ 120.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 700px;
+        text-align: center;
+    }
+    
+    .img-equipment h1{
+        color: white;
+        font-size: 120px;
+        padding-top: 18%;
+    
+    }
+    .header-equip{
+        background-image: url("../public/img/bryce.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: bottom;
+    }
+    
+    .title-equip p{
+        font-size: 25px;
+    }
+    
+
+    
+    .img-d{
+        border-radius: 0px 15px 15px 0px;
+    }
+    
+    .img-l{
+        border-radius: 15px 0px 0px 15px;
+    }
+    
+    
+    .image-desc-equip p{
+        padding-left: 5%;
+        font-size: 25px;
+    }
+  }
+
+
+@media only screen and (max-width: 600px) {
+    .img-equipment{
+        background-image: url("../public/img/image\ 120.svg");
+        background-size: 300%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 400px;
+        text-align: center;
+    }
+    
+    .img-equipment h1{
+        color: white;
+        font-size: 40px;
+        padding-top: 70%;
+    
+    }
+
+    .header-equip{
+        background-image: url("../public/img/bryce.svg");
+        background-repeat: no-repeat;
+        background-size: 150%;
+        background-position: bottom;
+    }
+    
+
+    
+    .equipments-contents{
+        text-align: center;
+    }  
+    .title-equip p{
+        font-size: 15px;
+    }
+    
+
+    
+    .img-d{
+        border-radius: 15px;
+    }
+    
+    .img-l{
+        border-radius: 15px;
+    }
+     
+    .image-desc-equip p{
+
+        font-family: Abel;
+        font-size: 15px;
+    }
+}
+
+.title-equip{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 3%;
+    padding-top: 3%;
+}
+
+
+.title-equip p{
+    font-family: Abel;
+}
+
+.image-desc-equip{
+    margin-bottom: 2%;
+}
+
+.image-desc-equip img{
+    width: 100%;
+    margin-bottom: 1%;
+    
+}
+
+
+
+.image-desc-equip h2{
+    padding-left: 5%;
+    padding-top: 10%;
+    font-size: 25px;
+}
+
+.image-desc-equip p{
+    font-family: Abel;
+}
+
+
 /** SIGN**/
 
 .img-sign{
@@ -541,6 +697,67 @@ link {
 .form-space{
     margin-bottom: 1%;
 }
+
+/** ADMIN**/
+
+.img-admin{
+    background-image: url("../public/img/image\ 120.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 500px;
+    text-align: center;
+}
+
+.img-admin h1{
+    color: white;
+    font-size: 120px;
+    padding-top: 15%;
+
+}
+
+.new-content-admin{
+    text-align: center;
+    margin-top: 2%;
+}
+
+
+
+
+
+
+/** Maintaining **/
+
+.maintaining{
+    background-image: url("../public/img/Logo.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.maintaining-head{
+    text-align: center;
+    padding-top: 2%;
+}
+
+.maintaining-head h1{
+    padding-top: 10%;
+    font-size: 70px;
+    font-family: Amiko;
+}
+
+.maintaining-text{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    align-items: center;
+}
+
+.maintaining-text img{
+    border-radius:  10px ;
+}
+
+.maintaining-text h2{
+    padding-top: 20%;
+    font-family: Abel;
+}
+
 /** FOOTER **/
 
 /** DROP-DOWN EDITS **/
@@ -548,6 +765,22 @@ link {
 .dropdown-menu {
     right: 0;
     left: auto !important;
+}
+
+.login-field {
+    text-align-last: start;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items:baseline;
+}
+
+.login-field .field-title {
+    width: 25%;
+}
+
+.login-field .field-control {
+    width: 75%
 }
 
 /** Login Dropdown **/
@@ -645,4 +878,44 @@ link {
     font-family: 'Abel', sans-serif;
     font-weight: 400;
     color: #646363;
+}
+
+/** Account Details **/
+.account-details-wrapper {
+
+}
+
+.account-details-wrapper .container-reduced {
+    margin: 0% 15%;
+}
+
+.account-details-wrapper .container-reduced .inline-flex-box {
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#newsletter-button {
+    font-family: 'Amiko', sans-serif;
+    font-weight: 700;
+}
+
+.MuiCheckbox-root, #newsletter-button .MuiCheckbox-root {
+    color: #0d6efd !important;
+    transition: 0.5s;
+}
+
+.MuiCheckbox-root:hover, #newsletter-button:hover .MuiCheckbox-root {
+    color: white !important;
+    transition: 0.5s;
+}
+
+.Mui-checked, #newsletter-button .Mui-checked {
+    color: #0d6efd !important;
+    transition: 0.5s;
+}
+
+.Mui-checked:hover, #newsletter-button:hover .Mui-checked {
+    color: white !important;
+    transition: 0.5s;
 }

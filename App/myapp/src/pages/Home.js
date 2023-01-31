@@ -4,6 +4,7 @@ import HomeParallax from '../component/HomeParallax.js';
 import Banner from '../component/Banner.js';
 import Card from '../component/Card.js';
 import Regroup from '../component/Regroup-faq.js';
+import CriticCarousel from '../component/CriticCarousel.js';
 
 function Home() {
     return <div>
@@ -30,10 +31,11 @@ function Home() {
             title="Dark room"
             content="Wow c'est trop bien"
             slogan="The conjuring experience"
+            age="Interdit aux moins de 18 ans"
         />
 
+        <CriticCarousel/>
         <Regroup/>
-
         <Footer />
     </div>
 }

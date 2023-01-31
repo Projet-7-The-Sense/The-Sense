@@ -8,15 +8,33 @@ import Footer from "../component/Footer";
 import { useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
 import { useForm } from "react-hook-form";
-import { insertUser } from "../api/user";
+import { createUser, alreadyExist } from "../api/user";
+import AccountField from "../component/AccountField";
+import NewsletterButton from "../component/NewsletterButton";
+import DeleteAccountButton from "../component/DeleteAccountButton";
 
 const Account = () => {
-    const { user, userSet } = useContext(UserContext);
+    const { user, setUser } = useContext(UserContext);
     const { register, handleSubmit } = useForm();
 
     const onSubmit = (data) => {
-        const insertedUser = insertUser(data.id, data.password, data.firstname, data.lastname, data.phone_number, data.age, data.reduction_points);
-        // Request the id of the created user to login instantly
+        // Check if there is already an existing account under this email-adress
+        const existFetched = alreadyExist(data.id);
+        existFetched
+            .then(result => {
+                if (result) {
+                    console.log("There is already an existing account under the following adress email: " + data.id);
+                    return;
+                }
+                const userFetched = createUser(data.id, data.password, data.firstname, data.lastname, data.phone_number, data.age, data.subscribeNewsletter);
+                userFetched
+                    .then(newUser => setUser(newUser))
+                    .catch(err => console.error("Encountered an error while trying to connect you to your newly created account!"));
+                console.log("New account created!");
+            }) 
+            .catch(err => {
+                console.error("There was an error fetching if there is already an existing account under the following email: " + data.id)
+            });
     }
 
     return <>
@@ -67,7 +85,7 @@ const Account = () => {
                             <label htmlFor="email">Adress e-mail</label>
                         </Col>
                         <Col lg="1">
-                            <input {...register('email')}
+                            <input {...register('id')}
                             type="text"
                             className="form-input"
                             id="email"
@@ -117,107 +135,19 @@ const Account = () => {
                 </form>
             </div>
         ) : (
-            <>
-            </>
+            <div className="account-details-wrapper">
+                <div className="container-reduced">
+                    <AccountField title="Adresse e-mail" type="email" value={user.id}/>
+                    <AccountField title="Mot de passe" type="password" value={"X".repeat(user.password.length)}/>
+                    Réservation
+                    <NewsletterButton />
+                    <DeleteAccountButton />
+                </div>
+            </div>
         ) }
 
         <Footer />
     </>
-
-    return (<>
-    
-    <div className="form-sign">
-        <form>
-            <fieldset>
-            <legend>Créer un compte</legend>
-            <div className="form-space">
-                <Row>
-                <Col lg={{ span: 2, offset: 4 }}>
-                    <label htmlFor="name">Nom et prénom</label>
-                </Col>
-                <Col lg="1">
-                    <input 
-                    type="text"
-                    name="name"
-                    className="form-input"
-                    id="name"
-                    
-                    
-                    />
-                </Col>
-                </Row>
-
-            </div>
-            <div className="form-space">
-                <Row>
-                <Col lg={{ span: 2, offset: 4 }}>
-                    <label htmlFor="email">Mon adresse mail</label>
-                </Col>
-                <Col lg="1">
-                    <input
-                    type="text"
-                    name="username"
-                    className="form-input"
-                    id="email"
-                    
-                    
-                    />
-                </Col>
-                </Row>
-
-            </div>
-            <div className="form-space">
-                <Row>
-                    <Col lg={{ span: 2, offset: 4 }}>
-                    <label htmlFor="password">Mot de Passe</label>
-                    </Col>
-                    <Col lg="1">
-                        <input
-                        type="password"
-                        name="password"
-                        className="form-input"
-                        id="password"
-                        
-                        
-                    />
-                    </Col>
-                </Row>
-            </div>
-            <div className="form-space">
-                <Row>
-                    <Col lg={{ span: 2, offset: 4 }}>
-                    <label htmlFor="password">Confirmation du mot de Passe</label>
-                    </Col>
-                    <Col lg="1">
-                        <input
-                        type="password"
-                        name="cpassword"
-                        className="form-input"
-                        id="cpassword"
-                        
-                        
-                    />
-                    </Col>
-
-                </Row>
-            </div>
-            <div>
-                <div >
-                    <Button type='submit'  variant="dark">Valider</Button>
-                </div>
-                <div>
-                <FormControlLabel control={<Checkbox  />} label="Se désabonner de la newsletter" />
-                </div>
-            </div>
-
-            
-            
-            </fieldset>
-        </form>
-    </div>
-        <Footer/>
-        </>
-    );
 }
 
 export default Account;
