@@ -15,6 +15,8 @@
     box-sizing: border-box;
 }
 
+
+
 h1, h2, h3, h4, h5, h6, .amiko-bold {
     font-family: 'Amiko', sans-serif !important;
     font-weight: 700 !important;
@@ -164,15 +166,18 @@ link {
   width: 99vw;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 40%;
 }
 
 .discover-button{
     height: 7.5vh;
     width: auto;
-    margin-left: 40vw;
-    margin-top: 80vh;
+    margin-left: 43vw;
 }
 
+.discover-button a{
+    margin-top: 5%;
+}
 .discover-button:hover{
     cursor: pointer;
 }
@@ -251,6 +256,7 @@ link {
 .banner-flex .banner-bubble .image-wrapper img {
     object-fit: fill;
     height: 100%;
+    
 }
 
 .banner-flex .banner-content {
@@ -265,6 +271,7 @@ link {
 .banner-content .banner-title img {
     width: 125px;
     padding-bottom: 12px;
+    margin-left: 2%;
 }
 
 .banner-content .banner-description {
@@ -297,6 +304,11 @@ link {
         width: 100% !important;
         text-align: center;
     }
+}
+
+
+.vecteur-holder{
+    overflow: hidden;
 }
 
 .vecteur1 {
@@ -546,6 +558,11 @@ link {
     cursor: pointer;
 }
 
+.equipments-contents{
+    background-image: url("../public/img/TRUC\ COOL.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
 /** SIGN**/
 
 .img-sign{
