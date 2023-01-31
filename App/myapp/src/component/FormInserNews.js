@@ -12,15 +12,20 @@ export default function FormInsertNews(props) {
     };
     return(
         <>
-        <h2 className="inserttitle">Insert News</h2>
+        
         <div className="insertform">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <input className="insert" {...register("name")} placeholder="Name" required />
-          <input className="insert" {...register("img")} placeholder="Image link" required/>
-          <input className="insert" {...register("id")} placeholder="content" required />
+          <input className="insert" {...register("title")} placeholder="Name" required />
+          <input className="insert" {...register("image")} placeholder="Image link" required/>
+          <input className="insert" {...register("text")} placeholder="content" required />
+          <select className="insert" {...register("size")} >
+            <option>SmallCard</option>
+            <option>WideCard</option>
+          </select>
           <button  type="submit">Insert</button>
         </form>
         </div>
+        <h2 className="inserttitle">Insert News</h2>
         </>
     );
 }

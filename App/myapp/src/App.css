@@ -430,6 +430,12 @@ link {
     color: #beb9b9;
 }
 
+/** RESERVATION **/
+
+.reservation-all{
+    background-image: url("../public/img/image\ 7.svg");
+}
+
 /** NEWS **/
 
 .news-header {
@@ -455,10 +461,17 @@ link {
     background-repeat: no-repeat;
     height: 3000px;
     padding-top: 10%;
+
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .news-card-wrapper.small {
-    width: 45%;
+    width: 48%;
+    margin-left: 1%;
 }
 
 .news-card-wrapper.wide {
@@ -726,8 +739,19 @@ link {
     margin-top: 2%;
 }
 
-
-
+.news-admin{
+    border: solid;
+    border-color: #000;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.news-admin img {
+    width: 100%;
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
 
 
 
