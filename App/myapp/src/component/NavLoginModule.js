@@ -23,7 +23,7 @@ const NavLoginModule = () => {
           console.log("Failed to login");
         })
     }
-    
+
     const onLogout = () => {
       setUser(null);
       console.log("Logged out");
@@ -94,6 +94,13 @@ const NavLoginModule = () => {
 
         <div className="account-preview-buttons">
           <Button as={Link} to="/mon-compte" id="cog-holder" className="account-button" variant="white" type="redirect">Accéder aux paramètres du compte <FaCog id="cog"/></Button>
+          {user.admin?(
+             <Button as={Link} to="/admin" id="cog-holder" className="account-button" variant="white" type="redirect">Admin panel </Button>
+             ):(
+              <></>
+             )
+          }
+            
           <Button variant="danger" className="amiko-bold" onClick={onLogout}>Se déconnecter</Button>
         </div>
       </>)}

@@ -3,19 +3,25 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import Footer from "../component/Footer";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { getNews, DeleteNews } from "../api/news";
 import { getUsers } from "../api/user";
 import FormInsertNews from "../component/FormInserNews";
 import { getReservation } from "../api/reservation";
 import ExperienceUpdate, { getExperience } from "../api/experience";
+import { UserContext } from '../contexts/UserContext';
+import { Redirect } from "react-router-dom";
+import { MaintainingContext } from "../contexts/MaintainingContext";
 
-const Admin = () => {
+
+export default function Admin ()  {
     const [news, setNews] =useState([]);
     const [ deleted, setDelete ] = useState([]);
     const [users, setUser]=useState([]);
     const [reservations, setReservations]=useState([]);
+    const { user } = useContext(UserContext);
     const [experiences, setExperiences]=useState([]);
+    const {main, setMain} = useContext(MaintainingContext);
 
 
     useEffect(()=>{
@@ -36,13 +42,21 @@ const Admin = () => {
         //     .then(result => setExperiences(result))
         //     .catch(error=>console.error("Erreur avec notre API :",error.message));
     },[deleted]);
-    return <>
+    console.log(setMain);
+    // if (!user){
+    //     return <Redirect to="/"></Redirect>
+    // }
+    // return (<>
+    // { !user.admin?(
+    //     <Redirect to="/"></Redirect>
+    // ):(
+        return<>
         <CollapsibleNavbar />
         <div className="img-admin">
             <h1>Panel Admin</h1>
         </div>
+        <div className="new-content-admin">
         <Row>
-            <div className="new-content-admin">
                 <Col lg={{span:"8", offset:"2"}}>
                     <h2>News</h2>
                     <div className="news-admin">
@@ -59,27 +73,34 @@ const Admin = () => {
                         <FormInsertNews   deleted={deleted} setDelete={setDelete}/>
                     </div>
                 </Col>
-            </div>
-        </Row>
-        <Row>
-            <Col lg={{span:"4", offset:"2"}}>
-                <h2>Notre adresse email : ....</h2>
-            </Col>
-            <Col lg={{span:"4", offset:"0"}}>
-                <h2>Adresse des utilisateurs</h2>
-                {
-                            users.map((user, key) => {
-                                return <>
-                                <h3>{user.email}</h3>
-                                </>
+            </Row>
+        </div>
+        <div className="new-content-admin">
+            <Row>
+                
+                <Col lg={{span:"4", offset:"2"}}>
+                    <h2>Notre adresse email : ....</h2>
+                </Col>
+                <Col lg={{span:"4", offset:"0"}}>
+                    <h2>Adresse des utilisateurs</h2>
+                    <select className="mail-content">
+                    {
+                                
+                                users.map((user, key) => {
+                                    return <>
+                                    <option>{user.id}</option>
+                                    </>
 
-                            })
-                        }
+                                })
+                            }
 
-            </Col>
-        </Row>
-        <Row>
-            <div className="new-content-admin">
+                    </select>
+
+                </Col>
+            </Row>
+        </div>
+        <div className="new-content-admin">
+            <Row>
                 <Col lg={{span:"8", offset:"2"}}>
                     <h2>Reservations</h2>
                     <div className="reservation-admin">
@@ -93,12 +114,12 @@ const Admin = () => {
                         }
                     </div>
                 </Col>
-            </div>
-        </Row>
-        <Row>
-            <div className="new-content-admin">
+            </Row>
+        </div>
+        <div className="new-content-admin">
+            <Row>
                 <Col lg={{span:"8", offset:"2"}}>
-                    <h2>Reservations</h2>
+                    <h2>Experiences</h2>
                     <div className="reservation-admin">
                         {
                             experiences.map((experience, key) => {
@@ -111,10 +132,17 @@ const Admin = () => {
                         }
                     </div>
                 </Col>
-            </div>
-        </Row>
+            </Row>
+        </div>
+        <button 
+        onClick={()=>setMain(!true)} 
+        aria-expanded={false}
+        >Maintaining</button>
     <Footer/>
     </>
+    // )}
+    //</>)
+    
 }
+    
 
-export default Admin;
