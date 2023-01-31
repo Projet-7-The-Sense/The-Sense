@@ -32,16 +32,16 @@ export default function App() {
           <div >
             <div>
             <MDBBtn floating className='m-1' href='#!' role='button'>
-              <MDBIcon fab icon='facebook-f' />
+              <MDBIcon fab icon="fab fa-youtube" />
             </MDBBtn>
             <MDBBtn floating className='m-1' href='#!' role='button'>
-              <MDBIcon fab icon='twitter' />
+              <MDBIcon fab icon="fab fa-instagram" />
             </MDBBtn>
             <MDBBtn floating className='m-1' href='#!' role='button'>
-              <MDBIcon fab icon='google' />
+              <MDBIcon fab icon="fab fa-twitter" />
             </MDBBtn>
             <MDBBtn floating className='m-1' href='#!' role='button'>
-              <MDBIcon fab icon='instagram' />
+              <MDBIcon fab icon="fab fa-facebook-f" />
             </MDBBtn>
             </div>
           </div>
