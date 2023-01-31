@@ -33,6 +33,16 @@ app.get('/user/list', (req, res) => {
         });
 });
 
+app.get('/user/get_user_by_id', (req, res) => {
+    const dbConnect = dbo.getDb();
+
+    dbConnect
+        .collection('user')
+        .findOne({_id: {$eq: ObjectId(req.query._id)}})
+        .then(result => res.status(200).json(result))
+        .catch(err => console.error(err));
+});
+
 app.get('/user/login', (req, res) => {
     const dbConnect = dbo.getDb();
 
@@ -46,7 +56,17 @@ app.get('/user/login', (req, res) => {
         })
         .then(result => res.status(200).json(result))
         .catch(err => res.sendStatus(400, "Failed to fetch the user"));
-})
+});
+
+app.get('/user/alreadyExist', (req, res) => {
+    const dbConnect = dbo.getDb();
+
+    dbConnect
+        .collection('user')
+        .findOne({id: {$eq: req.query.id}})
+        .then(result => res.status(200).json(result!=null))
+        .catch(err => res.sendStatus(400, "Failed to fetch the user"));
+});
 
 app.post('/user/insert', jsonParser, (req, res) => {
     const dbConnect = dbo.getDb();
@@ -68,7 +88,7 @@ app.post('/user/update', jsonParser, (req, res) => {
     dbConnect
         .collection('user')
         .updateOne(
-            { id: { $eq: req.params.id } },
+            { id: { $eq: req.query.id } },
             {
                 $set: { ...req.body },
                 $currentDate: { lastModified: true }
@@ -87,7 +107,7 @@ app.delete('/user/delete', jsonParser, (req, res) => {
 
     dbConnect
         .collection('user')
-        .deleteOne( { id: { $eq: req.params.id } } )
+        .deleteOne( { id: { $eq: req.query.id } } )
         .then(result => {
             res.status(200).json(result)
         })
@@ -325,3 +345,40 @@ app.delete('/FAQ/delete', jsonParser, (req, res) => {
 });
 
 // #endregion
+
+// #experiences
+
+app.get('/experience/list', (req, res) => {
+    const dbConnect = dbo.getDb();
+
+    dbConnect
+        .collection('FAQ')
+        .find({}) // Return all
+        .toArray((err, result) => {
+            if (err) {
+                res.status(400).send("Error fetching reservations!");
+            } else {
+                res.status(200).json(result);
+            }
+        });
+});
+
+app.post('/experience/update', jsonParser, (req, res) => {
+    const dbConnect = dbo.getDb();
+
+    dbConnect
+        .collection('FAQ')
+        .updateOne(
+            { _id: { $eq: ObjectId(req.body._id) } },
+            {
+                $set: { ...req.body.updates },
+                $currentDate: { lastModified: true }
+            }
+        )
+        .then(result => {
+            res.status(200).json(result);
+        })
+        .catch(err => {
+            res.status(500).json({err: 'Could not update the news'});
+        });
+});
