@@ -61,11 +61,26 @@ export default function Admin ()  {
                     <h2>News</h2>
                     <div className="news-admin">
                         
+                        
                         {
-                            news.map((news, key) => {
+                            news.map((newste, key) => {
                                 return <>
-                                <h3>{news.title}</h3>
-                                <button className="btn" onClick={()=>DeleteNews(news).then(()=>setDelete(deleted+1))}>DeleteNews</button>
+                                <Row>
+                                    <Col lg="4">
+                                        <h3>{newste.title}</h3>
+                                    </Col>
+                                    <Col lg="4">
+                                        <img src={newste.image}></img>
+                                    </Col>
+                                    <Col lg="4">
+                                        <p>{newste.text}</p>
+                                        <p>{newste.size}</p>
+                                        <button  onClick={()=>DeleteNews(newste).then(()=>setDelete(deleted+1))}>DeleteNews</button>
+                                    </Col>
+                                </Row>
+                                
+                                
+                                
                                 </>
 
                             })
@@ -79,7 +94,7 @@ export default function Admin ()  {
             <Row>
                 
                 <Col lg={{span:"4", offset:"2"}}>
-                    <h2>Notre adresse email : ....</h2>
+                    <h2>Notre adresse email : admin@admin</h2>
                 </Col>
                 <Col lg={{span:"4", offset:"0"}}>
                     <h2>Adresse des utilisateurs</h2>
