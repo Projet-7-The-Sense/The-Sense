@@ -98,6 +98,5 @@ export const deleteUser = async (id) => {
             }
         }
     )
-    console.log(response.status);
     return response.status;
 }
