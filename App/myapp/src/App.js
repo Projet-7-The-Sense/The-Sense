@@ -5,7 +5,7 @@ import Experiences from './pages/Experiences';
 import Equipments from './pages/Equipments';
 import AboutUs from './pages/AboutUs';
 import Account from './pages/Account';
-import { useState, useMemo, useContext } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { UserContext } from './contexts/UserContext';
 import {
   BrowserRouter as Router,
@@ -14,6 +14,7 @@ import {
 } from "react-router-dom";
 import Admin from './pages/AdminPanel';
 import { Maintaining } from './pages/Maintaining';
+import { getUserById } from './api/user';
 
 const App = () => {
   const [user, setUser] = useState(null);
