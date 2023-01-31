@@ -430,6 +430,12 @@ link {
     color: #beb9b9;
 }
 
+/** RESERVATION **/
+
+.reservation-all{
+    background-image: url("../public/img/image\ 7.svg");
+}
+
 /** NEWS **/
 
 .news-header {
