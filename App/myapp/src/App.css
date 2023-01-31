@@ -1,0 +1,940 @@
+/** GENERAL **/
+
+.example {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+.example::-webkit-scrollbar {
+    display: none;
+  }
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+h1, h2, h3, h4, h5, h6, .amiko-bold {
+    font-family: 'Amiko', sans-serif !important;
+    font-weight: 700 !important;
+    color: #3B4040;
+}
+
+.amiko {
+    font-family: 'Amiko', sans-serif;
+    font-weight: 400;
+}
+
+.abel {
+    font-family: 'Abel', sans-serif;
+    font-weight: 400;
+    color: #646363;
+}
+
+link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
+.poppins-thin {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+}
+
+.container {
+    margin: 0% 10%;
+}
+
+
+/** NAVBAR **/
+
+
+/* BESOIN DE LE RETIRER ? */
+
+.navbar{
+    width: 100%;
+    margin: 0 !important;
+    position: fixed !important;
+    background-color:rgba(255, 255, 255,0.5);
+    backdrop-filter: blur(5px);
+}
+
+.home_logo_holder{
+    height: 100%;
+}
+
+.navbar-links{
+    text-align-last: end;
+}
+
+.navbar-links button{
+    border: none;
+}
+
+.navbar a{
+    color: black;
+    text-decoration: underline transparent;
+    font-size: 115%;
+    transform: scale(1);
+    transition: 0.75s;
+}
+
+.navbar a.line-text{
+    white-space: nowrap;
+}
+
+.navbar a:not(.account-button):hover{
+    color: black;
+    text-decoration: underline;
+    transform: scale(1.05);
+    transition: 0.75s;
+}
+
+.navbar button{
+    color: black;
+}
+
+.vertical-line{
+    width: 2px;
+    background: black;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 992px){
+    .div.vertical-line{
+        visibility: hidden !important;
+    }
+}
+
+.login-link{
+    font-weight: bold !important;
+}
+
+.form-profile legend{
+    margin-left: 60%;
+}
+.dropdown-menu.show{
+
+    width: 400%;
+    padding-left: 40%;
+    padding-right: 40%;
+}
+.form-group{
+    
+    margin-top: 5%;
+    font-weight: bold;
+    
+}
+
+.sign{
+    text-decoration: none;
+    font-size: 12px;
+    color: black;
+    
+    
+}
+
+.footer-connect{
+    margin-top: 5%;
+}
+
+
+.navbar{
+    width: 100%;
+    margin: 0 !important;
+    position: fixed !important;
+    background-color:rgba(255, 255, 255,0.5);
+    backdrop-filter: blur(5px);
+
+}
+
+.home-logo-holder{
+    height: 100%;
+}
+
+
+/** HomeParallax **/
+
+
+.parallax{
+  background-image: url("../public/img/Logo\ Haut\ de\ Page.png");
+  height: 100vh;
+  width: 99vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 40%;
+}
+
+.discover-button{
+    height: 7.5vh;
+    width: auto;
+    margin-left: 43vw;
+}
+
+.discover-button a{
+    margin-top: 5%;
+}
+.discover-button:hover{
+    cursor: pointer;
+}
+
+/** BANNER **/
+
+.banner-wrapper.the-sense {
+    --banner-bg-color: rgb(77, 155, 142);
+    --banner-text-color: #fff;
+    --banner-secondary-color: rgb(94, 148, 195);
+}
+
+.banner-wrapper.dark-room {
+    --banner-bg-color: rgb(92, 14, 14);
+    --banner-text-color: #fff;
+    --banner-secondary-color: rgb(38, 10, 10);
+}
+
+.banner-wrapper {
+    width: 100%;
+    height: auto;
+    padding: 30px 0%;
+    z-index: 2;
+    position: relative;
+}
+
+.banner-wrapper.the-sense {
+    background-color: #EAFFFB
+}
+
+.banner-wrapper.dark-room {
+    background-color: #000;
+    color: #fff;
+}
+
+.banner-wrapper .banner-flex {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-wrapper.the-sense .banner-flex {
+    background-color: #EAFFFB;
+}
+
+.banner-wrapper.dark-room .banner-flex {
+    background-color: #000;
+}
+
+.banner-flex .banner-bubble {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.banner-flex .banner-bubble .image-wrapper {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    border: solid 10px;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.banner-flex .banner-bubble .image-wrapper.the-sense {
+    border-color: #bbccc9;
+}
+
+.banner-flex .banner-bubble .image-wrapper.dark-room {
+    border-color: #430000;
+}
+
+.banner-flex .banner-bubble .image-wrapper img {
+    object-fit: fill;
+    height: 100%;
+    
+}
+
+.banner-flex .banner-content {
+    width: 60%;
+}
+
+.banner-content .banner-title {
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.banner-content .banner-title img {
+    width: 125px;
+    padding-bottom: 12px;
+    margin-left: 2%;
+}
+
+.banner-content .banner-description {
+    font-size: 1.2rem;
+    color: #3B4040;
+}
+
+.banner-content .banner-link {
+    text-decoration: none;
+    color: #3B4040;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
+.banner-content .banner-link div {
+    padding-right: 8px;
+}
+
+@media screen and (max-width: 992px){
+    .banner-flex{
+        flex-direction: column;
+        padding: 0px !important;
+    }
+    .banner-content{
+        width: 100% !important;
+        text-align: center;
+    }
+}
+
+
+.vecteur-holder{
+    overflow: hidden;
+}
+
+.vecteur1 {
+    width: 100%;
+    margin-top: -22%;
+}
+
+/** CARD **/
+
+
+.icon{  
+    text-align: center;
+    font-family: Abel;
+    font-size: 25px;
+    
+}
+
+@media only screen and (min-width: 600px) {
+    .icon{
+        margin-top: 33%;   
+        
+    }
+  }
+
+
+@media only screen and (max-width: 600px) {
+    .icon{
+        font-size: 10px;   
+        margin-top: 20%;
+
+        
+    }
+
+    .icon img{
+        width: 50%;
+    }
+}
+
+.back-icon{
+    background-color: rgba(255, 255, 255, 0.01);
+    padding-top: 1%;
+    backdrop-filter: blur(5px);
+    
+}
+
+.cardblock{
+    margin-top: 2%;
+}
+
+.cardtextc{
+    background-color: lightgrey;  ;
+    border-color: lightgrey;
+    border-radius: 0px 0 10px 10px;
+    
+    
+}
+.cardtitle{
+    display: flex;
+    margin-bottom: 0%;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+.desctitle{
+    margin-bottom: 0%;
+}
+
+
+#sub{
+    color:     #FA8072;
+    font-size: 20px;
+    margin: 0%;
+    margin-left: 2%;
+    font-family: Abel;
+    padding-top: 0%;
+}
+
+.titlecard1{
+    font-family: 'amiko', sans-serif;
+
+}
+
+.titlecard2{
+    margin-left: 2%;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.cardtext{
+    margin-left: 2%;
+}
+
+.contentcard{
+    font-size: 20px;
+    font-family: Abel;
+    margin-left: 2%;
+}
+.link2{
+    text-decoration: none;
+    font-family: 'Poppins';
+    color: gray;
+}
+
+/** FAQ **/
+
+.regroup-faq{
+    margin-top: 3%;
+}
+
+.regroup-faq h2{
+    margin-left: 5%;
+}
+
+.faq-button{
+    width: 100%;
+    border: none;
+    margin-top: 1%;
+
+    font-size: 20px;
+    background-color: white;
+    
+}
+
+.faq-button p{
+    font-size: 20px;
+    color: #646363;
+    font-family: Abel;
+    text-align: left;
+}
+
+.desc-faq p{
+    color: #beb9b9;
+}
+
+/** NEWS **/
+
+.news-header {
+    width: 100%;
+    height: 510px;
+    background-image: url("../public/img/image\ 137.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.news-header h1 {
+    color: #fff;
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+
+.news-content {
+    background-image: url("../public/img/news_background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 3000px;
+    padding-top: 10%;
+}
+
+.news-card-wrapper.small {
+    width: 45%;
+}
+
+.news-card-wrapper.wide {
+    width: 100%;
+}
+
+.news-card-wrapper img {
+    width: 100%;
+}
+
+.news-card-wrapper .content-wrapper {
+    background-color: lightgrey;
+    padding: 30px;
+    width: 95%;
+    height: 300px;
+    border-radius: 0px 0 10px 10px;
+    margin-left:2.5%;
+    text-align: center;
+    text-justify:distribute;
+    margin-bottom: 50px;
+}
+
+.news-card-wrapper .content-wrapper .news-title {
+    text-transform: uppercase;
+
+}
+
+.news-card-wrapper.wide .content-wrapper .news-title {
+    margin-bottom: 20px;
+}
+
+.news-card-wrapper.small .content-wrapper .news-title {
+    margin-bottom: 5px;
+}
+
+.news-card-wrapper .content-wrapper .news-paragraph {
+    font-size: 1.3rem;
+}
+
+.small-news-holder {
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/** EQUIPMENT **/
+
+
+
+.button-equipment{
+    padding-top: 10%;
+    padding-bottom: 7%;
+
+    text-align: center;
+}
+
+.discover-equipement{
+    height: 7.5vh;
+    width: auto;
+}
+
+.discover-equipement:hover{
+    cursor: pointer;
+}
+
+.equipments-contents{
+    background-image: url("../public/img/TRUC\ COOL.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media only screen and (min-width: 600px) {
+    
+    .img-equipment{
+        background-image: url("../public/img/image\ 120.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 700px;
+        text-align: center;
+    }
+    
+    .img-equipment h1{
+        color: white;
+        font-size: 120px;
+        padding-top: 18%;
+    
+    }
+    .header-equip{
+        background-image: url("../public/img/bryce.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: bottom;
+    }
+    
+    .title-equip p{
+        font-size: 25px;
+    }
+    
+
+    
+    .img-d{
+        border-radius: 0px 15px 15px 0px;
+    }
+    
+    .img-l{
+        border-radius: 15px 0px 0px 15px;
+    }
+    
+    
+    .image-desc-equip p{
+        padding-left: 5%;
+        font-size: 25px;
+    }
+  }
+
+
+@media only screen and (max-width: 600px) {
+    .img-equipment{
+        background-image: url("../public/img/image\ 120.svg");
+        background-size: 300%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 400px;
+        text-align: center;
+    }
+    
+    .img-equipment h1{
+        color: white;
+        font-size: 40px;
+        padding-top: 70%;
+    
+    }
+
+    .header-equip{
+        background-image: url("../public/img/bryce.svg");
+        background-repeat: no-repeat;
+        background-size: 150%;
+        background-position: bottom;
+    }
+    
+
+    
+    .equipments-contents{
+        text-align: center;
+    }  
+    .title-equip p{
+        font-size: 15px;
+    }
+    
+
+    
+    .img-d{
+        border-radius: 15px;
+    }
+    
+    .img-l{
+        border-radius: 15px;
+    }
+     
+    .image-desc-equip p{
+
+        font-family: Abel;
+        font-size: 15px;
+    }
+}
+
+.title-equip{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 3%;
+    padding-top: 3%;
+}
+
+
+.title-equip p{
+    font-family: Abel;
+}
+
+.image-desc-equip{
+    margin-bottom: 2%;
+}
+
+.image-desc-equip img{
+    width: 100%;
+    margin-bottom: 1%;
+    
+}
+
+
+
+.image-desc-equip h2{
+    padding-left: 5%;
+    padding-top: 10%;
+    font-size: 25px;
+}
+
+.image-desc-equip p{
+    font-family: Abel;
+}
+
+
+/** SIGN**/
+
+.img-sign{
+    background-image: url("../public/img/image\ 42.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 500px;
+    text-align: center;
+}
+
+.img-sign h1{
+    color: white;
+    font-size: 120px;
+    padding-top: 10%;
+
+}
+
+.form-sign{
+    height: 400px;
+    background-color: white;
+    background-image: url("../public/img/Logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    text-align: center;
+    
+}
+
+.form-sign legend{
+    font-weight: bold;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+.form-space{
+    margin-bottom: 1%;
+}
+
+/** ADMIN**/
+
+.img-admin{
+    background-image: url("../public/img/image\ 120.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 500px;
+    text-align: center;
+}
+
+.img-admin h1{
+    color: white;
+    font-size: 120px;
+    padding-top: 15%;
+
+}
+
+
+/** Maintaining **/
+
+.maintaining{
+    background-image: url("../public/img/Logo.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.maintaining-head{
+    text-align: center;
+    padding-top: 2%;
+}
+
+.maintaining-head h1{
+    padding-top: 10%;
+    font-size: 70px;
+    font-family: Amiko;
+}
+
+.maintaining-text{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    align-items: center;
+}
+
+.maintaining-text img{
+    border-radius:  10px ;
+}
+
+.maintaining-text h2{
+    padding-top: 20%;
+    font-family: Abel;
+}
+
+/** FOOTER **/
+
+/** DROP-DOWN EDITS **/
+
+.dropdown-menu {
+    right: 0;
+    left: auto !important;
+}
+
+.login-field {
+    text-align-last: start;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items:baseline;
+}
+
+.login-field .field-title {
+    width: 25%;
+}
+
+.login-field .field-control {
+    width: 75%
+}
+
+/** Login Dropdown **/
+
+.login-dropdown {
+    padding-top: 5%;
+}
+
+/* Overriding Bootstrap Focus Border Color */
+.form-control {
+    border: solid 2px #82ffe1 !important;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgb(130 255 255 / 40%) !important;
+}
+
+.account-button {
+    font-family: 'Abel', sans-serif !important;
+    font-weight: 400 !important;
+    margin-right: 1%;
+    color: #646363 !important;
+    text-decoration: underline transparent;
+    transition: text-decoration 0.5s;
+}
+
+.account-button:hover {
+    text-decoration: underline solid #646363;
+    transition: text-decoration 0.75;
+}
+
+#login-button {
+    background-color: #000 !important;
+    color: #fff !important;
+    transition: 0.75;
+}
+
+#login-button:hover {
+    background-color: #82ffe1 !important;
+    color: #3B4040 !important;
+    transition: 0.5s;
+}
+
+#hello-user{
+    text-align-last:right;
+    font-size: 1.5rem;
+}
+
+.account-preview-buttons {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cog {
+    transform: rotate(0deg);
+    transition: 1s;
+}
+
+#cog:hover {
+    transform: rotate(135deg);
+    transition: 1s;
+}
+
+#cog-holder:hover #cog {
+    transform: rotate(135deg);
+    transition: 1s;
+}
+
+.account-preview-data-inline {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.account-preview-data-inline .title {
+    width: 30%;
+    font-size: 1.25rem;
+    text-align-last: left;
+}
+
+.account-preview-data-inline .reservation, .account-preview-data-inline .points {
+    text-align-last: left;
+    width: 70%;
+    font-size: 1.15;
+}
+
+.account-preview-data-inline.points {
+    margin-top: 0.5rem;
+}
+
+.account-preview-data-inline .points {
+    font-family: 'Abel', sans-serif;
+    font-weight: 400;
+    color: #646363;
+}
+
+/** Account Details **/
+.account-details-wrapper {
+    
+}
+
+.account-details-wrapper .container-reduced {
+    margin: 0% 25%;
+}
+
+.account-details-wrapper .container-reduced .inline-flex-box {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.inline-flex-box #
+
+#newsletter-button {
+    font-family: 'Amiko', sans-serif;
+    font-weight: 700;
+}
+
+.MuiCheckbox-root, #newsletter-button .MuiCheckbox-root {
+    color: #0d6efd !important;
+    transition: 0.5s;
+}
+
+.MuiCheckbox-root:hover, #newsletter-button:hover .MuiCheckbox-root {
+    color: white !important;
+    transition: 0.5s;
+}
+
+.Mui-checked, #newsletter-button .Mui-checked {
+    color: #0d6efd !important;
+    transition: 0.5s;
+}
+
+.Mui-checked:hover, #newsletter-button:hover .Mui-checked {
+    color: white !important;
+    transition: 0.5s;
+}
+
+.account-management-buttons-wrapper {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account-management-buttons-wrapper .account-management-button {
+    width: 45%;
+    height: 3rem;
+}
