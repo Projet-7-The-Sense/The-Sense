@@ -19,6 +19,7 @@ import { getUserById } from './api/user';
 const App = () => {
   const [user, setUser] = useState(null);
   const [main, setMain,] = useState(false);
+  const maintaining =true;
 
   useEffect(() => {
     const id_token = sessionStorage.getItem('_id-token');
@@ -52,6 +53,7 @@ const App = () => {
       </Switch>
     </Router>
   )
+  
 }
 
 export default App;

@@ -43,14 +43,14 @@ export default function Admin ()  {
         //     .catch(error=>console.error("Erreur avec notre API :",error.message));
     },[deleted]);
     console.log(setMain);
-    // if (!user){
-    //     return <Redirect to="/"></Redirect>
-    // }
-    // return (<>
-    // { !user.admin?(
-    //     <Redirect to="/"></Redirect>
-    // ):(
-        return<>
+     if (!user){
+         return <Redirect to="/"></Redirect>
+     }
+     return (<>
+     { !user.admin?(
+         <Redirect to="/"></Redirect>
+     ):(
+        <>
         <CollapsibleNavbar />
         <div className="img-admin">
             <h1>Panel Admin</h1>
@@ -140,8 +140,8 @@ export default function Admin ()  {
         >Maintaining</button>
     <Footer/>
     </>
-    // )}
-    //</>)
+    )}
+    </>)
     
 }
     
