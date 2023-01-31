@@ -180,12 +180,14 @@ link {
 }
 
 .banner-wrapper.the-sense {
-    background-color: #EAFFFB
+    background-color: #EAFFFB;
+    transition: 1.5s;
 }
 
 .banner-wrapper.dark-room {
     background-color: #000;
     color: #fff;
+    transition: 1.5s;
 }
 
 .banner-wrapper .banner-flex {
@@ -196,10 +198,12 @@ link {
 
 .banner-wrapper.the-sense .banner-flex {
     background-color: #EAFFFB;
+    transition: 1.5s;
 }
 
 .banner-wrapper.dark-room .banner-flex {
     background-color: #000;
+    transition: 1.5s;
 }
 
 .banner-flex .banner-bubble {
@@ -222,10 +226,12 @@ link {
 
 .banner-flex .banner-bubble .image-wrapper.the-sense {
     border-color: #bbccc9;
+    transition: 1.5s;
 }
 
 .banner-flex .banner-bubble .image-wrapper.dark-room {
     border-color: #430000;
+    transition: 1.5s;
 }
 
 .banner-flex .banner-bubble .image-wrapper img {
@@ -247,6 +253,7 @@ link {
     width: 125px;
     padding-bottom: 12px;
     margin-left: 2%;
+    transition: 1.5s;
 }
 
 .banner-content .banner-description {
@@ -1045,12 +1052,16 @@ footer a.btn{
 
 .experiences {
     --header-stylized-background: url("../public/img/stylized-background1.svg");
-    --body-stylized-background: url("../public/img/body-stylized-background2.svg");
+    --body-stylized-background: url("../public/img/TRUC\ COOL.svg");
+    --dark-room-logo: url("../public/img/DARK ROOM.png");
+    --bg-color: #fff;
 }
 
 .experiences.dark {
     --header-stylized-background: url("../public/img/stylized-background2.svg");
     --body-stylized-background: url("../public/img/body-stylized-background2.svg");
+    --dark-room-logo: url('../public/img/DARK ROOM (1).svg');
+    --bg-color: #131313;
 }
 
 .experiences.battle {
@@ -1069,10 +1080,16 @@ footer a.btn{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background-color: var(--bg-color);
+    transition: background-color 1.5s, background-image 1.5s
 }
 
 .experiences .exp-header .logo {
     width: 10%;
+}
+
+.experiences .exp-header .logo.dark-logo {
+    content: var(--dark-room-logo);
 }
 
 .experiences .exp-header .active {
@@ -1084,4 +1101,6 @@ footer a.btn{
     background-image: var(--body-stylized-background);
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: var(--bg-color);
+    transition: background-color 1.5s, background-image 1.5s;
 }
