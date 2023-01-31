@@ -22,7 +22,7 @@ function CollapsibleNavbar() {
               <div className='vertical-line'></div>
               <Nav.Link className='line-text' as={Link} to="/equipements">NOS ÉQUIPEMENTS</Nav.Link>
               <div className='vertical-line'></div>
-              {/*<NavLoginModule />*/}
+              <NavLoginModule />
             </Nav>
           </Navbar.Collapse>
         </div>

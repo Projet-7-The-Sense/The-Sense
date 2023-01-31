@@ -530,7 +530,7 @@ link {
     background-position: center;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 992px) {
     
     .img-equipment{
         background-image: url("../public/img/image\ 120.svg");
@@ -575,7 +575,7 @@ link {
   }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 992px) {
     .img-equipment{
         background-image: url("../public/img/image\ 120.svg");
         background-size: 300%;
@@ -603,15 +603,20 @@ link {
     
     .equipments-contents{
         text-align: center;
+        
     }  
     .title-equip p{
         font-size: 15px;
     }
     
-
+    #equip-l .row{
+        display: flex;
+        flex-direction: column-reverse;
+    }
     
     .img-d{
         border-radius: 15px;
+
     }
     
     .img-l{
@@ -622,6 +627,7 @@ link {
 
         font-family: Abel;
         font-size: 15px;
+        
     }
 }
 

@@ -19,6 +19,7 @@ import { MaintainingContext } from './contexts/MaintainingContext';
 const App = () => {
   const [user, setUser] = useState(null);
   const [main, setMain,] = useState(false);
+  const maintaining =true;
 
 
   const value = useMemo(() => ({ user, setUser }), [user, setUser],[main, setMain,], {main, setMain,} );
@@ -40,6 +41,7 @@ const App = () => {
       </Switch>
     </Router>
   )
+  
 }
 
 export default App;
