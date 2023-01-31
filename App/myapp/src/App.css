@@ -888,20 +888,21 @@ link {
 
 /** Account Details **/
 .account-details-wrapper {
-
+    
 }
 
 .account-details-wrapper .container-reduced {
-    margin: 0% 15%;
+    margin: 0% 25%;
 }
 
 .account-details-wrapper .container-reduced .inline-flex-box {
+    width: 100%;
     display: inline-flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-#newsletter-button {
+.inline-flex-box #newsletter-button {
     font-family: 'Amiko', sans-serif;
     font-weight: 700;
 }
@@ -925,3 +926,18 @@ link {
     color: white !important;
     transition: 0.5s;
 }
+
+.account-management-buttons-wrapper {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account-management-buttons-wrapper .account-management-button {
+    width: 45%;
+    height: 3rem;
+}
+
+/** EXPERIENCES / ROOMS **/
+
