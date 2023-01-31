@@ -40,11 +40,11 @@ export const alreadyExist = async (id) => {
     return exist;
 }
 
-export const createUser = async (id, password, firstname, lastname, phone_number, age, reduction_points=0, admin=false) => {
+export const createUser = async (id, password, firstname, lastname, phone_number, age, newsletter, reduction_points=0, admin=false) => {
     const response = await fetch(
         'http://localhost:4444/user/insert', {
             method: 'POST',
-            body: JSON.stringify({id, password, firstname, lastname, phone_number, age, reduction_points, admin}),
+            body: JSON.stringify({id, password, firstname, lastname, phone_number, age, newsletter, reduction_points, admin}),
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
@@ -84,6 +84,7 @@ export const updateUser = async (id, updates) => {
 }
 
 export const deleteUser = async (id) => {
+    console.log('http://localhost:4444/user/delete?id='+id);
     const response = await fetch(
         'http://localhost:4444/user/delete?id='+id, {
             method: 'DELETE',
@@ -93,5 +94,6 @@ export const deleteUser = async (id) => {
             }
         }
     )
+    console.log(response.status);
     return response.status;
 }

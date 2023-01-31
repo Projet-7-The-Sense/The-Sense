@@ -88,7 +88,7 @@ app.post('/user/update', jsonParser, (req, res) => {
     dbConnect
         .collection('user')
         .updateOne(
-            { id: { $eq: req.params.id } },
+            { id: { $eq: req.query.id } },
             {
                 $set: { ...req.body },
                 $currentDate: { lastModified: true }
@@ -107,7 +107,7 @@ app.delete('/user/delete', jsonParser, (req, res) => {
 
     dbConnect
         .collection('user')
-        .deleteOne( { id: { $eq: req.params.id } } )
+        .deleteOne( { id: { $eq: req.query.id } } )
         .then(result => {
             res.status(200).json(result)
         })

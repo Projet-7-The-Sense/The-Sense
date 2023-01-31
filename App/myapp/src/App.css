@@ -756,3 +756,43 @@ link {
     font-weight: 400;
     color: #646363;
 }
+
+/** Account Details **/
+.account-details-wrapper {
+
+}
+
+.account-details-wrapper .container-reduced {
+    margin: 0% 15%;
+}
+
+.account-details-wrapper .container-reduced .inline-flex-box {
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#newsletter-button {
+    font-family: 'Amiko', sans-serif;
+    font-weight: 700;
+}
+
+.MuiCheckbox-root, #newsletter-button .MuiCheckbox-root {
+    color: #0d6efd !important;
+    transition: 0.5s;
+}
+
+.MuiCheckbox-root:hover, #newsletter-button:hover .MuiCheckbox-root {
+    color: white !important;
+    transition: 0.5s;
+}
+
+.Mui-checked, #newsletter-button .Mui-checked {
+    color: #0d6efd !important;
+    transition: 0.5s;
+}
+
+.Mui-checked:hover, #newsletter-button:hover .Mui-checked {
+    color: white !important;
+    transition: 0.5s;
+}

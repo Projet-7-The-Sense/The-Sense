@@ -9,6 +9,9 @@ import { useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
 import { useForm } from "react-hook-form";
 import { createUser, alreadyExist } from "../api/user";
+import AccountField from "../component/AccountField";
+import NewsletterButton from "../component/NewsletterButton";
+import DeleteAccountButton from "../component/DeleteAccountButton";
 
 const Account = () => {
     const { user, setUser } = useContext(UserContext);
@@ -21,18 +24,16 @@ const Account = () => {
             .then(result => {
                 if (result) {
                     console.log("There is already an existing account under the following adress email: " + data.id);
-                } else {
-                    const userFetched = createUser(data.id, data.password, data.firstname, data.lastname, data.phone_number, data.age);
-                    userFetched
-                        .then(newUser => setUser(newUser))
-                        .catch(err => console.error("Encountered an error while trying to connect you to your newly created account!"));
-
-                    console.log("New account created!");
+                    return;
                 }
+                const userFetched = createUser(data.id, data.password, data.firstname, data.lastname, data.phone_number, data.age, data.subscribeNewsletter);
+                userFetched
+                    .then(newUser => setUser(newUser))
+                    .catch(err => console.error("Encountered an error while trying to connect you to your newly created account!"));
+                console.log("New account created!");
             }) 
             .catch(err => {
                 console.error("There was an error fetching if there is already an existing account under the following email: " + data.id)
-                return;
             });
     }
 
@@ -134,9 +135,15 @@ const Account = () => {
                 </form>
             </div>
         ) : (
-            <>
-            <h1>{user.firstname} {user.lastname}</h1>
-            </>
+            <div className="account-details-wrapper">
+                <div className="container-reduced">
+                    <AccountField title="Adresse e-mail" type="email" value={user.id}/>
+                    <AccountField title="Mot de passe" type="password" value={"X".repeat(user.password.length)}/>
+                    Réservation
+                    <NewsletterButton />
+                    <DeleteAccountButton />
+                </div>
+            </div>
         ) }
 
         <Footer />
