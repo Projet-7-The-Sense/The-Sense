@@ -431,6 +431,12 @@ link {
     color: #beb9b9;
 }
 
+/** RESERVATION **/
+
+.reservation-all{
+    background-image: url("../public/img/image\ 7.svg");
+}
+
 /** NEWS **/
 
 .news-header {
@@ -456,10 +462,17 @@ link {
     background-repeat: no-repeat;
     height: 3000px;
     padding-top: 10%;
+
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .news-card-wrapper.small {
-    width: 45%;
+    width: 48%;
+    margin-left: 1%;
 }
 
 .news-card-wrapper.wide {
@@ -531,7 +544,7 @@ link {
     background-position: center;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 992px) {
     
     .img-equipment{
         background-image: url("../public/img/image\ 120.svg");
@@ -576,7 +589,7 @@ link {
   }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 992px) {
     .img-equipment{
         background-image: url("../public/img/image\ 120.svg");
         background-size: 300%;
@@ -604,15 +617,20 @@ link {
     
     .equipments-contents{
         text-align: center;
+        
     }  
     .title-equip p{
         font-size: 15px;
     }
     
-
+    #equip-l .row{
+        display: flex;
+        flex-direction: column-reverse;
+    }
     
     .img-d{
         border-radius: 15px;
+
     }
     
     .img-l{
@@ -623,6 +641,7 @@ link {
 
         font-family: Abel;
         font-size: 15px;
+        
     }
 }
 
@@ -721,8 +740,19 @@ link {
     margin-top: 2%;
 }
 
-
-
+.news-admin{
+    border: solid;
+    border-color: #000;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.news-admin img {
+    width: 100%;
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
 
 
 
@@ -960,20 +990,21 @@ footer a.btn{
 
 /** Account Details **/
 .account-details-wrapper {
-
+    
 }
 
 .account-details-wrapper .container-reduced {
-    margin: 0% 15%;
+    margin: 0% 25%;
 }
 
 .account-details-wrapper .container-reduced .inline-flex-box {
+    width: 100%;
     display: inline-flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-#newsletter-button {
+.inline-flex-box #newsletter-button {
     font-family: 'Amiko', sans-serif;
     font-weight: 700;
 }
@@ -996,4 +1027,61 @@ footer a.btn{
 .Mui-checked:hover, #newsletter-button:hover .Mui-checked {
     color: white !important;
     transition: 0.5s;
+}
+
+.account-management-buttons-wrapper {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account-management-buttons-wrapper .account-management-button {
+    width: 45%;
+    height: 3rem;
+}
+
+/** EXPERIENCES / ROOMS **/
+
+.experiences {
+    --header-stylized-background: url("../public/img/stylized-background1.svg");
+    --body-stylized-background: url("../public/img/body-stylized-background2.svg");
+}
+
+.experiences.dark {
+    --header-stylized-background: url("../public/img/stylized-background2.svg");
+    --body-stylized-background: url("../public/img/body-stylized-background2.svg");
+}
+
+.experiences.battle {
+    --header-stylized-background: url("../public/img/stylized-background1.svg");
+}
+
+.experiences.creative {
+    --header-stylized-background: url("../public/img/stylized-background3.svg");
+}
+
+.experiences .exp-header {
+    height: 1200px;
+    background-image: var(--header-stylized-background);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.experiences .exp-header .logo {
+    width: 10%;
+}
+
+.experiences .exp-header .active {
+    width: 100%;
+}
+
+.experiences .wrapper {
+    height: 1200px;
+    background-image: var(--body-stylized-background);
+    background-repeat: no-repeat;
+    background-size: cover;
 }

@@ -9,9 +9,10 @@ const DeleteAccountButton = () => {
     const handleClick = () => {
         deleteUser(user.id);
         setUser(null);
+        sessionStorage.removeItem('_id-token');
     }
 
-    return <Button id="delete-account-button" variant="outline-danger" onClick={handleClick}>
+    return <Button className="account-management-button" id="delete-account-button" variant="outline-danger" onClick={handleClick}>
         Supprimer le compte
     </Button>
 }

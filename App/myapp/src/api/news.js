@@ -27,11 +27,11 @@ export const DeleteNews = async (news) => {
 };
 
 
-export const InsertNews = async (id, password, firstname, lastname, phone_number, age, reduction_points=0) => {
+export const InsertNews = async (data) => {
     const response = await fetch(
         'http://localhost:4444/news/insert', {
             method: 'POST',
-            body: JSON.stringify({id, password, firstname, lastname, phone_number, age, reduction_points}),
+            body: JSON.stringify(data),
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'

@@ -34,7 +34,7 @@ function ImageDescL(props){
 
 function ImageDescD(props){
     return <>
-        <div className="image-desc-equip">
+        <div className="image-desc-equip" id="equip-l">
         <Row>
                 <Col lg={{span:"5",offset:"1"}} xs={{span:"10" ,offset:"1"}}>
                     <h2>{props.title}</h2>

@@ -16,7 +16,7 @@ const NewsletterButton = () => {
         updateUser(user.id, {newsletter: checked});
     }, [checked])
 
-    return <Button id="newsletter-button" variant="outline-primary" onClick={handleUpdate}>
+    return <Button className="account-management-button" id="newsletter-button" variant="outline-primary" onClick={handleUpdate}>
         <Checkbox color="primary" onChange={handleUpdate} checked={checked}/> <span>Newsletter</span>
     </Button>
 }
