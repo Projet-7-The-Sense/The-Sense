@@ -1,77 +1,52 @@
-import {
-  MDBFooter,
+import React from 'react';
+import {   MDBFooter,
   MDBContainer,
   MDBCol,
   MDBRow,
   MDBIcon,
-  MDBBtn
-} from 'mdb-react-ui-kit';
+  MDBBtn } from 'mdb-react-ui-kit';
+  import { Link } from 'react-router-dom'
 
-export default function Footer() {
+export default function App() {
   return (
-    <MDBFooter className='bg-light text-center text-white'>
-      <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-        © THE SENS, SAS. Tous droits réservés
-        <section className='text-right-icons mb-4'>
-          <MDBBtn
-            floating
-            className='m-1'
-            style={{ backgroundColor: '#3b5998' }}
-            href='#!'
-            role='button'
-          >
-            <MDBIcon fab icon='facebook-f' />
-          </MDBBtn>
-          <MDBBtn
-            floating
-            className='m-1'
-            style={{ backgroundColor: '#55acee' }}
-            href='#!'
-            role='button'
-          >
-            <MDBIcon fab icon='twitter' />
-          </MDBBtn>
-          <MDBBtn
-            floating
-            className='m-1'
-            style={{ backgroundColor: '#dd4b39' }}
-            href='#!'
-            role='button'
-          >
-            <MDBIcon fab icon='google' />
-          </MDBBtn>
-          <MDBBtn
-            floating
-            className='m-1'
-            style={{ backgroundColor: '#ac2bac' }}
-            href='#!'
-            role='button'
-          >
-            <MDBIcon fab icon='instagram' />
-          </MDBBtn>
-
-          <MDBBtn
-            floating
-            className='m-1'
-            style={{ backgroundColor: '#0082ca' }}
-            href='#!'
-            role='button'
-          >
-            <MDBIcon fab icon='linkedin-in' />
-          </MDBBtn>
-
-          <MDBBtn
-            floating
-            className='m-1'
-            style={{ backgroundColor: '#333333' }}
-            href='#!'
-            role='button'
-          >
-            <MDBIcon fab icon='github' />
-          </MDBBtn>
-        </section>
+    <MDBFooter>
+      <div className='text-center p-3 footer-display'>
+        <div className='footer-left-part'>
+          <Link as={Link} to='#'>Nous Contacter</Link>
+          <Link as={Link} to='#'>Réservation</Link>
+          <Link as={Link} to='#faq'>FAQ</Link>
+        </div>
+        <div className='footer-mid-part'>
+        © THE SENSE, SAS. Tous droits réservés
+        </div>
+        <div className='footer-right-part'>
+          <div>
+            <div className='split'>
+                <Link as={Link} to='#modalites'>Modalités</Link>
+                <div className='vertical-line'></div>
+                <Link as={Link} to='#politique-de-confidentialite'>Politique de confidentialité</Link>
+                <div className='vertical-line hidden-on-large'></div>
+                <Link className='hidden-on-large' as={Link} to='#contact'>Contact</Link>
+              </div>
+          </div>
+          <div >
+            <div>
+            <MDBBtn floating className='m-1' href='#!' role='button'>
+              <MDBIcon fab icon='facebook-f' />
+            </MDBBtn>
+            <MDBBtn floating className='m-1' href='#!' role='button'>
+              <MDBIcon fab icon='twitter' />
+            </MDBBtn>
+            <MDBBtn floating className='m-1' href='#!' role='button'>
+              <MDBIcon fab icon='google' />
+            </MDBBtn>
+            <MDBBtn floating className='m-1' href='#!' role='button'>
+              <MDBIcon fab icon='instagram' />
+            </MDBBtn>
+            </div>
+          </div>
+        </div>
       </div>
     </MDBFooter>
   );
-};
-
+}

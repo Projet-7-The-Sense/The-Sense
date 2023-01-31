@@ -403,6 +403,7 @@ link {
 
 .regroup-faq{
     margin-top: 3%;
+    width: 100%;
 }
 
 .regroup-faq h2{
@@ -759,6 +760,83 @@ link {
 }
 
 /** FOOTER **/
+
+footer{
+    background-color: #3B4040;
+    color: #82ffe1 ;
+}
+
+footer .text-center{
+    justify-content: space-between;
+}
+
+footer .footer-right-part{
+    display: flex;
+    flex-direction: row;
+}
+
+footer .split{
+    display: flex;
+    flex-direction: row;
+}
+
+footer .vertical-line{
+    background-color: #82ffe1;
+}
+
+.footer-display{
+    display: flex;
+    flex-direction: row;
+}
+
+footer .split .hidden-on-large{
+    display: none;
+}
+
+@media screen and (max-width: 992px){
+    .footer-display{
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    .footer-left-part{
+        display: none;
+    }
+    footer .footer-right-part{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    footer .split{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    footer .split {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    footer .split .hidden-on-large{
+        display: unset;
+    }
+}
+
+footer a{
+    background-color: #3B4040 !important;
+    color: #82ffe1 !important;
+    text-decoration: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 80%;
+}
+
+footer a.btn{
+    background-color: #82ffe1 !important;
+    color: #3B4040 !important;
+    border: none;
+}
+
+
 
 /** DROP-DOWN EDITS **/
 

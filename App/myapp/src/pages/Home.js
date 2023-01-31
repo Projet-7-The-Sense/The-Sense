@@ -36,7 +36,9 @@ function Home() {
 
         <CriticCarousel/>
         <Regroup/>
-        <Footer />
+        <div id='faq'>
+            <Footer />
+        </div>
     </div>
 }
 
