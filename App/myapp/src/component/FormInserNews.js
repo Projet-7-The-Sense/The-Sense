@@ -18,7 +18,7 @@ export default function FormInsertNews(props) {
           <input className="insert" {...register("name")} placeholder="Name" required />
           <input className="insert" {...register("img")} placeholder="Image link" required/>
           <input className="insert" {...register("id")} placeholder="content" required />
-          <button className="btn" type="submit"></button>
+          <button  type="submit">Insert</button>
         </form>
         </div>
         </>

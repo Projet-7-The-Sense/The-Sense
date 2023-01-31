@@ -449,7 +449,7 @@ link {
     width: 100%;
     height: 510px;
     background-image: url("../public/img/image\ 137.svg");
-    background-size: contain;
+    background-size: 100%;
     background-repeat: no-repeat;
     display: inline-flex;
     justify-content:space-around;
@@ -727,6 +727,12 @@ link {
     padding-top: 15%;
 
 }
+
+.new-content-admin{
+    text-align: center;
+    margin-top: 2%;
+}
+
 
 
 /** Maintaining **/

@@ -1,6 +1,7 @@
 import CollapsibleNavbar from '../component/CollapsibleNavbar.js';
 import NewsWideCard from '../component/NewsWideCard';
 import NewsSmallCard from '../component/NewsSmallCard';
+import Footer from '../component/Footer.js';
 
 const News = () => {
     return <>
@@ -37,6 +38,7 @@ const News = () => {
                 />
             </div>
         </div>
+        <Footer/>
     </>
 }
 

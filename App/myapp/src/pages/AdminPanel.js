@@ -55,8 +55,8 @@ export default function Admin ()  {
         <div className="img-admin">
             <h1>Panel Admin</h1>
         </div>
+        <div className="new-content-admin">
         <Row>
-            <div className="new-content-admin">
                 <Col lg={{span:"8", offset:"2"}}>
                     <h2>News</h2>
                     <div className="news-admin">
@@ -73,29 +73,34 @@ export default function Admin ()  {
                         <FormInsertNews   deleted={deleted} setDelete={setDelete}/>
                     </div>
                 </Col>
-            </div>
-        </Row>
-        <Row>
-            <Col lg={{span:"4", offset:"2"}}>
-                <h2>Notre adresse email : ....</h2>
-            </Col>
-            <Col lg={{span:"4", offset:"0"}}>
-                <h2>Adresse des utilisateurs</h2>
+            </Row>
+        </div>
+        <div className="new-content-admin">
+            <Row>
                 
-                {
-                            
-                            users.map((user, key) => {
-                                return <>
-                                <h3>{user.id}</h3>
-                                </>
+                <Col lg={{span:"4", offset:"2"}}>
+                    <h2>Notre adresse email : ....</h2>
+                </Col>
+                <Col lg={{span:"4", offset:"0"}}>
+                    <h2>Adresse des utilisateurs</h2>
+                    <select className="mail-content">
+                    {
+                                
+                                users.map((user, key) => {
+                                    return <>
+                                    <option>{user.id}</option>
+                                    </>
 
-                            })
-                        }
+                                })
+                            }
 
-            </Col>
-        </Row>
-        <Row>
-            <div className="new-content-admin">
+                    </select>
+
+                </Col>
+            </Row>
+        </div>
+        <div className="new-content-admin">
+            <Row>
                 <Col lg={{span:"8", offset:"2"}}>
                     <h2>Reservations</h2>
                     <div className="reservation-admin">
@@ -109,12 +114,12 @@ export default function Admin ()  {
                         }
                     </div>
                 </Col>
-            </div>
-        </Row>
-        <Row>
-            <div className="new-content-admin">
+            </Row>
+        </div>
+        <div className="new-content-admin">
+            <Row>
                 <Col lg={{span:"8", offset:"2"}}>
-                    <h2>Reservations</h2>
+                    <h2>Experiences</h2>
                     <div className="reservation-admin">
                         {
                             experiences.map((experience, key) => {
@@ -127,8 +132,8 @@ export default function Admin ()  {
                         }
                     </div>
                 </Col>
-            </div>
-        </Row>
+            </Row>
+        </div>
         <button 
         onClick={()=>setMain(!true)} 
         aria-expanded={false}
