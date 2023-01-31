@@ -28,7 +28,10 @@ const Account = () => {
                 }
                 const userFetched = createUser(data.id, data.password, data.firstname, data.lastname, data.phone_number, data.age, data.subscribeNewsletter);
                 userFetched
-                    .then(newUser => setUser(newUser))
+                    .then(newUser => {
+                        setUser(newUser);
+                        sessionStorage.setItem('_id-token', newUser._id);
+                    })
                     .catch(err => console.error("Encountered an error while trying to connect you to your newly created account!"));
                 console.log("New account created!");
             }) 
@@ -82,7 +85,7 @@ const Account = () => {
                     <div className="form-space">
                         <Row>
                         <Col lg={{ span: 2, offset: 4 }}>
-                            <label htmlFor="email">Adress e-mail</label>
+                            <label htmlFor="email">Adresse e-mail</label>
                         </Col>
                         <Col lg="1">
                             <input {...register('id')}
@@ -137,11 +140,12 @@ const Account = () => {
         ) : (
             <div className="account-details-wrapper">
                 <div className="container-reduced">
-                    <AccountField title="Adresse e-mail" type="email" value={user.id}/>
-                    <AccountField title="Mot de passe" type="password" value={"X".repeat(user.password.length)}/>
-                    Réservation
-                    <NewsletterButton />
-                    <DeleteAccountButton />
+                    <AccountField title="Adresse e-mail" type="email" value={user.id} name="id"/>
+                    <AccountField title="Mot de passe" type="password" value={"X".repeat(user.password.length)} name="password"/>
+                    <div className="account-management-buttons-wrapper">
+                        <NewsletterButton />
+                        <DeleteAccountButton />
+                    </div>
                 </div>
             </div>
         ) }

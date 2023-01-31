@@ -18,6 +18,7 @@ const NavLoginModule = () => {
       userFetched
         .then(user => {
           setUser(user);
+          sessionStorage.setItem('_id-token', user._id);
         })
         .catch(err => {
           console.log("Failed to login");
@@ -26,6 +27,7 @@ const NavLoginModule = () => {
 
     const onLogout = () => {
       setUser(null);
+      sessionStorage.removeItem('_id-token');
       console.log("Logged out");
     }
 
@@ -40,7 +42,7 @@ const NavLoginModule = () => {
       "quatre",
       "cinq"
     ]
-    
+
     const formatedCoupons = (number_coupons) => {
       if (number_coupons >= 10) {
         return "Votre prochaine réservation vous est offerte!";
@@ -70,7 +72,7 @@ const NavLoginModule = () => {
         </Form.Group>
 
         <NavDropdown.Divider />
-        
+
         <Button as={Link} to="/mon-compte" className="account-button" variant="white" type="redirect">Créer un compte</Button>
         <Button variant="dark" className="amiko-bold" id="login-button" type="submit">Se connecter</Button>
       </Form>
@@ -100,7 +102,7 @@ const NavLoginModule = () => {
               <></>
              )
           }
-            
+
           <Button variant="danger" className="amiko-bold" onClick={onLogout}>Se déconnecter</Button>
         </div>
       </>)}
