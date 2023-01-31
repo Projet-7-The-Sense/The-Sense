@@ -941,3 +941,45 @@ link {
 
 /** EXPERIENCES / ROOMS **/
 
+.experiences {
+    --header-stylized-background: url("../public/img/stylized-background1.svg");
+    --body-stylized-background: url("../public/img/body-stylized-background2.svg");
+}
+
+.experiences.dark {
+    --header-stylized-background: url("../public/img/stylized-background2.svg");
+    --body-stylized-background: url("../public/img/body-stylized-background2.svg");
+}
+
+.experiences.battle {
+    --header-stylized-background: url("../public/img/stylized-background1.svg");
+}
+
+.experiences.creative {
+    --header-stylized-background: url("../public/img/stylized-background3.svg");
+}
+
+.experiences .exp-header {
+    height: 1200px;
+    background-image: var(--header-stylized-background);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.experiences .exp-header .logo {
+    width: 10%;
+}
+
+.experiences .exp-header .active {
+    width: 100%;
+}
+
+.experiences .wrapper {
+    height: 1200px;
+    background-image: var(--body-stylized-background);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
