@@ -348,6 +348,7 @@ link {
 .cardblock img{
     border-radius: 0px 0 10px 10px;
 }
+
 .cardtextc{
     background-color: lightgrey;  ;
     border-color: lightgrey;
@@ -355,16 +356,17 @@ link {
     
     
 }
+
 .cardtitle{
     display: flex;
     margin-bottom: 0%;
     margin-top: 2%;
     margin-left: 2%;
 }
+
 .desctitle{
     margin-bottom: 0%;
 }
-
 
 #sub{
     color:     #FA8072;
@@ -385,8 +387,6 @@ link {
     font-family: 'Poppins', sans-serif;
 }
 
-
-
 .cardtext{
     margin-left: 2%;
 }
@@ -396,6 +396,7 @@ link {
     font-family: Abel;
     margin-left: 2%;
 }
+
 .link2{
     text-decoration: none;
     font-family: 'Poppins';
@@ -410,12 +411,14 @@ link {
 
 .regroup-faq{
     margin-top: 3%;
+    width: 100% !important;
+}
+
+.regroup-faq .row{
     width: 100%;
 }
 
-.regroup-faq h2{
-    margin-left: 5%;
-}
+
 
 .faq-button{
     width: 100%;
