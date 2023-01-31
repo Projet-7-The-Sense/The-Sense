@@ -10,8 +10,9 @@ export const getNews = async () => {
             }
         }
     )
-    return response.status;
-}
+    const news = await response.json();
+    return news;
+};
 
 export const DeleteNews = async (news) => {
     

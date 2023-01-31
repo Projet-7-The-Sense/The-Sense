@@ -158,6 +158,7 @@ link {
     width: auto;
     margin-left: 40vw;
     margin-top: 80vh;
+    border: none;
 }
 
 .discover-button:hover{
@@ -238,6 +239,7 @@ link {
 .banner-content .banner-title img {
     width: 125px;
     padding-bottom: 12px;
+    margin-left: 5%;
 }
 
 .banner-content .banner-description {
@@ -489,7 +491,51 @@ link {
     justify-content: space-evenly;
     align-items: center;
 }
-/** SIGN**/
+
+
+/** EQUIPMENT **/
+
+
+.img-equipment{
+    background-image: url("../public/img/image\ 120.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 700px;
+    text-align: center;
+}
+
+.img-equipment h1{
+    color: white;
+    font-size: 120px;
+    padding-top: 15%;
+
+}
+
+.button-equipment{
+    padding-top: 10%;
+    padding-bottom: 7%;
+
+    text-align: center;
+}
+
+.header-equip{
+    background-image: url("../public/img/bryce.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+}
+
+.discover-equipement{
+    height: 7.5vh;
+    width: auto;
+}
+
+.discover-equipement:hover{
+    cursor: pointer;
+}
+
+
+/** SIGN **/
 
 .img-sign{
     background-image: url("../public/img/image\ 42.svg");
@@ -530,7 +576,7 @@ link {
 
 /** ADMIN**/
 
-.img-sign{
+.img-admin{
     background-image: url("../public/img/image\ 120.svg");
     background-size: 100%;
     background-repeat: no-repeat;
@@ -538,7 +584,7 @@ link {
     text-align: center;
 }
 
-.img-sign h1{
+.img-admin h1{
     color: white;
     font-size: 120px;
     padding-top: 15%;

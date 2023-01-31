@@ -12,33 +12,33 @@ import ExperienceUpdate, { getExperience } from "../api/experience";
 
 const Admin = () => {
     const [news, setNews] =useState([]);
-    const [ deleted, setDelete ] = useState(0);
-    const [users, setUser]=useState(0);
-    const [reservations, setReservations]=useState(0);
-    const [experiences, setExperiences]=useState(0);
+    const [ deleted, setDelete ] = useState([]);
+    const [users, setUser]=useState([]);
+    const [reservations, setReservations]=useState([]);
+    const [experiences, setExperiences]=useState([]);
 
 
     useEffect(()=>{
         const NewsFetched = getNews();
         NewsFetched
-          .then(result => setNews(result))
+          .then((result) => setNews(result))
           .catch(error=>console.error("Erreur avec notre API :",error.message));
         const MailUser = getUsers();
         MailUser
             .then(result => setUser(result))
             .catch(error=>console.error("Erreur avec notre API :",error.message));
-        const reservations =getReservation
-        reservations
-            .then(result => setReservations(result))
-            .catch(error=>console.error("Erreur avec notre API :",error.message));
-        const experiences =getExperience
-        experiences
-            .then(result => setExperiences(result))
-            .catch(error=>console.error("Erreur avec notre API :",error.message));
+        // const reservations =getReservation
+        // reservations
+        //     .then(result => setReservations(result))
+        //     .catch(error=>console.error("Erreur avec notre API :",error.message));
+        // const experiences =getExperience
+        // experiences
+        //     .then(result => setExperiences(result))
+        //     .catch(error=>console.error("Erreur avec notre API :",error.message));
     },[deleted]);
     return <>
         <CollapsibleNavbar />
-        <div className="img-sign">
+        <div className="img-admin">
             <h1>Panel Admin</h1>
         </div>
         <Row>
@@ -46,6 +46,7 @@ const Admin = () => {
                 <Col lg={{span:"8", offset:"2"}}>
                     <h2>News</h2>
                     <div className="news-admin">
+                        
                         {
                             news.map((news, key) => {
                                 return <>
@@ -69,7 +70,7 @@ const Admin = () => {
                 {
                             users.map((user, key) => {
                                 return <>
-                                <h3>{user.mail}</h3>
+                                <h3>{user.email}</h3>
                                 </>
 
                             })
