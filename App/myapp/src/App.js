@@ -5,7 +5,7 @@ import Experiences from './pages/Experiences';
 import Equipments from './pages/Equipments';
 import AboutUs from './pages/AboutUs';
 import Account from './pages/Account';
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useContext } from 'react';
 import { UserContext } from './contexts/UserContext';
 import {
   BrowserRouter as Router,
@@ -14,12 +14,15 @@ import {
 } from "react-router-dom";
 import Admin from './pages/AdminPanel';
 import { Maintaining } from './pages/Maintaining';
+import { MaintainingContext } from './contexts/MaintainingContext';
 
 const App = () => {
   const [user, setUser] = useState(null);
+  const [main, setMain,] = useState(false);
 
-  const value = useMemo(() => ({ user, setUser }), [user, setUser]);
 
+  const value = useMemo(() => ({ user, setUser }), [user, setUser],[main, setMain,], {main, setMain,} );
+  
   return (
     <Router>
       <Switch>

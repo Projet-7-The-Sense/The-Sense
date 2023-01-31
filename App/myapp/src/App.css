@@ -520,33 +520,12 @@ link {
 /** EQUIPMENT **/
 
 
-.img-equipment{
-    background-image: url("../public/img/image\ 120.svg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 700px;
-    text-align: center;
-}
-
-.img-equipment h1{
-    color: white;
-    font-size: 120px;
-    padding-top: 18%;
-
-}
 
 .button-equipment{
     padding-top: 10%;
     padding-bottom: 7%;
 
     text-align: center;
-}
-
-.header-equip{
-    background-image: url("../public/img/bryce.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: bottom;
 }
 
 .discover-equipement{
@@ -563,6 +542,137 @@ link {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+@media only screen and (min-width: 600px) {
+    
+    .img-equipment{
+        background-image: url("../public/img/image\ 120.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 700px;
+        text-align: center;
+    }
+    
+    .img-equipment h1{
+        color: white;
+        font-size: 120px;
+        padding-top: 18%;
+    
+    }
+    .header-equip{
+        background-image: url("../public/img/bryce.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: bottom;
+    }
+    
+    .title-equip p{
+        font-size: 25px;
+    }
+    
+
+    
+    .img-d{
+        border-radius: 0px 15px 15px 0px;
+    }
+    
+    .img-l{
+        border-radius: 15px 0px 0px 15px;
+    }
+    
+    
+    .image-desc-equip p{
+        padding-left: 5%;
+        font-size: 25px;
+    }
+  }
+
+
+@media only screen and (max-width: 600px) {
+    .img-equipment{
+        background-image: url("../public/img/image\ 120.svg");
+        background-size: 300%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 400px;
+        text-align: center;
+    }
+    
+    .img-equipment h1{
+        color: white;
+        font-size: 40px;
+        padding-top: 70%;
+    
+    }
+
+    .header-equip{
+        background-image: url("../public/img/bryce.svg");
+        background-repeat: no-repeat;
+        background-size: 150%;
+        background-position: bottom;
+    }
+    
+
+    
+    .equipments-contents{
+        text-align: center;
+    }  
+    .title-equip p{
+        font-size: 15px;
+    }
+    
+
+    
+    .img-d{
+        border-radius: 15px;
+    }
+    
+    .img-l{
+        border-radius: 15px;
+    }
+     
+    .image-desc-equip p{
+
+        font-family: Abel;
+        font-size: 15px;
+    }
+}
+
+.title-equip{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 3%;
+    padding-top: 3%;
+}
+
+
+.title-equip p{
+    font-family: Abel;
+}
+
+.image-desc-equip{
+    margin-bottom: 2%;
+}
+
+.image-desc-equip img{
+    width: 100%;
+    margin-bottom: 1%;
+    
+}
+
+
+
+.image-desc-equip h2{
+    padding-left: 5%;
+    padding-top: 10%;
+    font-size: 25px;
+}
+
+.image-desc-equip p{
+    font-family: Abel;
+}
+
+
 /** SIGN**/
 
 .img-sign{

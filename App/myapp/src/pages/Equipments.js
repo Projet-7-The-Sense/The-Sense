@@ -2,6 +2,7 @@ import Footer from '../component/Footer.js';
 import CollapsibleNavbar from '../component/CollapsibleNavbar.js';
 import Banner from '../component/Banner.js';
 import EquipmentsContent from '../component/EquipementsContent.js';
+import CriticCarousel from '../component/CriticCarousel.js';
 
 const Equipments = () => {
     return (
@@ -27,6 +28,7 @@ const Equipments = () => {
             />
         
         <EquipmentsContent/>
+        <CriticCarousel/>
         <Footer/>
         </>
     );

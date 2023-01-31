@@ -1,9 +1,11 @@
 import { Col, Row } from "react-bootstrap";
+import CollapsibleNavbar from "../component/CollapsibleNavbar";
 import NewsSmallCard from '../component/NewsSmallCard';
 
 
 export function Maintaining () {
     return <>
+    <CollapsibleNavbar/>
         <div className="maintaining">
             
             <div className="maintaining-head">

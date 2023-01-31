@@ -11,6 +11,8 @@ import { getReservation } from "../api/reservation";
 import ExperienceUpdate, { getExperience } from "../api/experience";
 import { UserContext } from '../contexts/UserContext';
 import { Redirect } from "react-router-dom";
+import { MaintainingContext } from "../contexts/MaintainingContext";
+
 
 export default function Admin ()  {
     const [news, setNews] =useState([]);
@@ -19,6 +21,7 @@ export default function Admin ()  {
     const [reservations, setReservations]=useState([]);
     const { user } = useContext(UserContext);
     const [experiences, setExperiences]=useState([]);
+    const {main, setMain} = useContext(MaintainingContext);
 
 
     useEffect(()=>{
@@ -39,14 +42,15 @@ export default function Admin ()  {
         //     .then(result => setExperiences(result))
         //     .catch(error=>console.error("Erreur avec notre API :",error.message));
     },[deleted]);
-    if (!user){
-        return <Redirect to="/"></Redirect>
-    }
-    return (<>
-    { !user.admin?(
-        <Redirect to="/"></Redirect>
-    ):(
-        <>
+    console.log(setMain);
+    // if (!user){
+    //     return <Redirect to="/"></Redirect>
+    // }
+    // return (<>
+    // { !user.admin?(
+    //     <Redirect to="/"></Redirect>
+    // ):(
+        return<>
         <CollapsibleNavbar />
         <div className="img-admin">
             <h1>Panel Admin</h1>
@@ -77,10 +81,12 @@ export default function Admin ()  {
             </Col>
             <Col lg={{span:"4", offset:"0"}}>
                 <h2>Adresse des utilisateurs</h2>
+                
                 {
+                            
                             users.map((user, key) => {
                                 return <>
-                                <h3>{user.email}</h3>
+                                <h3>{user.id}</h3>
                                 </>
 
                             })
@@ -123,9 +129,15 @@ export default function Admin ()  {
                 </Col>
             </div>
         </Row>
+        <button 
+        onClick={()=>setMain(!true)} 
+        aria-expanded={false}
+        >Maintaining</button>
     <Footer/>
     </>
-    )}
-    </>)}
+    // )}
+    //</>)
+    
+}
     
 

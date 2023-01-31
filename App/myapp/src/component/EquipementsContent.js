@@ -6,7 +6,7 @@ import Row from "react-bootstrap/esm/Row"
 
 function Title (props){
     return <>
-    <div>
+    <div className="title-equip">
         <h2>{props.title}</h2>
         <p>{props.text}</p>
     </div>
@@ -17,29 +17,35 @@ function Title (props){
 
 function ImageDescL(props){
     return <>
-        <Row>
-            <Col lg={{span:"5",offset:"1"}}>
-                <img src={props.img}></img>
-            </Col>
-            <Col lg={{span:"5"}}>
-                <h2>{props.title}</h2>
-                <p>{props.text}</p>
-            </Col>
-        </Row>
+        <div className="image-desc-equip">
+            <Row>
+                <Col lg={{span:"5",offset:"1"} } xs={{span:"10" ,offset:"1"}}>
+                    <img className="img-l" src={props.img}></img>
+                </Col>
+                <Col lg={{span:"5", offset:"0"}} xs={{span:"10" ,offset:"1"}} >
+                    <h2>{props.title}</h2>
+                    <p>{props.text}</p>
+                </Col>
+            </Row>
+        </div>
+
     </>
 }
 
 function ImageDescD(props){
     return <>
+        <div className="image-desc-equip">
         <Row>
-            <Col lg={{span:"5",offset:"1"}}>
-                <h2>{props.title}</h2>
-                <p>{props.text}</p>
-            </Col>
-            <Col lg={{span:"5"}}>
-                <img src={props.img}></img>
-            </Col>
-        </Row>
+                <Col lg={{span:"5",offset:"1"}} xs={{span:"10" ,offset:"1"}}>
+                    <h2>{props.title}</h2>
+                    <p>{props.text}</p>
+                </Col>
+                <Col lg={{span:"5",offset:"0"}} xs={{span:"10" ,offset:"1"}}>
+                    <img className="img-d" src={props.img}></img>
+                </Col>
+            </Row>
+        </div>
+
     </>
 }
 
