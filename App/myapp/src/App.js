@@ -14,12 +14,23 @@ import {
 } from "react-router-dom";
 import Admin from './pages/AdminPanel';
 import { Maintaining } from './pages/Maintaining';
-import { MaintainingContext } from './contexts/MaintainingContext';
 
 const App = () => {
   const [user, setUser] = useState(null);
   const [main, setMain,] = useState(false);
 
+  useEffect(() => {
+    const id_token = sessionStorage.getItem('_id-token');
+    if (id_token) {
+    const userFetched = getUserById(id_token);
+      userFetched
+        .then(resultUser => {
+          setUser(resultUser);
+          console.log("Logged successfully");
+        })
+        .catch(err => console.error(err));
+    }
+  }, [])
 
   const value = useMemo(() => ({ user, setUser }), [user, setUser],[main, setMain,], {main, setMain,} );
   

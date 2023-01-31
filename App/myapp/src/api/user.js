@@ -40,6 +40,21 @@ export const alreadyExist = async (id) => {
     return exist;
 }
 
+export const getUserById = async (_id) => {
+    const response = await fetch(
+        'http://localhost:4444/user/get_user_by_id?_id='+_id, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        }
+    )
+
+    const user = await response.json();
+    return user;
+}
+
 export const createUser = async (id, password, firstname, lastname, phone_number, age, newsletter, reduction_points=0, admin=false) => {
     const response = await fetch(
         'http://localhost:4444/user/insert', {
@@ -55,18 +70,7 @@ export const createUser = async (id, password, firstname, lastname, phone_number
 
     if (!data) return null;
 
-    const response2 = await fetch(
-        'http://localhost:4444/user/get_user_by_id?_id='+data.insertedId, {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        }
-    )
-    
-    const user = await response2.json();
-    return user;
+    return getUserById(data.insertedId);
 }
 
 export const updateUser = async (id, updates) => {

@@ -1,19 +1,25 @@
+import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useForm } from "react-hook-form";
+import { updateUser } from '../api/user';
+import { UserContext } from '../contexts/UserContext';
 
 const AccountField = (props) => {
+    const { user } = useContext(UserContext);
     const { register, handleSubmit } = useForm();
 
     const onSubmit = (data) => {
-        console.log(data);
+        console.log({...data})
+        updateUser(user.id, {...data});
+        console.log("updated");
     }
 
     return <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="accountField">
             <div className="inline-flex-box">
                 <Form.Label className="field-title amiko-bold">{props.title}</Form.Label>
-                <Form.Control className="field-control abel" {...register("field")} type={props.type} placeholder={props.value} />
+                <Form.Control className="field-control abel" {...register(props.name)} type={props.type} placeholder={props.value} />
                 <Button variant="primary" className="amiko-bold" id="login-button" type="submit">Modifier</Button>
             </div>
         </Form.Group>
