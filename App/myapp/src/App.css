@@ -1,6 +1,5 @@
 /** GENERAL **/
 
-
 .example {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -16,6 +15,9 @@
     box-sizing: border-box;
 }
 
+body{
+    min-height: 100vh !important;
+}
 
 
 h1, h2, h3, h4, h5, h6, .amiko-bold {
@@ -425,7 +427,6 @@ link {
     width: 100%;
     border: none;
     margin-top: 1%;
-
     font-size: 20px;
     background-color: white;
     
@@ -572,7 +573,6 @@ iframe {
     background-image: url("../public/img/news_background.svg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 3000px;
     padding-top: 10%;
 
 }
@@ -792,7 +792,7 @@ iframe {
 }
 
 
-/** SIGN**/
+/** SIGN **/
 
 .img-sign{
     background-image: url("../public/img/image\ 42.svg");
@@ -986,6 +986,10 @@ footer a.btn{
     background-color: #82ffe1 !important;
     color: #3B4040 !important;
     border: none;
+}
+
+footer button:active{
+    display: none;
 }
 
 
