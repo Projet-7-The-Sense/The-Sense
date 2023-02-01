@@ -5,13 +5,13 @@ import { clamp } from "../helpers";
 function TarifRoom(props){
     var tarif=1;
     if (props.count==5){
-        tarif=0.95;
+        tarif=0.90;
     }else if (props.count==6){
         tarif=0.90;
     }else if (props.count==7){
-        tarif=0.85;
-    }else if (props.count==8){
         tarif=0.80;
+    }else if (props.count==8){
+        tarif=0.70;
     }
     return <>
 
@@ -19,18 +19,46 @@ function TarifRoom(props){
         <div className="tarif-rooms">
             <Col lg="12">
                 <img src={props.img}></img>
-                <p>De 10 à 18h : {props.tarifj*tarif} € /PERSONNE</p>
-                <p>De 18 à 21h : {props.tarifn*tarif} € /PERSONNE</p>
+                <Row>
+                    <Col>
+                        <p>De 10 à 18h : {props.tarifj*tarif} </p>
+                    </Col>
+                    <Col>
+                        <p className="red">€ /PERSONNE</p>
+                    </Col>
+                    
+                    
+                </Row>
+                <Row>
+                    <Col>
+                        <p>De 18 à 21h : {props.tarifn*tarif} </p>
+                    </Col>
+                    <Col>
+                        <p className="red">€ /PERSONNE</p>
+                    </Col>
+                </Row>
+                
 
             </Col>
         </div>
     </Row>
     
     </>
-}
+};
+
+function TabReserv(props){
+
+};
 
 const ReservationAll = (props) => {
     const [count, setCount]= useState(4);
+    const [day, setDay]= useState(1);
+    const horTuesday=["10h20","11h50","13h20","14h50","16h20","17h50","19h20","20h50","-","-"];
+    const horWednesday=["10h20","11h50","13h20","14h50","16h20","17h50","19h20","20h50","-","-"];
+    const horThursday=["10h20","11h50","13h20","14h50","16h20","17h50","19h20","20h50","-","-"];
+    const horFriday=["10h20","11h50","13h20","14h50","16h20","17h50","19h20","20h50","22h20","23h50"];
+    const horSaturday=["10h20","11h50","13h20","14h50","16h20","17h50","19h20","20h50","22h20","23h50"];
+    const horSunday=["10h20","11h50","13h20","14h50","16h20","17h50","19h20","20h50","-","-"];
     
     useEffect(() => {
       },[count]);
@@ -86,7 +114,92 @@ const ReservationAll = (props) => {
 
                     </div>
                     <div className="tab-reservation">
-                        <p>aaaaaaaaaaaaaaaaa</p>
+                        
+                        <div className="button-tarif">
+                            <button  onClick={() => setDay(clamp(day-7,1,31))}>&lt;&lt;</button>
+                            <h2>Du {day} au {day+7} décembre</h2>
+                            <button onClick={() => setDay(clamp(day +7,1,24))}>&gt;&gt;</button>
+
+                        </div>
+                        <div className="tab">
+                            <Row>
+                                <Col lg="1">
+                                    <div className="tab-left">
+                                        <p>Mardi {day} Dec.</p>
+                                        {(horTuesday).map((hor)=>{
+                                                return <>
+                                                    <button className="button-reser">{hor}</button>
+                                                
+                                                </>
+
+                                            })}
+                                    </div>
+                                </Col>
+                                <Col lg="1">
+                                    <div className="tab-middle">
+                                        <p>Mercredi {day+1} Dec.</p>
+                                        {(horWednesday).map((hor)=>{
+                                                return <>
+                                                    <button className="button-reser">{hor}</button>
+                                                
+                                                </>
+
+                                            })}
+                                    </div>
+                                </Col>
+                                <Col lg="1">
+                                    <div className="tab-middle">
+                                        <p>Jeudi {day+2} Dec.</p>
+                                        {(horThursday).map((hor)=>{
+                                                return <>
+                                                    <button className="button-reser">{hor}</button>
+                                                
+                                                </>
+
+                                            })}
+                                    </div>
+                                </Col>
+                                <Col lg="1">
+                                    <div className="tab-middle">
+                                        <p>Vendredi {day+3} Dec.</p>
+                                        {(horFriday).map((hor)=>{
+                                                return <>
+                                                    <button className="button-reser">{hor}</button>
+                                                
+                                                </>
+
+                                            })}
+                                    </div>
+                                </Col>
+                                <Col lg="1">
+                                    <div className="tab-middle">
+                                        <p>Samedi {day+4} Dec.</p>
+                                        {(horSaturday).map((hor)=>{
+                                                return <>
+                                                    <button className="button-reser">{hor}</button>
+                                                
+                                                </>
+
+                                            })}
+                                    </div>
+                                </Col>
+                                <Col lg="1">
+                                    <div className="tab-middle">
+                                        <p>Dimanche {day+5} Dec.</p>
+                                        {(horSunday).map((hor)=>{
+                                                return <>
+                                                    <button className="button-reser">{hor}</button>
+                                                
+                                                </>
+
+                                            })}
+                                    </div>
+                                </Col>
+
+                            </Row>
+
+                        </div>
+                        
                     </div>
                 </div>
                 

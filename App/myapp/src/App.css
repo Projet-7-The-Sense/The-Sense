@@ -527,24 +527,79 @@ link {
     display: flex;
     flex-wrap: wrap;
     margin-top: 5%;
+    margin-bottom: 5%;
+    
 }
 
 
 
 .tarif-rooms{
-    margin-left: 35px;
+    margin-left: 60px;
     text-align: center;
+    
 }
 
 .tarif-rooms img{
     margin-bottom: 5%;
 }
 
-.tab-reservation{
-    background-color: #000;
+.tarif-rooms p{
+    font-size: 17px;
+    padding: 0%;
+    margin: 0%;
+}
+.tarif-rooms .red{
+    color: red;
+    margin: 0%;
+    padding: 0%;
 }
 
+.tab-reservation{
+    padding-top: 7%;
 
+    background-color: #000;
+    color: white;
+    padding-bottom: 5%;
+}
+
+.tab{
+    padding-left: 32%;
+}
+
+.tab-reservation h2{
+    padding-top: 5%;
+    margin: 5%;
+    color: white;
+}
+.tab-left{
+    text-align: center;
+    display: grid;
+    font-family: Abel;
+    font-size: 20px;
+}
+
+.tab-middle{
+    text-align: center;
+    display: grid;
+    font-family: Abel;
+    font-size: 20px;
+}
+
+.button-reser{
+    background-color: #000;
+    border-radius: 10px;
+    color: white;
+    margin: 10%;
+    width: 100%;
+}
+
+.button-reser:hover{
+    border-color: white;
+}
+.tab-reservation p{
+    color: red;
+    font-size: 18px;
+}
 
 /** ABOUT **/
 .container-a {
