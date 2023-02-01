@@ -6,6 +6,10 @@ import { RoomContext } from '../contexts/RoomContext.js';
 import { Button } from 'react-bootstrap';
 import roomsData from '../RoomsData.json';
 
+const changeRoomTheme = () => {
+    
+}
+
 const Experiences = () => {
     const {room, setRoom} = useContext(RoomContext);
 
@@ -13,8 +17,8 @@ const Experiences = () => {
         <CollapsibleNavbar/>
         <div className="exp-header">
             <img src="/img/DARK ROOM.png" className="logo dark-logo" alt="dark-room the-sense vr" onClick={console.log("clicked")} />
-            <img src="/img/BATTLE ROOM.svg" className="logo" alt="battle-room the-sense vr" onClick={console.log("clicked")} />
-            <img src="/img/CREATIVE ROOM.svg" className="logo" alt="dark-room the-sense vr" onClick={console.log("clicked")} />
+            <img src="/img/BATTLE ROOM.svg" className="logo battle-logo" alt="battle-room the-sense vr" onClick={console.log("clicked")} />
+            <img src="/img/CREATIVE ROOM.svg" className="logo creative-logo" alt="dark-room the-sense vr" onClick={console.log("clicked")} />
         </div>
         <img src="/img/LIGHT ROOM.svg" className="active" alt="light-room the-sense vr" onClick={console.log("clicked")} />
         <Button onClick={() => {

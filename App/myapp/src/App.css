@@ -1061,20 +1061,30 @@ footer a:active{
     --header-stylized-background: url("../public/img/stylized-background1.svg");
     --body-stylized-background: url("../public/img/TRUC\ COOL.svg");
     --dark-room-logo: url("../public/img/DARK ROOM.png");
-    --battle-room-logo: url("../public/img/Battle_room_phone_logo.png");
+    --battle-room-logo: url("../public/img/BATTLE ROOM.svg");
     --creative-room-logo: url("../public/img/CREATIVE ROOM.svg");
     --bg-color: #fff;
+    --animation-duration: 1s;
 }
 
 .experiences.dark {
     --header-stylized-background: url("../public/img/stylized-background2.svg");
     --body-stylized-background: url("../public/img/body-stylized-background2.svg");
     --dark-room-logo: url('../public/img/DARK ROOM (1).svg');
-    --battle-room-logo: url("../public/img/Battle_room_phone_dark.png");
-    --creative-room-logo: url("../public/img/CREATIVE ROOM.svg");
+    --battle-room-logo: url("../public/img/BATTLE ROOM white.svg");
+    --creative-room-logo: url("../public/img/CREATIVE.png");
     --bg-color: #131313;
 }
 
+@media screen and (max-width: 992px){
+    .experiences{
+        --battle-room-logo: url("../public/img/Battle_room_phone_logo.png");
+    }
+    .experiences.dark {   
+        --battle-room-logo: url("../public/img/battle_room_phone_dark.png");
+    }
+
+}
 .experiences.battle {
     --header-stylized-background: url("../public/img/stylized-background1.svg");
 }
@@ -1092,7 +1102,7 @@ footer a:active{
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--bg-color);
-    transition: background-color 1.5s, background-image 1.5s
+    transition: background-color var(--animation-duration), background-image var(--animation-duration);
 }
 
 .experiences .exp-header .logo {
@@ -1101,6 +1111,14 @@ footer a:active{
 
 .experiences .exp-header .logo.dark-logo {
     content: var(--dark-room-logo);
+}
+
+.experiences .exp-header .logo.battle-logo {
+    content: var(--battle-room-logo);
+}
+
+.experiences .exp-header .logo.creative-logo {
+    content: var(--creative-room-logo);
 }
 
 .experiences .exp-header .active {
@@ -1113,5 +1131,5 @@ footer a:active{
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--bg-color);
-    transition: background-color 1.5s, background-image 1.5s;
+    transition: background-color var(--animation-duration), background-image var(--animation-duration);
 }
