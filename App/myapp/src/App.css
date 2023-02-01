@@ -465,7 +465,7 @@ link {
 
 }
 
-.container{
+.news-content .container{
     display: flex;
     flex-wrap: wrap;
 }
