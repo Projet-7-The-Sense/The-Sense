@@ -29,7 +29,7 @@ export default function App() {
                 <Link className='hidden-on-large' as={Link} to='#contact'>Contact</Link>
             </div>
             <div>
-            <MDBBtn floating as={Link} to='' role='button' tag='a'>
+            <MDBBtn floating={true} as={Link} to='' tag='a'>
               <FaYoutube />
             </MDBBtn>
             <MDBBtn floating as={Link} to='' role='button' tag='a'>

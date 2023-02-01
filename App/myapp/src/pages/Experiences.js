@@ -5,11 +5,7 @@ import { useContext } from 'react';
 import { RoomContext } from '../contexts/RoomContext.js';
 import { Button } from 'react-bootstrap';
 import roomsData from '../RoomsData.json';
-
-
-const changeRoomTheme = () => {
-    
-}
+import Card from '../component/Card.js';
 
 const Experiences = () => {
     const {room, setRoom} = useContext(RoomContext);
@@ -17,11 +13,11 @@ const Experiences = () => {
     return <section className={"experiences "+room.theme}>
         <CollapsibleNavbar/>
         <div className="exp-header">
-            <img src="/img/DARK ROOM.png" className="logo dark-logo" alt="dark-room the-sense vr" onClick={console.log("clicked")} />
-            <img src="/img/BATTLE ROOM.svg" className="logo battle-logo" alt="battle-room the-sense vr" onClick={console.log("clicked")} />
-            <img src="/img/CREATIVE ROOM.svg" className="logo creative-logo" alt="dark-room the-sense vr" onClick={console.log("clicked")} />
+            <img src="/img/DARK ROOM.png" className="logo dark-logo" alt="dark-room the-sense vr" onClick={() => setRoom(roomsData.dark)} />
+            <img src="/img/BATTLE ROOM.svg" className="logo battle-logo" alt="battle-room the-sense vr" onClick={() => setRoom(roomsData.battle)} />
+            <img src="/img/CREATIVE ROOM.svg" className="logo creative-logo" alt="dark-room the-sense vr" onClick={() => setRoom(roomsData.creative)} />
         </div>
-        <img src="/img/LIGHT ROOM.svg" className="active" alt="light-room the-sense vr" onClick={console.log("clicked")} />
+        <img src="/img/LIGHT ROOM.svg" className="active" alt="light-room the-sense vr" onClick={() => setRoom(roomsData.light)} />
         <Button onClick={() => {
             setRoom("default-theme" == room.theme ? roomsData.dark : roomsData.light);
         }} >Change context</Button>
@@ -35,10 +31,37 @@ const Experiences = () => {
             bryceHidden={room.banner.bryceHidden}
         />
         <div className="wrapper">
-            
+            <div className="container">
+                <h1>{room.h1}</h1>
+                {room.theme=='creative' &&
+                    <h2>{room.h2}</h2>
+                }
+                <div className="cards-wrapper">
+                    <Card
+                        image="img/image 2.svg" 
+                        player="2-6-8"   
+                        timer="40 MIN"
+                        title="Dark room"
+                        content="Wow c'est trop bien"
+                        slogan="The conjuring experience"
+                        age="Interdit aux moins de 18 ans"
+                    />
+                    <Card
+                        image="img/image 2.svg" 
+                        player="2-6-8"   
+                        timer="40 MIN"
+                        title="Dark room"
+                        content="Wow c'est trop bien"
+                        slogan="The conjuring experience"
+                        age="Interdit aux moins de 18 ans"
+                    />
+                </div>
+            </div>
         </div>
         <Footer/>
     </section>
 }
+
+
 
 export default Experiences;
