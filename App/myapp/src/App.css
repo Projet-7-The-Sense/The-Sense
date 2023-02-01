@@ -1,6 +1,5 @@
 /** GENERAL **/
 
-
 .example {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -16,11 +15,15 @@
     box-sizing: border-box;
 }
 
+body{
+    min-height: 100vh !important;
+}
 
 
 h1, h2, h3, h4, h5, h6, .amiko-bold {
     font-family: 'Amiko', sans-serif;
-    font-weight: 700 !important;
+    font-weight: 700 ;
+
     color: #3B4040;
 }
 
@@ -443,7 +446,6 @@ link {
     width: 100%;
     border: none;
     margin-top: 1%;
-
     font-size: 20px;
     background-color: white;
     
@@ -464,9 +466,87 @@ link {
 
 .reservation-all{
     background-image: url("../public/img/image\ 7.svg");
+    color: white;
+    text-align: center;
+    margin-top: 5%;
 }
 
-/** Account **/
+.reservation-all .img-reserver{
+    margin-top: 5%;
+}
+
+.reservation-all h3{
+    font-family: Poppins;
+    font-weight: 100;
+    color: white;
+    font-size: 50px;
+}
+
+.reservation-all h4{
+    font-family: Poppins;
+    font-weight: 200;
+    color: white;
+    font-size: 40px;
+}
+
+.reservation-all p{
+    font-family: Poppins;
+    font-weight: 150;
+    color: white;
+    font-size: 20px;
+}
+.reservation-all .p1{
+    font-size: 15px;
+}
+
+.button-tarif{
+    display: inline-flex;
+}
+
+.button-tarif button{
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: white;
+
+}
+
+.button-tarif .button{
+
+    margin-left: -50%;
+}
+
+.button-tarif p{
+    font-size: 30px;
+    margin: 50%;
+
+}
+
+.tarif-room{
+    text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+
+
+
+.tarif-rooms{
+    margin-left: 35px;
+    text-align: center;
+}
+
+.tarif-rooms img{
+    margin-bottom: 5%;
+}
+
+.tab-reservation{
+    background-color: #000;
+}
+
+
+
+/** ABOUT **/
 .container-a {
     margin: 0% 10%;
 }
@@ -512,7 +592,6 @@ iframe {
     background-image: url("../public/img/news_background.svg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 3000px;
     padding-top: 10%;
 
 }
@@ -732,7 +811,7 @@ iframe {
 }
 
 
-/** SIGN**/
+/** SIGN **/
 
 .img-sign{
     background-image: url("../public/img/image\ 42.svg");
@@ -852,9 +931,18 @@ footer .text-center{
     justify-content: space-between;
 }
 
+footer .footer-left-part{
+    align-self: center;
+}
+
+footer .footer-mid-part{
+    align-self: center;
+}
+
 footer .footer-right-part{
     display: flex;
     flex-direction: row;
+    align-self: center;
 }
 
 footer .split{
@@ -919,10 +1007,10 @@ footer a.btn{
     border: none;
 }
 
-footer a:active{
-    transform: none;
-    transition: none;
+footer button:active{
+    display: none;
 }
+
 
 /** DROP-DOWN EDITS **/
 
