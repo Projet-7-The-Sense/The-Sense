@@ -1092,7 +1092,7 @@ footer a:active{
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--bg-color);
-    transition: background-color 1.5s, background-image 1.5s
+    transition: background-color 1s, background-image 1s
 }
 
 .experiences .exp-header .logo {
