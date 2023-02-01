@@ -476,6 +476,7 @@ link {
     margin-top: 5%;
 }
 
+
 .reservation-all .img-reserver{
     margin-top: 5%;
 }
@@ -1041,11 +1042,7 @@ footer .split .hidden-on-large{
         display: flex;
         flex-direction: row;
         justify-content: center;
-    }
-    footer .split {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        padding-top: 10px;
     }
     footer .split .hidden-on-large{
         display: unset;

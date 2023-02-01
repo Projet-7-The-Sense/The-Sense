@@ -66,7 +66,7 @@ const ReservationAll = (props) => {
     return <>
     
         <Row>
-            <Col lg={{span:"10", offset:"1"}}>
+            <Col lg={{span:"12"}}>
                 <div className="reservation-all">
                     <div className="header-reservation">
                         <img className="img-reserver" src="/img/RESERVER.png"></img>
