@@ -818,6 +818,7 @@ footer .footer-right-part{
 footer .split{
     display: flex;
     flex-direction: row;
+    align-self: center;
 }
 
 footer .vertical-line{
@@ -876,7 +877,10 @@ footer a.btn{
     border: none;
 }
 
-
+footer a:active{
+    transform: none;
+    transition: none;
+}
 
 /** DROP-DOWN EDITS **/
 
