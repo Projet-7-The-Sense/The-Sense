@@ -52,6 +52,11 @@ link {
     margin: 0% 10%;
 }
 
+/** Navigation**/
+
+#banner{
+    scroll-margin-top: 81px;
+}
 
 /** NAVBAR **/
 
