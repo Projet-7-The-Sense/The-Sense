@@ -445,9 +445,12 @@ link {
 
 .reservation-all{
     background-image: url("../public/img/image\ 7.svg");
+    color: white;
 }
 
-/** Account **/
+
+
+/** ABOUT **/
 .container-a {
     margin: 0% 10%;
 }
