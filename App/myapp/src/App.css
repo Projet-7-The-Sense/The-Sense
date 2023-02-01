@@ -1057,6 +1057,8 @@ footer a.btn{
     --header-stylized-background: url("../public/img/stylized-background1.svg");
     --body-stylized-background: url("../public/img/TRUC\ COOL.svg");
     --dark-room-logo: url("../public/img/DARK ROOM.png");
+    --battle-room-logo: url("../public/img/");
+    --creative-room-logo: url("../public/img/");
     --bg-color: #fff;
 }
 
