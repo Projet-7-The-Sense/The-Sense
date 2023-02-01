@@ -35,11 +35,11 @@ function Home() {
             age="Interdit aux moins de 18 ans"
         />
         <ReservationAll/>
-        <CriticCarousel/>
-        <Regroup/>
+        
         <div id='faq'>
-            <Footer />
+            <Regroup/>
         </div>
+        <Footer />
     </div>
 }
 

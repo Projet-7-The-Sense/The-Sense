@@ -3,34 +3,65 @@ import CollapsibleNavbar from '../component/CollapsibleNavbar.js';
 import Banner from '../component/Banner.js';
 import { useContext } from 'react';
 import { RoomContext } from '../contexts/RoomContext.js';
+import { Button } from 'react-bootstrap';
+import roomsData from '../RoomsData.json';
+import Card from '../component/Card.js';
 
 const Experiences = () => {
     const {room, setRoom} = useContext(RoomContext);
 
-    setRoom('dark');
-
-    return <section className={"experiences "+room}>
+    return <section className={"experiences "+room.theme}>
         <CollapsibleNavbar/>
         <div className="exp-header">
-            <img src="/img/DARK ROOM.png" className="logo" alt="dark-room the-sense vr" onClick={console.log("clicked")} />
-            <img src="/img/BATTLE ROOM.svg" className="logo" alt="battle-room the-sense vr" onClick={console.log("clicked")} />
-            <img src="/img/CREATIVE ROOM.svg" className="logo" alt="dark-room the-sense vr" onClick={console.log("clicked")} />
+            <img src="/img/DARK ROOM.png" className="logo dark-logo" alt="dark-room the-sense vr" onClick={() => setRoom(roomsData.dark)} />
+            <img src="/img/BATTLE ROOM.svg" className="logo battle-logo" alt="battle-room the-sense vr" onClick={() => setRoom(roomsData.battle)} />
+            <img src="/img/CREATIVE ROOM.svg" className="logo creative-logo" alt="dark-room the-sense vr" onClick={() => setRoom(roomsData.creative)} />
         </div>
-        <img src="/img/LIGHT ROOM.svg" className="active" alt="light-room the-sense vr" onClick={console.log("clicked")} />
+        <img src="/img/LIGHT ROOM.svg" className="active" alt="light-room the-sense vr" onClick={() => setRoom(roomsData.light)} />
+        <Button onClick={() => {
+            setRoom("default-theme" == room.theme ? roomsData.dark : roomsData.light);
+        }} >Change context</Button>
         <Banner
-            theme="the-sense"
-            prezImg="/img/light-room-video.png"
-            title="Qu'est ce que la "
-            logoImage="/img/LIGHT ROOM.svg"
-            description="Voyagez, explorez, décrouvrez la LIGHT ROOM! Découvre des paysages somptueux et des histories palpitantes dans cette salle accessible pour toute la famille. Ici tout n'est qu'affaire d'émotions et de beauté, explorer les décors de nos expériences et partez à l'aventure en famille ou entre amis à partir de 12 ans. Il ne vous reste plus qu'à franchir le seuil de la LIGHT ROOM et à vous laissez transporter dans un voyage époustouflant. Vos émotions n'attendent que vous !"
-            linkHidden={true}
-            bryceHidden={true}
+            theme={room.banner.theme}
+            prezImg={room.banner.prezImg}
+            title={room.banner.title}
+            logoImage={room.banner.logoImage}
+            description={room.banner.description}
+            linkHidden={room.banner.linkHidden}
+            bryceHidden={room.banner.bryceHidden}
         />
         <div className="wrapper">
-            
+            <div className="container">
+                <h1>{room.h1}</h1>
+                {room.theme=='creative' &&
+                    <h2>{room.h2}</h2>
+                }
+                <div className="cards-wrapper">
+                    <Card
+                        image="img/image 2.svg" 
+                        player="2-6-8"   
+                        timer="40 MIN"
+                        title="Dark room"
+                        content="Wow c'est trop bien"
+                        slogan="The conjuring experience"
+                        age="Interdit aux moins de 18 ans"
+                    />
+                    <Card
+                        image="img/image 2.svg" 
+                        player="2-6-8"   
+                        timer="40 MIN"
+                        title="Dark room"
+                        content="Wow c'est trop bien"
+                        slogan="The conjuring experience"
+                        age="Interdit aux moins de 18 ans"
+                    />
+                </div>
+            </div>
         </div>
         <Footer/>
     </section>
 }
+
+
 
 export default Experiences;

@@ -1,6 +1,5 @@
 /** GENERAL **/
 
-
 .example {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -16,11 +15,15 @@
     box-sizing: border-box;
 }
 
+body{
+    min-height: 100vh !important;
+}
 
 
 h1, h2, h3, h4, h5, h6, .amiko-bold {
     font-family: 'Amiko', sans-serif;
-    font-weight: 700 !important;
+    font-weight: 700 ;
+
     color: #3B4040;
 }
 
@@ -180,12 +183,23 @@ link {
 }
 
 .banner-wrapper.the-sense {
-    background-color: #EAFFFB
+    background-color: #EAFFFB;
+    transition: 1.5s;
 }
 
 .banner-wrapper.dark-room {
     background-color: #000;
     color: #fff;
+    transition: 1.5s;
+}
+
+.banner-wrapper.battle-room {
+    background-color: #CDFFF3;
+    transition: 1.5s;
+}
+
+.banner-wrapper.creative-room {
+    background-color: #F2F2F2;
 }
 
 .banner-wrapper .banner-flex {
@@ -196,10 +210,12 @@ link {
 
 .banner-wrapper.the-sense .banner-flex {
     background-color: #EAFFFB;
+    transition: 1.5s;
 }
 
 .banner-wrapper.dark-room .banner-flex {
     background-color: #000;
+    transition: 1.5s;
 }
 
 .banner-flex .banner-bubble {
@@ -222,10 +238,22 @@ link {
 
 .banner-flex .banner-bubble .image-wrapper.the-sense {
     border-color: #bbccc9;
+    transition: 1.5s;
 }
 
 .banner-flex .banner-bubble .image-wrapper.dark-room {
     border-color: #430000;
+    transition: 1.5s;
+}
+
+.banner-flex .banner-bubble .image-wrapper.battle-room {
+    border-color: #798F8B;
+    transition: 1.5s;
+}
+
+.banner-flex .banner-bubble .image-wrapper.creative-room {
+    border-color: #771261;
+    transition: 1.5s;
 }
 
 .banner-flex .banner-bubble .image-wrapper img {
@@ -247,6 +275,7 @@ link {
     width: 125px;
     padding-bottom: 12px;
     margin-left: 2%;
+    transition: 1.5s;
 }
 
 .banner-content .banner-description {
@@ -341,6 +370,7 @@ link {
 .cardblock img{
     border-radius: 0px 0 10px 10px;
 }
+
 .cardtextc{
     background-color: lightgrey;  ;
     border-color: lightgrey;
@@ -348,16 +378,17 @@ link {
     
     
 }
+
 .cardtitle{
     display: flex;
     margin-bottom: 0%;
     margin-top: 2%;
     margin-left: 2%;
 }
+
 .desctitle{
     margin-bottom: 0%;
 }
-
 
 #sub{
     color:     #FA8072;
@@ -378,8 +409,6 @@ link {
     font-family: 'Poppins', sans-serif;
 }
 
-
-
 .cardtext{
     margin-left: 2%;
 }
@@ -389,6 +418,7 @@ link {
     font-family: Abel;
     margin-left: 2%;
 }
+
 .link2{
     text-decoration: none;
     font-family: 'Poppins';
@@ -403,18 +433,19 @@ link {
 
 .regroup-faq{
     margin-top: 3%;
+    width: 100% !important;
+}
+
+.regroup-faq .row{
     width: 100%;
 }
 
-.regroup-faq h2{
-    margin-left: 5%;
-}
+
 
 .faq-button{
     width: 100%;
     border: none;
     margin-top: 1%;
-
     font-size: 20px;
     background-color: white;
     
@@ -435,8 +466,109 @@ link {
 
 .reservation-all{
     background-image: url("../public/img/image\ 7.svg");
+    color: white;
+    text-align: center;
+    margin-top: 5%;
 }
 
+.reservation-all .img-reserver{
+    margin-top: 5%;
+}
+
+.reservation-all h3{
+    font-family: Poppins;
+    font-weight: 100;
+    color: white;
+    font-size: 50px;
+}
+
+.reservation-all h4{
+    font-family: Poppins;
+    font-weight: 200;
+    color: white;
+    font-size: 40px;
+}
+
+.reservation-all p{
+    font-family: Poppins;
+    font-weight: 150;
+    color: white;
+    font-size: 20px;
+}
+.reservation-all .p1{
+    font-size: 15px;
+}
+
+.button-tarif{
+    display: inline-flex;
+}
+
+.button-tarif button{
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: white;
+
+}
+
+.button-tarif .button{
+
+    margin-left: -50%;
+}
+
+.button-tarif p{
+    font-size: 30px;
+    margin: 50%;
+
+}
+
+.tarif-room{
+    text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+
+
+
+.tarif-rooms{
+    margin-left: 35px;
+    text-align: center;
+}
+
+.tarif-rooms img{
+    margin-bottom: 5%;
+}
+
+.tab-reservation{
+    background-color: #000;
+}
+
+
+
+/** ABOUT **/
+.container-a {
+    margin: 0% 10%;
+}
+.col div{
+    color: #3B4040;
+    margin: 0% 10%;
+}
+
+.p {
+    color: #3B4040;
+}
+
+.p1 {
+    color: #3B4040;
+    font-weight: bold;
+}
+
+iframe {
+    border: 1px solid black;
+    width: 100%;
+    margin: 5% 10%;
+}
 /** NEWS **/
 
 .news-header {
@@ -460,7 +592,6 @@ link {
     background-image: url("../public/img/news_background.svg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 3000px;
     padding-top: 10%;
 
 }
@@ -680,7 +811,7 @@ link {
 }
 
 
-/** SIGN**/
+/** SIGN **/
 
 .img-sign{
     background-image: url("../public/img/image\ 42.svg");
@@ -800,14 +931,24 @@ footer .text-center{
     justify-content: space-between;
 }
 
+footer .footer-left-part{
+    align-self: center;
+}
+
+footer .footer-mid-part{
+    align-self: center;
+}
+
 footer .footer-right-part{
     display: flex;
     flex-direction: row;
+    align-self: center;
 }
 
 footer .split{
     display: flex;
     flex-direction: row;
+    align-self: center;
 }
 
 footer .vertical-line{
@@ -866,6 +1007,9 @@ footer a.btn{
     border: none;
 }
 
+footer button:active{
+    display: none;
+}
 
 
 /** DROP-DOWN EDITS **/
@@ -1045,20 +1189,44 @@ footer a.btn{
 
 .experiences {
     --header-stylized-background: url("../public/img/stylized-background1.svg");
-    --body-stylized-background: url("../public/img/body-stylized-background2.svg");
+    --body-stylized-background: url("../public/img/Light_body.svg");
+    --dark-room-logo: url("../public/img/DARK ROOM.png");
+    --battle-room-logo: url("../public/img/BATTLE ROOM.svg");
+    --creative-room-logo: url("../public/img/CREATIVE ROOM.svg");
+    --bg-color: #fff;
+    --animation-duration: 1s;
+    --text-color: #646363;
+    --title-color: #3B4040;
 }
 
 .experiences.dark {
     --header-stylized-background: url("../public/img/stylized-background2.svg");
-    --body-stylized-background: url("../public/img/body-stylized-background2.svg");
+    --body-stylized-background: url("../public/img/Dark_body.svg");
+    --dark-room-logo: url('../public/img/DARK ROOM (1).svg');
+    --battle-room-logo: url("../public/img/BATTLE ROOM white.svg");
+    --creative-room-logo: url("../public/img/CREATIVE.png");
+    --bg-color: #131313;
+    --text-color: #fff;
+    --title-color: #fff;
 }
 
+@media screen and (max-width: 992px){
+    .experiences{
+        --battle-room-logo: url("../public/img/Battle_room_phone_logo.png");
+    }
+    .experiences.dark {   
+        --battle-room-logo: url("../public/img/battle_room_phone_dark.png");
+    }
+
+}
 .experiences.battle {
     --header-stylized-background: url("../public/img/stylized-background1.svg");
+    --body-stylized-background: url("../public/img/Battle_body.svg");
 }
 
 .experiences.creative {
     --header-stylized-background: url("../public/img/stylized-background3.svg");
+    --body-stylized-background: url("../public/img/Creative_body.svg");
 }
 
 .experiences .exp-header {
@@ -1069,10 +1237,24 @@ footer a.btn{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background-color: var(--bg-color);
+    transition: background-color var(--animation-duration), background-image var(--animation-duration);
 }
 
 .experiences .exp-header .logo {
     width: 10%;
+}
+
+.experiences .exp-header .logo.dark-logo {
+    content: var(--dark-room-logo);
+}
+
+.experiences .exp-header .logo.battle-logo {
+    content: var(--battle-room-logo);
+}
+
+.experiences .exp-header .logo.creative-logo {
+    content: var(--creative-room-logo);
 }
 
 .experiences .exp-header .active {
@@ -1080,8 +1262,23 @@ footer a.btn{
 }
 
 .experiences .wrapper {
-    height: 1200px;
+    height: fit-content;
     background-image: var(--body-stylized-background);
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: var(--bg-color);
+    transition: background-color var(--animation-duration), background-image var(--animation-duration);
+}
+
+.experiences h1, .experiences .h2 {
+    color: var(--title-color);
+    transition: var(--animation-duration);
+}
+
+.wrapper h1 {
+    text-transform: uppercase;
+}
+
+.wrapper h2 {
+    font-size: 1rem;
 }

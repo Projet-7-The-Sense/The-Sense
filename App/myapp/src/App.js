@@ -16,11 +16,12 @@ import {
 import Admin from './pages/AdminPanel';
 import { Maintaining } from './pages/Maintaining';
 import { getUserById } from './api/user';
+import roomsData from './RoomsData.json';
 
 const App = () => {
   const [user, setUser] = useState(null);
   const [main, setMain,] = useState(false);
-  const [room, setRoom] = useState('light');
+  const [room, setRoom] = useState(roomsData.light);
   const maintaining =true;
 
   useEffect(() => {
