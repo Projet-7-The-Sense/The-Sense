@@ -447,6 +447,29 @@ link {
     background-image: url("../public/img/image\ 7.svg");
 }
 
+/** Account **/
+.container-a {
+    margin: 0% 10%;
+}
+.col div{
+    color: #3B4040;
+    margin: 0% 10%;
+}
+
+.p {
+    color: #3B4040;
+}
+
+.p1 {
+    color: #3B4040;
+    font-weight: bold;
+}
+
+iframe {
+    border: 1px solid black;
+    width: 100%;
+    margin: 5% 10%;
+}
 /** NEWS **/
 
 .news-header {

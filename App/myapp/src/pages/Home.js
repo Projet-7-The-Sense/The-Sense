@@ -34,8 +34,8 @@ function Home() {
             slogan="The conjuring experience"
             age="Interdit aux moins de 18 ans"
         />
-        {/*<ReservationAll/>*/}
-        <CriticCarousel/>
+        <ReservationAll/>
+        
         <div id='faq'>
             <Regroup/>
         </div>
