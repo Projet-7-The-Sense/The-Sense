@@ -1287,7 +1287,7 @@ footer button:active{
 }
 
 .experiences .exp-header {
-    height: 1200px;
+    height: 100vh;
     background-image: var(--header-stylized-background);
     background-repeat: no-repeat;
     background-size: cover;
