@@ -713,7 +713,7 @@ iframe {
 }
 
 
-/** SIGN**/
+/** SIGN **/
 
 .img-sign{
     background-image: url("../public/img/image\ 42.svg");
@@ -907,6 +907,10 @@ footer a.btn{
     background-color: #82ffe1 !important;
     color: #3B4040 !important;
     border: none;
+}
+
+footer button:active{
+    display: none;
 }
 
 

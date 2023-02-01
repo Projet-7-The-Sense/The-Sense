@@ -1,12 +1,6 @@
 import React from 'react';
-import {   MDBFooter,
-  MDBContainer,
-  MDBCol,
-  MDBRow,
-  MDBIcon,
-  MDBBtn } from 'mdb-react-ui-kit';
+import {   MDBFooter } from 'mdb-react-ui-kit';
 import { Link } from 'react-router-dom';
-import { FaYoutube, FaInstagram, FaTwitter ,FaFacebookF } from 'react-icons/fa';
 
 export default function App() {
   return (
@@ -29,18 +23,10 @@ export default function App() {
                 <Link className='hidden-on-large' as={Link} to='#contact'>Contact</Link>
             </div>
             <div>
-            <MDBBtn floating as={Link} to='' role='button' tag='a'>
-              <FaYoutube />
-            </MDBBtn>
-            <MDBBtn floating as={Link} to='' role='button' tag='a'>
-              <FaInstagram />
-            </MDBBtn>
-            <MDBBtn floating as={Link} to='' role='button' tag='a'>
-              <FaTwitter/>
-            </MDBBtn>
-            <MDBBtn floating as={Link} to='' role='button' tag='a'>
-              <FaFacebookF/>
-            </MDBBtn>
+              <a href=''><img src='../img/youtube_logo.png' alt='youtube_logo' /></a>
+              <a href=''><img src='../img/instagram_logo.png' alt='instagram_logo'/></a>
+              <a href=''><img src='../img/twitter_logo.png' alt='twitter_logo'/></a>
+              <a href=''><img src='../img/facebook_logo.png' alt='facebook_logo'/></a>
             </div>
         </div>
       </div>
