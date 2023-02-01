@@ -84,7 +84,7 @@ const NavLoginModule = () => {
 
         <div className="account-preview-data-inline">
           <div className="title amiko-bold">Réservation</div>
-          <Link><div className="reservation amiko">{formatedReservation(user)} <BsArrowRight /></div></Link>
+          <Link to="/reservation"><div className="reservation amiko">{formatedReservation(user)} <BsArrowRight /></div></Link>
         </div>
 
         <div className="account-preview-data-inline points">
