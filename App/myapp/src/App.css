@@ -830,6 +830,7 @@ iframe {
 footer{
     background-color: #3B4040;
     color: #82ffe1 ;
+    margin-top: auto;
 }
 
 footer .text-center{
