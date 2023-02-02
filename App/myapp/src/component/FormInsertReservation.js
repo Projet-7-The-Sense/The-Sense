@@ -1,33 +1,26 @@
 import { useContext, useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 
-import { InsertReservation } from "../api/reservation";
+
+import { getReservation, InsertReservation } from "../api/reservation";
 import { UserContext } from "../contexts/UserContext";
 import { clamp } from "../helpers";
 
-function TarifRoom(props){
-  var tarif=1;
-  if (props.count==5){
-      tarif=0.90;
-  }else if (props.count==6){
-      tarif=0.90;
-  }else if (props.count==7){
-      tarif=0.80;
-  }else if (props.count==8){
-      tarif=0.70;
-  }
-  return <>
-  </>
-};
+
 
 export default function FormInsertReservation(props) {
     const { user, setUser } = useContext(UserContext);
     const { register, handleSubmit } = useForm();
     const [count, setCount]= useState(4);
+    var exist=0;
+    var price=20;
+    var priceTotal=0;
     const [day, setDay]= useState(1);
     const [dayRes, setDayRes]= useState([]);
     const [horRes, setHorRes]= useState([]);
+    const [deleted, setDelete] = useState(0);
     const horTuesday=["10h20","11h50","13h20","14h50","16h20","17h50","19h20","20h50","-","-"];
     const horWednesday=["10h20","11h50","13h20","14h50","16h20","17h50","19h20","20h50","-","-"];
     const horThursday=["10h20","11h50","13h20","14h50","16h20","17h50","19h20","20h50","-","-"];
@@ -35,20 +28,41 @@ export default function FormInsertReservation(props) {
     const horSaturday=["10h20","11h50","13h20","14h50","16h20","17h50","19h20","20h50","22h20","23h50"];
     const horSunday=["10h20","11h50","13h20","14h50","16h20","17h50","19h20","20h50","-","-"];
 
-    useEffect(() => {
-    },[dayRes]);
+    
+    useEffect(()=>{
+
+    },[deleted]);
+
+
     const onSubmit = async (data) => {      
       const res = await InsertReservation(data);
       console.log(res);
+      console.log(data);
+      
 
-      props.setDelete(props.deleted+1)
+      setDelete(deleted+1);
+      
     };
+
+    if(count==6){
+      price=(20*0.90);
+      priceTotal=price*count;
+    }else
+    if(count==7){
+      price=(20*0.80)
+      priceTotal=price*count;
+    }else if(count==8){
+      price=(20*0.70)
+      priceTotal=price*count;
+    }else{
+      priceTotal=price*count;
+    }
     return(
         <>
         
         
         {!user?(
-            <p>Connexion indisponible</p>
+            <Link to="/mon-compte"> Création de compte obligatoire</Link>
         ):(
 
           <div className="tab-reservation">
@@ -59,21 +73,25 @@ export default function FormInsertReservation(props) {
                   <button onClick={() => setDay(clamp(day +7,1,24))}>&gt;&gt;</button>
 
               </div>
-              <div className="tab">
+              <div className="tab-res">
                   <Row>
-                      <Col lg="1">
+                      <Col lg={{span:"1"}}>
                           <div className="tab-left">
                               <p>Mardi {day} Dec.</p>
                               {(horTuesday).map((hor)=>{
-                                      return <>
+                                
+
+
+                                  return <>
                                           <button onClick={() => (setDayRes(day ),setHorRes(hor))} className="button-reser">{hor}</button>
                                       
                                       </>
 
+                                
                                   })}
                           </div>
                       </Col>
-                      <Col lg="1">
+                      <Col lg={{span:"1",offset:"1"}}>
                           <div className="tab-middle">
                               <p>Mercredi {day+1} Dec.</p>
                               {(horWednesday).map((hor)=>{
@@ -85,7 +103,7 @@ export default function FormInsertReservation(props) {
                                   })}
                           </div>
                       </Col>
-                      <Col lg="1">
+                      <Col lg={{span:"1",offset:"1"}}>
                           <div className="tab-middle">
                               <p>Jeudi {day+2} Dec.</p>
                               {(horThursday).map((hor)=>{
@@ -97,7 +115,7 @@ export default function FormInsertReservation(props) {
                                   })}
                           </div>
                       </Col>
-                      <Col lg="1">
+                      <Col lg={{span:"1",offset:"1"}}>
                           <div className="tab-middle">
                               <p>Vendredi {day+3} Dec.</p>
                               {(horFriday).map((hor)=>{
@@ -109,7 +127,7 @@ export default function FormInsertReservation(props) {
                                   })}
                           </div>
                       </Col>
-                      <Col lg="1">
+                      <Col lg={{span:"1",offset:"1"}}>
                           <div className="tab-middle">
                               <p>Samedi {day+4} Dec.</p>
                               {(horSaturday).map((hor)=>{
@@ -121,7 +139,7 @@ export default function FormInsertReservation(props) {
                                   })}
                           </div>
                       </Col>
-                      <Col lg="1">
+                      <Col lg={{span:"1",offset:"1"}}>
                           <div className="tab-middle">
                               <p>Dimanche {day+5} Dec.</p>
                               {(horSunday).map((hor)=>{
@@ -141,21 +159,29 @@ export default function FormInsertReservation(props) {
               <Row>
                 <Col lg={{span:8, offset:"2"}} className="form-insert">
                   <form onSubmit={handleSubmit(onSubmit)}>
-                    <input className="insert" {...register("user")} placeholder="Name" type='hidden' defaultValue={user.id} required />
+                    <input className="insert" {...register("user")}  type='hidden' defaultValue={user.id} required />
                     <input className="insert" {...register("pseudo")} placeholder="pseudo" required/>
-                    <input className="insert" {...register("date")} defaultValue={dayRes } placeholder={dayRes} equired />
-                    <input className="insert" {...register("hours")} defaultValue={horRes} placeholder={horRes} required />
-                    <input className="insert" {...register("room")} defaultValue={props.room} type='hidden' required />
-                    <select className="insert" {...register("player")}>
-                      <option >4 joueurs</option>
-                      <option >5 joueurs</option>
-                      <option >6 joueurs</option>
-                      <option >7 joueurs</option>
-                      <option >8 joueurs</option>
-                    </select>
-                    <input className="insert" {...register("price")} defaultValue={count} type='hidden' required />
+                    <p>Date :</p>
+                    <input className="insert" {...register("date")} value={dayRes}  required />
+                    <p> décembre</p>
+                    <p>Horaire :</p>
+                    <input className="insert" {...register("hours")} value={horRes}  required />
+                    <p>Salle :</p>
+                    <input className="insert" {...register("room")} value={props.room} type='hidden' required />
+                    <input className="insert" {...register("player")} value={count}   required />               
+                    <input className="insert" {...register("price")} value={priceTotal}  required />
                     <button  type="submit">Réserver</button>
                   </form>
+                  <div className="button-tarif">
+                    <button className="button" onClick={() => setCount(clamp(count-1,4,8))}>-</button>
+                      <p>{count} joueurs</p>
+                    <button onClick={() => setCount(clamp(count+1,4,8))}>+</button>
+
+                  </div>
+
+                  <p>{price} €/personne</p>
+                  <p>Total :</p>
+                  <p>{priceTotal} €</p>
                 </Col>                       
               </Row>
             </div>
