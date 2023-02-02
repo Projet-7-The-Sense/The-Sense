@@ -424,6 +424,11 @@ link {
     margin-left: 2%;
 }
 
+.button-reserv{
+    border: none;
+    background: none;
+}
+
 .link2{
     text-decoration: none;
     font-family: 'Poppins';
@@ -1165,7 +1170,7 @@ footer button:active{
 .account-preview-data-inline {
     width: 100%;
     display: inline-flex;
-    justify-content: space-between;
+    
     align-items: baseline;
 }
 

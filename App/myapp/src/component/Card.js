@@ -58,16 +58,28 @@ const CardRoom = (props) => {
                         </Card.Text>
                         <Row>
                             <Col xs={{ span: 8, offset: 2 }} md={{ span: 6, offset: 3 }} lg={{ span: 4, offset: 5 }}>
-                                <button 
-                                onClick={() => setOpen(!open)}
-                                ><img src="./img/BoutonRes.svg"></img></button>
-                                <Collapse in={open}>
-                                    <div>
-                                        <FormInsertReservation
-                                            room={props.title}
-                                        />
-                                    </div>
-                                </Collapse>
+                                {!props.home?(
+                                    
+                                    <>
+                                    <button 
+                                    className="button-reserv"
+                                    onClick={() => setOpen(!open)}
+                                    ><img src="./img/BoutonRes.svg"></img></button>
+                                    <Collapse in={open}>
+                                        <div>
+                                            <FormInsertReservation
+                                                room={props.title}
+                                            />
+                                        </div>
+                                    </Collapse>
+                                    </>
+
+                                ):(
+                                    <>
+                                    <Card.Link to="/experience"><img src="./img/BoutonRes.svg"></img></Card.Link>
+                                    </>
+                                )}
+                                
                             </Col>
                             <Col  xs={{ span: 0, offset: 0 }} md={{ span: 5, offset: 4 }} lg={{ span: 3, offset: 0 }}>
                                 <Card.Link href="#" className="link2">Decouvrez la {props.title} <BsArrowRightShort/></Card.Link>
