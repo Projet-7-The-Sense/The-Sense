@@ -614,6 +614,16 @@ link {
     font-size: 18px;
 }
 
+.form-reserv{
+    text-align: center
+}
+
+.form-insert{
+    background-color: lightgrey;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
 /** ABOUT **/
 .container-a {
     margin: 0% 10%;

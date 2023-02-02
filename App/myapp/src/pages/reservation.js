@@ -4,7 +4,7 @@
  import EquipmentsContent from '../component/EquipementsContent.js';
  import CriticCarousel from '../component/CriticCarousel.js';
  import { getReservation, ReservationUser } from '../api/reservation.js';
- import { useContext, useState } from 'react';
+ import { useContext, useEffect, useState } from 'react';
  import { Redirect } from 'react-router-dom';
  import { UserContext } from '../contexts/UserContext.js';
 import Col from 'react-bootstrap/esm/Col.js';
@@ -13,10 +13,14 @@ import Row from 'react-bootstrap/esm/Row.js';
  const Reservation = () => {
     const { user, setUser } = useContext(UserContext);
     const [reservation, setReservations]=useState([]);
-    const reservations =getReservation();
-    reservations
+    
+    useEffect(()=>{
+        const reservations =getReservation();
+        reservations
         .then(result => setReservations(result))
         .catch(error=>console.error("Erreur avec notre API :",error.message));
+    },[]);
+
     
     return <>
         {! user ? (
