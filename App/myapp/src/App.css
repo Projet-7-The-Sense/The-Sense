@@ -635,6 +635,45 @@ link {
     padding-bottom: 3%;
 }
 
+.warn{
+    text-decoration: none;
+    color: #000;
+    font-family: Abel;
+}
+
+/** PAGE RESERVATION **/
+.title-reserv{
+    margin-top: 15%;
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: 50px;
+}
+
+.red-page{
+    color: red;
+}
+
+.my-reserv{
+    text-align: center;
+    font-family: Abel;
+    background-color: #000;
+    color: white;
+    margin-bottom: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    flex-direction: column-reverse;
+}
+.my-reserv h2{
+    color: white;
+}
+.my-reserv h2.red-page{
+    color: red;
+}
+.my-reserv img{
+    width: 10%;
+}
+
+
 /** ABOUT **/
 .container-a {
     margin: 0% 10%;

@@ -20,7 +20,7 @@ export default function App() {
                 <div className='vertical-line'></div>
                 <Link as={Link} to='#politique-de-confidentialite'>Politique de confidentialité</Link>
                 <div className='vertical-line hidden-on-large'></div>
-                <Link className='hidden-on-large' as={Link} to='#contact'>Contact</Link>
+                <Link className='hidden-on-large' as={Link} to='/a-propos-de-nous'>Contact</Link>
             </div>
             <div>
               <a href=''><img src='../img/youtube_logo.png' alt='youtube_logo' /></a>

@@ -77,7 +77,16 @@ const CardRoom = (props) => {
                                 
                             </Col>
                             <Col  xs={{ span: 0, offset: 0 }} md={{ span: 5, offset: 4 }} lg={{ span: 3, offset: 0 }}>
-                                <Card.Link href="#" className="link2">Decouvrez la {props.title} <BsArrowRightShort/></Card.Link>
+                                {!props.home?(       
+                                        <>
+                                        </>
+
+                                    ):(
+                                        <>
+                                        <Card.Link href="#" className="link2">Decouvrez la {props.title} <BsArrowRightShort/></Card.Link>
+                                        </>
+                                    )}
+                                
                             </Col>
                         </Row>
                         <Collapse in={open}>
