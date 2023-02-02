@@ -249,20 +249,7 @@ app.get('/reservation/list', (req, res) => {
         });
 });
 
-app.get('/reservation/user', (req, res) => {
-    const dbConnect = dbo.getDb();
-    dbConnect
-      .collection("reservation")
-      .find({user:{$all:req.query.user.split(",")}})
-      .sort({id:1})
-      .toArray(function (err, result) {
-        if (err) {
-          res.status(400).send(err);
-        } else {
-          res.json(result);
-        }
-      });
-  });
+
 
 app.post('/reservation/insert', jsonParser, (req, res) => {
     const dbConnect = dbo.getDb();

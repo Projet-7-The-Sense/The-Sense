@@ -658,6 +658,19 @@ iframe {
     width: 100%;
     margin: 5% 10%;
 }
+
+.form-contact{
+    margin-bottom: 5%;
+    height: 400px;
+    background-color: white;
+    background-image: url("../public/img/Vector\ 38.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 75%;
+    text-align: center;
+
+    
+}
 /** NEWS **/
 
 .news-header {
@@ -899,7 +912,175 @@ iframe {
     font-family: Abel;
 }
 
+/** ABOUT US **/
 
+@media only screen and (min-width: 992px) {
+    
+    .img-about{
+        background-image: url("../public/img/image\ 42.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 700px;
+        text-align: center;
+    }
+    
+    .img-about img{
+        color: white;
+        width: 25%;
+        padding-top: 10%;
+    
+    }
+    .header-equip{
+        background-image: url("../public/img/bryce.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: bottom;
+    }
+    
+    .title-equip p{
+        font-size: 25px;
+    }
+    
+
+    
+    .img-d{
+        border-radius: 0px 15px 15px 0px;
+    }
+    
+    .img-l{
+        border-radius: 15px 0px 0px 15px;
+    }
+    
+    
+    .image-desc-equip p{
+        padding-left: 5%;
+        font-size: 25px;
+    }
+  }
+
+
+@media only screen and (max-width: 992px) {
+    .img-about{
+        background-image: url("../public/img/image\ 42.svg");
+        background-size: 300%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 400px;
+        text-align: center;
+    }
+    
+    .img-about img{
+        color: white;
+        width: 25%;
+        padding-top: 70%;
+    
+    }
+
+    .header-equip{
+        background-image: url("../public/img/bryce.svg");
+        background-repeat: no-repeat;
+        background-size: 150%;
+        background-position: bottom;
+    }
+    
+
+    
+    .equipments-contents{
+        text-align: center;
+        
+    }  
+    .title-equip p{
+        font-size: 15px;
+    }
+    
+    #equip-l .row{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .img-d{
+        border-radius: 15px;
+
+    }
+    
+    .img-l{
+        border-radius: 15px;
+    }
+     
+    .image-desc-equip p{
+
+        font-family: Abel;
+        font-size: 15px;
+        
+    }
+}
+
+.vector-about{
+    padding-top: 10%;
+    background-image: url("../public/img/Vector\ 37.svg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: top;
+
+}
+
+.perso-all{
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url("../public/img/Logo.svg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+
+.perso{
+    text-align: center;
+    width: 100%;
+    font-family: Abel;
+}
+
+.perso h2{
+    font-family: Abel;
+}
+.perso h3{
+    color: lightblue;
+    font-family: Abel;
+}
+.perso h4{
+    font-family: Abel;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.perso p{
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+iframe{
+    width: 600px;
+    height: 600px;
+}
+.red-hor{
+    color: red;
+}
+
+.blue{
+    color: blue;
+}
+
+.contact-input{
+    margin-top: 5%;
+    background-color: rgb(130 255 255 / 0%);
+    border-radius: 15px 15px 15px 15px;
+    padding: 2%;
+    width: 100%;
+}
+
+
+.hor-about{
+    text-align: center;
+    padding-top: 25%;
+}
 /** SIGN **/
 
 .img-sign{
@@ -925,6 +1106,7 @@ iframe {
     background-position: center;
     background-size: 50%;
     text-align: center;
+    margin-bottom: 5%;
     
 }
 
