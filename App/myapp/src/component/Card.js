@@ -7,6 +7,7 @@ import { BsArrowRightShort } from 'react-icons/bs';
 import {AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import Collapse from "react-bootstrap/esm/Collapse";
 import FormInsertReservation from "./FormInsertReservation";
+import { Link } from "react-router-dom";
 
 const CardRoom = (props) => {
     const [open, setOpen] = useState(false);
@@ -65,18 +66,12 @@ const CardRoom = (props) => {
                                     className="button-reserv"
                                     onClick={() => setOpen(!open)}
                                     ><img src="./img/BoutonRes.svg"></img></button>
-                                    <Collapse in={open}>
-                                        <div>
-                                            <FormInsertReservation
-                                                room={props.title}
-                                            />
-                                        </div>
-                                    </Collapse>
+                                    
                                     </>
 
                                 ):(
                                     <>
-                                    <Card.Link to="/experience"><img src="./img/BoutonRes.svg"></img></Card.Link>
+                                    <Link to="/experiences"><img src="./img/BoutonRes.svg"></img></Link>
                                     </>
                                 )}
                                 
@@ -85,6 +80,13 @@ const CardRoom = (props) => {
                                 <Card.Link href="#" className="link2">Decouvrez la {props.title} <BsArrowRightShort/></Card.Link>
                             </Col>
                         </Row>
+                        <Collapse in={open}>
+                                        <div className="form-reserv">
+                                            <FormInsertReservation
+                                                room={props.title}
+                                            />
+                                        </div>
+                                    </Collapse>
                     </Card.Body>
                 </Card>
             </Col>
