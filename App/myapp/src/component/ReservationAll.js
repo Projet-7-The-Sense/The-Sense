@@ -5,7 +5,7 @@ import { clamp } from "../helpers";
 function TarifRoom(props){
     var tarif=1;
     if (props.count==5){
-        tarif=0.90;
+        tarif=1;
     }else if (props.count==6){
         tarif=0.90;
     }else if (props.count==7){
@@ -92,20 +92,20 @@ const ReservationAll = (props) => {
                                     />
                                     <TarifRoom
                                         img="/img/DARK R.png"
-                                        tarifj={20}
-                                        tarifn={25}
+                                        tarifj={15}
+                                        tarifn={20}
                                         count={count}
                                     />
                                     <TarifRoom
                                         img="/img/BATTLE R.png"
-                                        tarifj={10}
-                                        tarifn={15}
+                                        tarifj={15}
+                                        tarifn={20}
                                         count={count}
                                     />
                                     <TarifRoom
                                         img="/img/CREATIVE R.png"
-                                        tarifj={25}
-                                        tarifn={30}
+                                        tarifj={15}
+                                        tarifn={20}
                                         count={count}
                                     />
                                 </div>
