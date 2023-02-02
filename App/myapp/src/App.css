@@ -1254,6 +1254,7 @@ footer button:active{
 .experiences {
     --header-stylized-background: url("../public/img/stylized-background1.svg");
     --body-stylized-background: url("../public/img/Light_body.svg");
+    --light-room-logo: url("../public/img/LIGHT\ ROOM.svg");
     --dark-room-logo: url("../public/img/DARK ROOM.png");
     --battle-room-logo: url("../public/img/BATTLE ROOM.svg");
     --creative-room-logo: url("../public/img/CREATIVE ROOM.svg");
@@ -1266,6 +1267,7 @@ footer button:active{
 .experiences.dark {
     --header-stylized-background: url("../public/img/stylized-background2.svg");
     --body-stylized-background: url("../public/img/Dark_body.svg");
+    --light-room-logo: url("../public/img/LIGHT\ ROOM\ WHITE.svg");
     --dark-room-logo: url('../public/img/DARK ROOM (1).svg');
     --battle-room-logo: url("../public/img/BATTLE ROOM white.svg");
     --creative-room-logo: url("../public/img/CREATIVE.png");
@@ -1281,8 +1283,8 @@ footer button:active{
     .experiences.dark {   
         --battle-room-logo: url("../public/img/battle_room_phone_dark.png");
     }
-
 }
+
 .experiences.battle {
     --header-stylized-background: url("../public/img/stylized-background1.svg");
     --body-stylized-background: url("../public/img/Battle_body.svg");
@@ -1319,6 +1321,10 @@ footer button:active{
 
 .experiences .exp-header .logo.creative-logo {
     content: var(--creative-room-logo);
+}
+
+.experiences .exp-header .logo.light-logo {
+    content: var(--light-room-logo);
 }
 
 .experiences .exp-header .active {
