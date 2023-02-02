@@ -28,14 +28,3 @@ export const InsertReservation = async (data) => {
     return response.status;
 }
 
-export const ReservationUser= async (data) => {
-    const pokemonsFetched = await fetch(
-      'http://localhost:4444/reservation/user?type='+data.user, {
-          method: 'GET', 
-          headers: {
-              'Accept': 'application/json', 
-              'Content-Type':'application/json'
-          }
-      }
-  )
-}

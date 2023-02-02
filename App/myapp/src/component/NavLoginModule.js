@@ -3,22 +3,25 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { logUser } from '../api/user';
 import { Link } from 'react-router-dom';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../contexts/UserContext';
 import { useForm } from 'react-hook-form';
 import { FaCog } from 'react-icons/fa';
 import {BsArrowRight} from 'react-icons/bs';
 import { getReservation } from '../api/reservation';
+import GoogleConscent from './GoogleConscent';
 
 const NavLoginModule = () => {
     const { user, setUser } = useContext(UserContext);
     const { register, handleSubmit } = useForm();
     const [reservation, setReservations]=useState([]);
-    const reservations =getReservation();
-    reservations
-        .then(result => setReservations(result))
-        .catch(error=>console.error("Erreur avec notre API :",error.message));
 
+    useEffect(()=>{
+      const reservations =getReservation();
+      reservations
+      .then(result => setReservations(result))
+      .catch(error=>console.error("Erreur avec notre API :",error.message));
+    },[]);
     const onSubmit = (data) => {
       const userFetched = logUser(data.id, data.password);
       userFetched
@@ -38,6 +41,7 @@ const NavLoginModule = () => {
     }
 
     const formatedReservation = (user) => {
+
       var reservUser="Pas de réservation";
       
       reservation.map((reservation, key) => {
@@ -89,6 +93,10 @@ const NavLoginModule = () => {
 
         <NavDropdown.Divider />
 
+        <GoogleConscent />
+
+        <NavDropdown.Divider />
+
         <Button as={Link} to="/mon-compte" className="account-button" variant="white" type="redirect">Créer un compte</Button>
         <Button variant="dark" className="amiko-bold" id="login-button" type="submit">Se connecter</Button>
       </Form>
@@ -100,7 +108,7 @@ const NavLoginModule = () => {
 
         <div className="account-preview-data-inline">
           <div className="title amiko-bold">Réservation</div>
-          <Link to="/reservation"><div className="reservation amiko"> {formatedReservation} <BsArrowRight /></div></Link>
+          <Link to="/reservation"><div className="reservation amiko"> {formatedReservation(user)} <BsArrowRight /></div></Link>
         </div>
 
         <div className="account-preview-data-inline points">
