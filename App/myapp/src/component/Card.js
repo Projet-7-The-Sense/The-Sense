@@ -94,6 +94,8 @@ const CardRoom = (props) => {
                                             <FormInsertReservation
                                                 room={props.title}
                                             />
+                                            
+                                         
                                         </div>
                                     </Collapse>
                     </Card.Body>

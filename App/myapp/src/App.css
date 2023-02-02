@@ -576,7 +576,7 @@ link {
 
 .tab-reservation{
     padding-top: 7%;
-
+    
     background-color: #000;
     color: white;
     padding-bottom: 5%;
@@ -630,7 +630,6 @@ link {
 }
 
 .form-insert{
-    background-color: lightgrey;
     padding-top: 3%;
     padding-bottom: 3%;
 }
@@ -639,6 +638,29 @@ link {
     text-decoration: none;
     color: #000;
     font-family: Abel;
+}
+
+.input-reservation{
+    background: none;
+    color: white;
+    border-radius: 15px;
+}
+.button-reservation{
+    margin-top: 5%;
+    background: none;
+}
+
+.red{
+    color: red;
+}
+
+.info-res h2{
+    font-size: 40px !important ;
+    font-family: Abel;
+}
+
+.info-res p{
+    color: white;
 }
 
 /** PAGE RESERVATION **/
