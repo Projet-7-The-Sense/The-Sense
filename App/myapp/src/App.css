@@ -235,7 +235,7 @@ link {
 .banner-flex .banner-bubble {
     width: 100%;
     display: inline-flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -277,7 +277,7 @@ link {
 }
 
 .banner-flex .banner-content {
-    width: 60%;
+    width: 100%;
 }
 
 .banner-content .banner-title {
