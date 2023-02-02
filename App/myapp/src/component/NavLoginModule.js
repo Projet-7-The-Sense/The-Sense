@@ -9,6 +9,7 @@ import { useForm } from 'react-hook-form';
 import { FaCog } from 'react-icons/fa';
 import {BsArrowRight} from 'react-icons/bs';
 import { getReservation } from '../api/reservation';
+import GoogleConscent from './GoogleConscent';
 
 const NavLoginModule = () => {
     const { user, setUser } = useContext(UserContext);
@@ -88,6 +89,8 @@ const NavLoginModule = () => {
         </Form.Group>
 
         <NavDropdown.Divider />
+
+        <GoogleConscent />
 
         <NavDropdown.Divider />
 
