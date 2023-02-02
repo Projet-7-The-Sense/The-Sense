@@ -13,58 +13,42 @@ const AboutUs = () => {
         
         <Banner
         theme="the-sense"
-        title="Qu'est ce que"
-        logoImage="img/SENSE.svg"
-        descrition="Présentation-vous pour une expérience unique qui vous emmène dans un autre univers. Vivez vos émotions comme vous ne l'avez jamais fait auparavant. Avec THE SENSE explorez d'autres dimensions et vivez l'impossible en interragissant avec un environnement dynamique et virtuel. Ce n'est pas une expérience en réalité virtuelle que vous vivez, c'est la réalité."
+        title="The Sense, une idée novatrice"
+        descrition="The Sense est né d'un projet d'école de quatre étudiants en école de commerce. Se basant sur une idée originaire des États-Unis, les quatre amis décidèrent d'adapter ce concept inédit au marché français en y ajoutant leurs idées novatrices. Mélant deux activités attractives, la Réalité Virtuel et les Escape Game, THE SENSE joint le meilleur des deux mondes pour vous proposer des expériences inédites et époustouflantes. N'hésitez plus et franchisser la frontière du réel."
         prezImg="img/image 42.svg"
-        linkHidden={false}
+        linkHidden={true}
             />
-        <h1>Qui sommes nous ?</h1>
+        
         <p>The Sense est une société formée par quatre étudiants en école de commerce qui détiennent la majorité des parts. Le restant étant la propriété de DreamAway, entreprise française spécialiste du milieu de la VR.</p>
         
-        <div >
-
+        <div className='Presentation'>
+            <h1>Qui sommes nous ?</h1>
             <div >
-
                 <div >
-
                     <h2>CORDIER Colin</h2>
                     <p>Co-Fondateur THE SENSE et Directeur Général</p>
                     <p>"Nous avons décidé de réaliser notre rêve de gosse: rendre réel ce qui ne l'est pas."</p>
                     <p>- Colin CORDIER -</p>
-
                 </div>
-
-                <div >
-
+                <div>
                     <h2>VANBORRE Thibault</h2>
                     <p>Co-Fondateur THE SENSE et Responsable RH</p>
                     <p>"The Sense représente , pour moi, la concrétisation de 4 ans de travails et de passions."</p>
                     <p>- Thibault VANBORRE -</p>
-
                 </div>
-
                 <div >
-
                     <h2>URBAIN Eloëne</h2>
                     <p>Co-Fondatrice THE SENSE et Responsable Communication</p>
                     <p>"Je pense qu'il est important de réver dans la vie et The Sense permet de vivre ces rêves."</p>
                     <p>- Eloëne URBAIN -</p>
-
                 </div>
-
                 <div >
-
                     <h2>ZAABAT Bryce</h2>
                     <p>Co-Fondateur THE SENSE  et Responsable Marketing</p>
                     <p>The Sense permet à nos joueurs de vivrent une expérience époustouflante qui les marquera lontemps. Croyez-moi."</p>
                     <p>- Bryce ZAABAT -</p>
-
-
                 </div>
-
             </div>
-
         </div>
 
         <div className="container">
