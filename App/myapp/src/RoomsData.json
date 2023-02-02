@@ -9,7 +9,8 @@
             "description": "Voyagez, explorez, décrouvrez la LIGHT ROOM! Découvre des paysages somptueux et des histories palpitantes dans cette salle accessible pour toute la famille. Ici tout n'est qu'affaire d'émotions et de beauté, explorer les décors de nos expériences et partez à l'aventure en famille ou entre amis à partir de 12 ans. Il ne vous reste plus qu'à franchir le seuil de la LIGHT ROOM et à vous laissez transporter dans un voyage époustouflant. Vos émotions n'attendent que vous !",
             "linkHidden": true,
             "bryceHidden": true
-        }
+        },
+        "h1": "Prenez part au voyage"
     },
     "dark": {
         "theme": "dark",
@@ -21,12 +22,34 @@
           "prezImg": "/img/image 84.svg",
           "linkHidden": true,
           "bryceHidden": true
-        }
+        },
+        "h1": "Réveillez la peur qui sommeille en vous"
     },
     "battle": {
-
+        "theme": "battle",
+        "banner": {
+            "theme": "battle-room",
+            "prezImg": "/img/Battle_room_video.svg",
+            "title": "Qu'est ce que la ",
+            "logoImage": "/img/BATTLE ROOM.svg",
+            "description": "Voyagez, explorez, décrouvrez la LIGHT ROOM! Découvre des paysages somptueux et des histories palpitantes dans cette salle accessible pour toute la famille. Ici tout n'est qu'affaire d'émotions et de beauté, explorer les décors de nos expériences et partez à l'aventure en famille ou entre amis à partir de 12 ans. Il ne vous reste plus qu'à franchir le seuil de la LIGHT ROOM et à vous laissez transporter dans un voyage époustouflant. Vos émotions n'attendent que vous !",
+            "linkHidden": true,
+            "bryceHidden": true
+        },
+        "h1": "Défiez vos adversaires"
     },
     "creative": {
-        
+        "theme": "creative",
+        "banner": {
+            "theme": "creative-room",
+            "prezImg": "/img/Creative_room_video.svg",
+            "title": "Qu'est ce que la ",
+            "logoImage": "/img/CREATIVE ROOM.svg",
+            "description": "Voyagez, explorez, décrouvrez la LIGHT ROOM! Découvre des paysages somptueux et des histories palpitantes dans cette salle accessible pour toute la famille. Ici tout n'est qu'affaire d'émotions et de beauté, explorer les décors de nos expériences et partez à l'aventure en famille ou entre amis à partir de 12 ans. Il ne vous reste plus qu'à franchir le seuil de la LIGHT ROOM et à vous laissez transporter dans un voyage époustouflant. Vos émotions n'attendent que vous !",
+            "linkHidden": true,
+            "bryceHidden": true
+        },
+        "h1": "Votre expérience entre vos mains",
+        "h2": "Suivez les étapes pour créer votre propre aventure. Nous mettons à votre disposition la possiblité de choisir tous les éléments de votre room dans le but de vous offrir l'expérence ultime qui VOUS correspond. Basculez entre chaque étape, modifiez vos choix à tout moment pour que ceux-ci correspondent à vos besoins."
     }
 }

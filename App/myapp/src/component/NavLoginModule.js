@@ -8,10 +8,16 @@ import { UserContext } from '../contexts/UserContext';
 import { useForm } from 'react-hook-form';
 import { FaCog } from 'react-icons/fa';
 import {BsArrowRight} from 'react-icons/bs';
+import { getReservation } from '../api/reservation';
 
 const NavLoginModule = () => {
     const { user, setUser } = useContext(UserContext);
     const { register, handleSubmit } = useForm();
+    const [reservation, setReservations]=useState([]);
+    const reservations =getReservation();
+    reservations
+        .then(result => setReservations(result))
+        .catch(error=>console.error("Erreur avec notre API :",error.message));
 
     const onSubmit = (data) => {
       const userFetched = logUser(data.id, data.password);
@@ -32,8 +38,18 @@ const NavLoginModule = () => {
     }
 
     const formatedReservation = (user) => {
-      return "DARK ROOM - The Conjuring Experience";
-    }
+      var reservUser="Pas de réservation";
+      
+      reservation.map((reservation, key) => {
+          if (reservation.user==user.id){
+            reservUser= reservation.room
+          
+          
+          }
+      })
+      return reservUser
+      }
+    
 
     const numberDict = [
       "une",
@@ -84,7 +100,7 @@ const NavLoginModule = () => {
 
         <div className="account-preview-data-inline">
           <div className="title amiko-bold">Réservation</div>
-          <Link><div className="reservation amiko">{formatedReservation(user)} <BsArrowRight /></div></Link>
+          <Link to="/reservation"><div className="reservation amiko"> {formatedReservation} <BsArrowRight /></div></Link>
         </div>
 
         <div className="account-preview-data-inline points">

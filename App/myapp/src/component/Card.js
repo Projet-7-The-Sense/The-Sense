@@ -5,8 +5,11 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import { BsArrowRightShort } from 'react-icons/bs';
 import {AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import Collapse from "react-bootstrap/esm/Collapse";
+import FormInsertReservation from "./FormInsertReservation";
 
 const CardRoom = (props) => {
+    const [open, setOpen] = useState(false);
     return <>
     <div className="cardblock">
         <Container >
@@ -55,7 +58,28 @@ const CardRoom = (props) => {
                         </Card.Text>
                         <Row>
                             <Col xs={{ span: 8, offset: 2 }} md={{ span: 6, offset: 3 }} lg={{ span: 4, offset: 5 }}>
-                                <Card.Link href="#" ><img src="./img/BoutonRes.svg"></img></Card.Link>
+                                {!props.home?(
+                                    
+                                    <>
+                                    <button 
+                                    className="button-reserv"
+                                    onClick={() => setOpen(!open)}
+                                    ><img src="./img/BoutonRes.svg"></img></button>
+                                    <Collapse in={open}>
+                                        <div>
+                                            <FormInsertReservation
+                                                room={props.title}
+                                            />
+                                        </div>
+                                    </Collapse>
+                                    </>
+
+                                ):(
+                                    <>
+                                    <Card.Link to="/experience"><img src="./img/BoutonRes.svg"></img></Card.Link>
+                                    </>
+                                )}
+                                
                             </Col>
                             <Col  xs={{ span: 0, offset: 0 }} md={{ span: 5, offset: 4 }} lg={{ span: 3, offset: 0 }}>
                                 <Card.Link href="#" className="link2">Decouvrez la {props.title} <BsArrowRightShort/></Card.Link>

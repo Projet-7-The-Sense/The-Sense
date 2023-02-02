@@ -22,7 +22,8 @@ body{
 
 h1, h2, h3, h4, h5, h6, .amiko-bold {
     font-family: 'Amiko', sans-serif;
-    font-weight: 700 !important;
+    font-weight: 700 ;
+
     color: #3B4040;
 }
 
@@ -51,6 +52,11 @@ link {
     margin: 0% 10%;
 }
 
+/** Navigation**/
+
+#banner{
+    scroll-margin-top: 81px;
+}
 
 /** NAVBAR **/
 
@@ -192,6 +198,15 @@ link {
     transition: 1.5s;
 }
 
+.banner-wrapper.battle-room {
+    background-color: #CDFFF3;
+    transition: 1.5s;
+}
+
+.banner-wrapper.creative-room {
+    background-color: #F2F2F2;
+}
+
 .banner-wrapper .banner-flex {
     display: inline-flex;
     justify-content: space-between;
@@ -233,6 +248,16 @@ link {
 
 .banner-flex .banner-bubble .image-wrapper.dark-room {
     border-color: #430000;
+    transition: 1.5s;
+}
+
+.banner-flex .banner-bubble .image-wrapper.battle-room {
+    border-color: #798F8B;
+    transition: 1.5s;
+}
+
+.banner-flex .banner-bubble .image-wrapper.creative-room {
+    border-color: #771261;
     transition: 1.5s;
 }
 
@@ -399,6 +424,11 @@ link {
     margin-left: 2%;
 }
 
+.button-reserv{
+    border: none;
+    background: none;
+}
+
 .link2{
     text-decoration: none;
     font-family: 'Poppins';
@@ -447,9 +477,142 @@ link {
 .reservation-all{
     background-image: url("../public/img/image\ 7.svg");
     color: white;
+    text-align: center;
+    margin-top: 5%;
 }
 
 
+.reservation-all .img-reserver{
+    margin-top: 5%;
+}
+
+.reservation-all h3{
+    font-family: Poppins;
+    font-weight: 100;
+    color: white;
+    font-size: 50px;
+}
+
+.reservation-all h4{
+    font-family: Poppins;
+    font-weight: 200;
+    color: white;
+    font-size: 40px;
+}
+
+.reservation-all p{
+    font-family: Poppins;
+    font-weight: 150;
+    color: white;
+    font-size: 20px;
+}
+.reservation-all .p1{
+    font-size: 15px;
+}
+
+.button-tarif{
+    display: inline-flex;
+}
+
+.button-tarif button{
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: white;
+
+}
+
+.button-tarif .button{
+
+    margin-left: -50%;
+}
+
+.button-tarif p{
+    font-size: 30px;
+    margin: 50%;
+
+}
+
+.tarif-room{
+    text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    
+}
+
+
+
+.tarif-rooms{
+    margin-left: 60px;
+    text-align: center;
+    
+}
+
+.tarif-rooms img{
+    margin-bottom: 5%;
+}
+
+.tarif-rooms p{
+    font-size: 17px;
+    padding: 0%;
+    margin: 0%;
+}
+.tarif-rooms .red{
+    color: red;
+    margin: 0%;
+    padding: 0%;
+}
+
+.tab-reservation{
+    padding-top: 7%;
+
+    background-color: #000;
+    color: white;
+    padding-bottom: 5%;
+}
+
+.tab{
+    padding-left: 32%;
+}
+
+
+
+.tab-reservation h2{
+    padding-top: 5%;
+    margin: 5%;
+    color: white;
+}
+.tab-left{
+    text-align: center;
+    display: grid;
+    font-family: Abel;
+    font-size: 20px;
+}
+
+.tab-middle{
+    text-align: center;
+    display: grid;
+    font-family: Abel;
+    font-size: 20px;
+}
+
+.button-reser{
+    background-color: #000;
+    border-radius: 10px;
+    color: white;
+    margin: 10%;
+    width: 100%;
+}
+
+.button-reser:hover{
+    border-color: white;
+}
+.tab-reservation p{
+    color: red;
+    font-size: 18px;
+}
 
 /** ABOUT **/
 .container-a {
@@ -887,11 +1050,7 @@ footer .split .hidden-on-large{
         display: flex;
         flex-direction: row;
         justify-content: center;
-    }
-    footer .split {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        padding-top: 10px;
     }
     footer .split .hidden-on-large{
         display: unset;
@@ -1012,7 +1171,7 @@ footer button:active{
 .account-preview-data-inline {
     width: 100%;
     display: inline-flex;
-    justify-content: space-between;
+    
     align-items: baseline;
 }
 
@@ -1095,21 +1254,25 @@ footer button:active{
 
 .experiences {
     --header-stylized-background: url("../public/img/stylized-background1.svg");
-    --body-stylized-background: url("../public/img/TRUC\ COOL.svg");
+    --body-stylized-background: url("../public/img/Light_body.svg");
     --dark-room-logo: url("../public/img/DARK ROOM.png");
     --battle-room-logo: url("../public/img/BATTLE ROOM.svg");
     --creative-room-logo: url("../public/img/CREATIVE ROOM.svg");
     --bg-color: #fff;
     --animation-duration: 1s;
+    --text-color: #646363;
+    --title-color: #3B4040;
 }
 
 .experiences.dark {
     --header-stylized-background: url("../public/img/stylized-background2.svg");
-    --body-stylized-background: url("../public/img/body-stylized-background2.svg");
+    --body-stylized-background: url("../public/img/Dark_body.svg");
     --dark-room-logo: url('../public/img/DARK ROOM (1).svg');
     --battle-room-logo: url("../public/img/BATTLE ROOM white.svg");
     --creative-room-logo: url("../public/img/CREATIVE.png");
     --bg-color: #131313;
+    --text-color: #fff;
+    --title-color: #fff;
 }
 
 @media screen and (max-width: 992px){
@@ -1123,10 +1286,12 @@ footer button:active{
 }
 .experiences.battle {
     --header-stylized-background: url("../public/img/stylized-background1.svg");
+    --body-stylized-background: url("../public/img/Battle_body.svg");
 }
 
 .experiences.creative {
     --header-stylized-background: url("../public/img/stylized-background3.svg");
+    --body-stylized-background: url("../public/img/Creative_body.svg");
 }
 
 .experiences .exp-header {
@@ -1162,10 +1327,23 @@ footer button:active{
 }
 
 .experiences .wrapper {
-    height: 1200px;
+    height: fit-content;
     background-image: var(--body-stylized-background);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--bg-color);
     transition: background-color var(--animation-duration), background-image var(--animation-duration);
+}
+
+.experiences h1, .experiences .h2 {
+    color: var(--title-color);
+    transition: var(--animation-duration);
+}
+
+.wrapper h1 {
+    text-transform: uppercase;
+}
+
+.wrapper h2 {
+    font-size: 1rem;
 }

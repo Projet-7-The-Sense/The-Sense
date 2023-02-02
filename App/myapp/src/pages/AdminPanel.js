@@ -33,11 +33,11 @@ export default function Admin ()  {
         MailUser
             .then(result => setUser(result))
             .catch(error=>console.error("Erreur avec notre API :",error.message));
-        // const reservations =getReservation
-        // reservations
-        //     .then(result => setReservations(result))
-        //     .catch(error=>console.error("Erreur avec notre API :",error.message));
-        // const experiences =getExperience
+        const reservations =getReservation();
+        reservations
+            .then(result => setReservations(result))
+            .catch(error=>console.error("Erreur avec notre API :",error.message));
+        //const experiences =getExperience
         // experiences
         //     .then(result => setExperiences(result))
         //     .catch(error=>console.error("Erreur avec notre API :",error.message));
@@ -118,11 +118,36 @@ export default function Admin ()  {
             <Row>
                 <Col lg={{span:"8", offset:"2"}}>
                     <h2>Reservations</h2>
-                    <div className="reservation-admin">
+                    <div className="news-admin">
                         {
                             reservations.map((reservation, key) => {
                                 return <>
-                                <h3>{reservation.title}</h3>
+                                <Row>
+                                    <Col lg="2">
+                                        <p>{reservation.user}</p>
+                                    </Col>
+                                    <Col lg="2">
+                                        <p>{reservation.pseudo}</p>
+                                    </Col>
+                                    <Col lg="2">
+                                        <p>{reservation.date}</p>
+                                    </Col>
+                                    <Col lg="2">
+                                        <p>{reservation.hours}</p>
+                                    </Col>
+                                    <Col lg="2">
+                                        <p>{reservation.player}</p>
+                                    </Col>
+                                    <Col lg="2">
+                                        <p>{reservation.room}</p>
+                                    </Col>
+                                </Row>
+                                
+                                
+                                
+                                
+                                
+                                
                                 </>
 
                             })

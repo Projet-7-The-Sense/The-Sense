@@ -33,6 +33,7 @@ function Home() {
             content="Wow c'est trop bien"
             slogan="The conjuring experience"
             age="Interdit aux moins de 18 ans"
+            home="home"
         />
         <ReservationAll/>
         

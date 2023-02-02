@@ -17,6 +17,7 @@ import Admin from './pages/AdminPanel';
 import { Maintaining } from './pages/Maintaining';
 import { getUserById } from './api/user';
 import roomsData from './RoomsData.json';
+import Reservation from './pages/reservation';
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -54,6 +55,7 @@ const App = () => {
             <Route exact path="/equipment"> {<Equipments />} </Route>
             <Route exact path="/admin"> {<Admin />} </Route>
             <Route exact path="/maintaining"> {<Maintaining />} </Route>
+            <Route exact path="/reservation"> {<Reservation />} </Route>
           </RoomContext.Provider>
         </UserContext.Provider>
       </Switch>
