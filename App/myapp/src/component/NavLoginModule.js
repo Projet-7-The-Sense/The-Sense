@@ -92,6 +92,8 @@ const NavLoginModule = () => {
 
         <NavDropdown.Divider />
 
+        <NavDropdown.Divider />
+
         <Button as={Link} to="/mon-compte" className="account-button" variant="white" type="redirect">Créer un compte</Button>
         <Button variant="dark" className="amiko-bold" id="login-button" type="submit">Se connecter</Button>
       </Form>

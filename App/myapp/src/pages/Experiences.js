@@ -16,11 +16,8 @@ const Experiences = () => {
             <img src="/img/DARK ROOM.png" className="logo dark-logo" alt="dark-room the-sense vr" onClick={() => setRoom(roomsData.dark)} />
             <img src="/img/BATTLE ROOM.svg" className="logo battle-logo" alt="battle-room the-sense vr" onClick={() => setRoom(roomsData.battle)} />
             <img src="/img/CREATIVE ROOM.svg" className="logo creative-logo" alt="dark-room the-sense vr" onClick={() => setRoom(roomsData.creative)} />
+            <img src="/img/LIGHT ROOM.svg" className="logo light-logo" alt="light-room the-sense vr" onClick={() => setRoom(roomsData.light)} />
         </div>
-        <img src="/img/LIGHT ROOM.svg" className="active" alt="light-room the-sense vr" onClick={() => setRoom(roomsData.light)} />
-        <Button onClick={() => {
-            setRoom("default-theme" == room.theme ? roomsData.dark : roomsData.light);
-        }} >Change context</Button>
         <Banner
             theme={room.banner.theme}
             prezImg={room.banner.prezImg}
