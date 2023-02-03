@@ -1655,7 +1655,16 @@ footer button:active{
     color: white;
 }
 
+.extra {
+    text-align: center;
+}
+
 #contact-form.btn {
     background-color: #0DE4BD;
     border-color: #0DE4BD;
+    text-align: center;
+}
+
+.contact-first-padding .submit-button {
+    text-align: center;
 }

@@ -142,7 +142,7 @@ const AboutUs = () => {
                         <Form.Control as="textarea" />
                     </Form.Group>
                 </Row>
-                <Button id="contact-form"  variant="primary" type="submit"><div className="content amiko-bold">Envoyer</div></Button>
+                <div className="submit-button"><Button id="contact-form"  variant="primary" type="submit"><div className="content amiko-bold">Envoyer</div></Button></div>
                 <div className="extra abel">
                     Ou par numéro de Téléphone <div className="phone-number amiko-bold">+33 1 23 45 67 89</div>
                 </div>
