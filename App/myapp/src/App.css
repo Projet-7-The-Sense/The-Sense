@@ -448,10 +448,49 @@ link {
     color: black;
 }
 
+.best{
+    background-image: url(../public/img/Vector\ 35.svg);
+}
+/** CAROUSEL **/
+.carousel-c{
+    background-color: rgb(226, 223, 223);
+    margin: 5%;
+}
+.carousel-c img{
+    width: 100%;
+    padding: 20%;
+}
+
+.carousel-c .center{
+    text-align: center;
+}
+.carousel-c p{
+    color: #000;
+    font-size: 30px;
+}
+
+.carousel-r{
+
+    margin: 5%;
+}
+.carousel-r img{
+    width: 100%;
+}
+
+
+.carousel-r p{
+    color: white;
+    font-size: 30px;
+    backdrop-filter: blur(5px);
+    margin: 5%;
+}
+
+
 /** FAQ **/
 
 .regroup-faq{
     margin-top: 3%;
+    margin-bottom: 3%;
     width: 100% !important;
 }
 
@@ -803,7 +842,7 @@ iframe {
 }
 
 .news-card-wrapper .content-wrapper .news-paragraph {
-    font-size: 1.3rem;
+    font-size: 18px;
 }
 
 .small-news-holder {

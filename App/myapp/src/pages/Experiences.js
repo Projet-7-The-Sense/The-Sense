@@ -5,6 +5,7 @@ import { useContext } from 'react';
 import { RoomContext } from '../contexts/RoomContext.js';
 import roomsData from '../RoomsData.json';
 import Card from '../component/Card.js';
+import CarouselRoom from '../component/CarouselRoom.js';
 
 const Experiences = () => {
     const {room, setRoom} = useContext(RoomContext);
@@ -33,27 +34,20 @@ const Experiences = () => {
                     <h2>{room.h2}</h2>
                 }
                 <div className="cards-wrapper">
+
                     <Card
                         image="img/image 2.svg" 
                         player="2-6-8"   
                         timer="40 MIN"
                         title="Dark room"
-                        content="Wow c'est trop bien"
-                        slogan="The conjuring experience"
-                        age="Interdit aux moins de 18 ans"
-                    />
-                    <Card
-                        image="img/image 2.svg" 
-                        player="2-6-8"   
-                        timer="40 MIN"
-                        title="Dark room"
-                        content="Wow c'est trop bien"
+                        content="Revivez l'histoire d'un chef d'oeuvre cinématographique au travers d’une expérience aussi bien réaliste qu'immersive. Rassemblez ce qu'il vous reste de courage, les inspecteurs Ed et Loren Warren ont besoin de vous. Un malheur hante la maison de ces derniers et vous ne pouvez vous en échapper sans sacrifices. Serez-vous à la hauteur de ce qui vous attend ? Bonne chance, vous en aurez besoin !"
                         slogan="The conjuring experience"
                         age="Interdit aux moins de 18 ans"
                     />
                 </div>
             </div>
         </div>
+        <CarouselRoom/>
         <Footer/>
     </section>
 }
