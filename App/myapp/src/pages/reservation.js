@@ -30,51 +30,51 @@ import Row from 'react-bootstrap/esm/Row.js';
         ):(
             <>
             <CollapsibleNavbar/>
-            <div className="new-content-admin">
             <Row>
                 <Col lg={{span:"8", offset:"2"}}>
-                    <h2>Reservations</h2>
-                    <div className="news-admin">
-                        {
-                            reservation.map((reservation, key) => {
-                                if (reservation.user==user.id){
-
-                                
-                                return <>
-                                <Row>
-                                    <Col lg="2">
-                                        <p>{reservation.user}</p>
-                                    </Col>
-                                    <Col lg="2">
-                                        <p>{reservation.pseudo}</p>
-                                    </Col>
-                                    <Col lg="2">
-                                        <p>{reservation.date}</p>
-                                    </Col>
-                                    <Col lg="2">
-                                        <p>{reservation.hours}</p>
-                                    </Col>
-                                    <Col lg="2">
-                                        <p>{reservation.player}</p>
-                                    </Col>
-                                    <Col lg="2">
-                                        <p>{reservation.room}</p>
-                                    </Col>
-                                </Row>
-                                
-                                
-                                
-                                
-                                
-                                
-                                </>
+                    <Row >
+                        <Col lg="12">
+                            <h2 className='title-reserv'>Mes réservations</h2>
+                            
+                                {
+                                    reservation.map((reservation, key) => {
+                                        if (reservation.user==user.id){
+                                        return <>
+                                        <div className="my-reserv">
+                                            <h2 >C'EST PRET !</h2>
+                                            <h2 className='red-page'>RECAPITULATIF DE VOTRE ACHAT</h2>
+                                            <img src="/img/Line 22.png"></img>
+                                            <h2>C'EST PRET !</h2>
+                                            <h2>{reservation.room}</h2>
+                                            <h2>{reservation.date}</h2>
+                                            <p className='red-page'>à {reservation.hours}</p>
+                                            <h2>{reservation.pseudo}</h2>
+                                            <p className='red-page'>{reservation.player} Joueurs</p>
+                                            <p>Prix total :</p>
+                                            <h2>{reservation.price} €</h2>
+                                            <p>Un mail de confirmation vous a été envoyé à l’adresse mail suivante : {reservation.user}</p>
+                                            <p>En cas d’annulation, merci de nous contacter : </p>
+                                            <p className='red-page'>- Par téléphone : 01 23 45 67 89</p>
+                                            <p className='red-page'> - Par mail : gpasdidée@projet7.com</p>
+                                            <p>*Seules les annulations jusqu’à 48h à l’avance seront remboursées</p>
+                                            <p>Toute l’équipe de The Sense vous remercie pour votre réservation, nous avons hâte de vous (re)voir !</p>
+                                            <img src="/img/Logo.png"></img>
+                                        </div>
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        </>
+                                        }
+                                    })
                                 }
-                            })
-                        }
-                    </div>
+                            
+                        </Col>
+                    </Row>
                 </Col>
             </Row>
-        </div>
         <Footer/>
         </>
         )}
