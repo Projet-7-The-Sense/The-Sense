@@ -45,7 +45,7 @@ const AboutUs = () => {
                 bryceHidden={false}
                 vecteur="/img/Vector 37.svg"
             />
-        <div className=''>
+        <div className='personna-intro'>
             <div className="text-adaptative">
                 <h2>Qui sommes nous ?</h2>
                 <p>The Sense est une société formée par quatre étudiants en école de commerce qui détiennent la majorité des parts. Le restant étant la propriété de DreamAway, entreprise française spécialiste du milieu de la VR.</p>
@@ -90,7 +90,7 @@ const AboutUs = () => {
             <p>The Sense se trouve, pour le moment, exclusivement à Lyon (France) dans le 3ème arrondissement. Pour nous rejoindre, il suffit de prendre la ligne T2 du Tram arrêt de l'Université ou bien prendre le métro B station Place Guichard Bourse du Travail (100 mètres à pied).</p>
         </div>
         <Row className='localisation'>
-            <Col lg={{ span: 5, offset: 1 }}>
+            <Col className='gg-maps' lg={{ span: 5, offset: 1 }}>
                 <iframe id="Google maps"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.5018395663483!2d4.846570815817648!3d45.76113207910556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea5e4b5e0f67%3A0xed466e201cea076d!2s207%20Rue%20Duguesclin%2C%2069003%20Lyon!5e0!3m2!1sfr!2sfr!4v1674829015888!5m2!1sfr!2sfr">
                 </iframe>
