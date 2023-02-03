@@ -6,8 +6,14 @@ import Card from '../component/Card.js';
 import Regroup from '../component/Regroup-faq.js';
 import CriticCarousel from '../component/CriticCarousel.js';
 import ReservationAll from '../component/ReservationAll.js';
+import PaypalCheckoutButton from '../component/PaypalCheckoutButton.js';
 
 function Home() {
+    const product = {
+        description: "Dark room",
+        price: 18
+    }
+
     return <div>
         <CollapsibleNavbar />
         <HomeParallax />
@@ -21,9 +27,11 @@ function Home() {
                 prezImg="/img/image 84.svg"
                 linkHidden={true}
             />
-
         </div>
 
+        <div className="paypal-button-container">
+            <PaypalCheckoutButton product={product} />
+        </div>
 
         <Card
             image="img/image 2.svg" 
