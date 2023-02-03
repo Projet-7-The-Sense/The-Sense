@@ -1661,3 +1661,16 @@ footer button:active{
     order: 4 !important;
     transition: var(--animation-duration);
 }
+
+.extra .phone-number {
+    color: #0DE4BD;
+}
+
+#contact-form .content {
+    color: white;
+}
+
+#contact-form.btn {
+    background-color: #0DE4BD;
+    border-color: #0DE4BD;
+}
