@@ -10,6 +10,7 @@ import { FaCog } from 'react-icons/fa';
 import {BsArrowRight} from 'react-icons/bs';
 import { getReservation } from '../api/reservation';
 import GoogleConscent from './GoogleConscent';
+import { PasswordDecrypt, PasswordEncrypt } from '../helpers';
 
 const NavLoginModule = () => {
     const { user, setUser } = useContext(UserContext);
@@ -22,8 +23,9 @@ const NavLoginModule = () => {
       .then(result => setReservations(result))
       .catch(error=>console.error("Erreur avec notre API :",error.message));
     },[]);
+
     const onSubmit = (data) => {
-      const userFetched = logUser(data.id, data.password);
+      const userFetched = logUser(data.id, PasswordEncrypt(data.password));
       userFetched
         .then(user => {
           setUser(user);
@@ -54,7 +56,6 @@ const NavLoginModule = () => {
       return reservUser
       }
     
-
     const numberDict = [
       "une",
       "deux",
