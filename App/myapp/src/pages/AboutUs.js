@@ -38,7 +38,7 @@ const AboutUs = () => {
         <Banner
                 theme="the-sense"
                 title="THE SENSE, UNE IDÉE NOVATRICE"
-                logoImage="img/SENSE.svg"
+                logoImage="img/transparent.png"
                 description="The Sense est né d un projet d école de quatre étudiants en école de commerce. Se basant sur une idée originaire des États-Unis, les quatre amis décidèrent d adapter ce concept inédit au marché français en y ajoutant leurs idées novatrices. Mélant deux activités attractives, la Réalité Virtuel et les Escape Game, THE SENSE joint le meilleur des deux mondes pour vous proposer des expériences inédites et époustouflantes. N hésitez plus et franchisser la frontière du réel."
                 prezImg="img/image 42.svg"
                 linkHidden={true}
