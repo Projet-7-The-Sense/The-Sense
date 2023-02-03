@@ -73,7 +73,6 @@ import Row from 'react-bootstrap/esm/Row.js';
                     </Row>
                 </Col>
             </Row>
-            </div>
         <Footer/>
         </div>
         </>
