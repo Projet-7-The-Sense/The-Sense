@@ -6,17 +6,48 @@ import { RoomContext } from '../contexts/RoomContext.js';
 import roomsData from '../RoomsData.json';
 import Card from '../component/Card.js';
 import CarouselRoom from '../component/CarouselRoom.js';
+import { useState } from 'react';
 
 const Experiences = () => {
     const {room, setRoom} = useContext(RoomContext);
+    const [lightActive, setLightActive] = useState(true);
+    const [darkActive, setDarkActive] = useState(false);
+    const [battleActive, setBattleActive] = useState(false);
+    const [creativeActive, setCreativeActive] = useState(false);
+    const [darkOrder, setDarkOrder] = useState(1);
+    const [battleOrder, setBattleOrder] = useState(2);
+    const [creativeOrder, setCreativeOrder] = useState(3);
+    const [lightOrder, setLightOrder] = useState(4);
+
+    const changeTheme = (newTheme, activeRoom, previousOrder, activeOrder) => {
+        setRoom(newTheme);
+        setLightActive(false);
+        setDarkActive(false);
+        setBattleActive(false);
+        setCreativeActive(false);
+        activeRoom(true);
+        // Switch order
+        
+        const lookedFor = previousOrder;
+        activeOrder(4);
+        if (lightOrder == lookedFor)
+            setLightOrder(lookedFor);
+        else if (darkOrder == lookedFor)
+            setDarkOrder(lookedFor);
+        else if (creativeOrder == lookedFor)
+            setCreativeOrder(lookedFor);
+        else
+            setBattleOrder(lookedFor);
+        
+    }
 
     return <section className={"experiences "+room.theme}>
         <CollapsibleNavbar/>
         <div className="exp-header">
-                <img src="/img/DARK ROOM.png" className="logo dark-logo" alt="dark-room the-sense vr" onClick={() => setRoom(roomsData.dark)} />
-                <img src="/img/BATTLE ROOM.svg" className="logo battle-logo" alt="battle-room the-sense vr" onClick={() => setRoom(roomsData.battle)} />
-                <img src="/img/CREATIVE ROOM.svg" className="logo creative-logo " alt="dark-room the-sense vr" onClick={() => setRoom(roomsData.creative)} />
-                <img src="/img/LIGHT ROOM.svg" className="logo light-logo active" alt="light-room the-sense vr" onClick={() => setRoom(roomsData.light)} />
+                <img src="/img/DARK ROOM.png" className={"logo dark-logo"+(darkActive ? " active" : "") + (" order-"+darkOrder)} alt="dark-room the-sense vr" onClick={() => changeTheme(roomsData.dark, setDarkActive, darkOrder, setDarkOrder)} />
+                <img src="/img/BATTLE ROOM.svg" className={"logo battle-logo"+(battleActive ? " active" : "") + (" order-"+battleOrder)} alt="battle-room the-sense vr" onClick={() => changeTheme(roomsData.battle, setBattleActive, battleOrder, setBattleOrder)} />
+                <img src="/img/CREATIVE ROOM.svg" className={"logo creative-logo"+(creativeActive ? " active" : "") + (" order-"+creativeOrder)} alt="dark-room the-sense vr" onClick={() => changeTheme(roomsData.creative, setCreativeActive, creativeOrder, setCreativeOrder)} />
+                <img src="/img/LIGHT ROOM.svg" className={"logo light-logo"+(lightActive ? " active" : "") + (" order-"+lightOrder)} alt="light-room the-sense vr" onClick={() => changeTheme(roomsData.light, setLightActive, lightOrder, setLightOrder)} />
         </div>
         <Banner
             theme={room.banner.theme}

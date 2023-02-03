@@ -40,7 +40,7 @@ const AboutUs = () => {
                 prezImg="img/image 42.svg"
                 linkHidden={true}
                 bryceHidden={false}
-                vecteur="/img/Vector\ 37.svg"
+                vecteur="/img/Vector 37.svg"
             />
         <div className=''>
             <div className="text-adaptative">

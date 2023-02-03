@@ -9,6 +9,5 @@ export const clamp = (value, min, max) => {
 };
 
 export const PasswordHash = (password) => {
-    console.log(bcrypt.hashSync(password, 10));
     return bcrypt.hashSync(password, 10);
 };
