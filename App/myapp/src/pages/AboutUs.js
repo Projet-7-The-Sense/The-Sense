@@ -1,10 +1,7 @@
 import Footer from '../component/Footer.js';
 import Banner from '../component/Banner.js';
 import CollapsibleNavbar from '../component/CollapsibleNavbar.js';
-import { useContext } from 'react';
-import { RoomContext } from '../contexts/RoomContext.js';
 import { Button, Col, Row } from 'react-bootstrap';
-import { Checkbox, FormControlLabel } from '@mui/material';
 
 
 function Personna(props){
