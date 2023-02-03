@@ -18,7 +18,7 @@ function CarouselRoom() {
 
           
           <Carousel.Caption >
-          “C’est dingue, j’ai vraiment eu l’impression d’être transporté dans un autre monde. Avant je ne faisais pas d’expérience VR car je ne croyais pas en la qualité mais grâce à The Sense, j’ai pu traverser la frontière du réel.” - Denise, 23 Octobre 2020 -
+            <p>“C’est dingue, j’ai vraiment eu l’impression d’être transporté dans un autre monde. Avant je ne faisais pas d’expérience VR car je ne croyais pas en la qualité mais grâce à The Sense, j’ai pu traverser la frontière du réel.” - Denise, 23 Octobre 2020 -</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>

@@ -29,9 +29,8 @@ function Home() {
     return <div>
         <CollapsibleNavbar />
         <HomeParallax />
-        <div id='banner'>
+        <div>
             <Banner
-                
                 theme="dark-room"
                 title="Qu'est ce que la"
                 logoImage="/img/DARK ROOM (1).svg"

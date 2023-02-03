@@ -1,12 +1,9 @@
- import Footer from '../component/Footer.js';
- import CollapsibleNavbar from '../component/CollapsibleNavbar.js';
- import Banner from '../component/Banner.js';
- import EquipmentsContent from '../component/EquipementsContent.js';
- import CriticCarousel from '../component/CriticCarousel.js';
- import { getReservation, ReservationUser } from '../api/reservation.js';
- import { useContext, useEffect, useState } from 'react';
- import { Redirect } from 'react-router-dom';
- import { UserContext } from '../contexts/UserContext.js';
+import Footer from '../component/Footer.js';
+import CollapsibleNavbar from '../component/CollapsibleNavbar.js';
+import { getReservation, ReservationUser } from '../api/reservation.js';
+import { useContext, useEffect, useState } from 'react';
+import { Redirect } from 'react-router-dom';
+import { UserContext } from '../contexts/UserContext.js';
 import Col from 'react-bootstrap/esm/Col.js';
 import Row from 'react-bootstrap/esm/Row.js';
 
@@ -30,7 +27,8 @@ import Row from 'react-bootstrap/esm/Row.js';
         ):(
             <>
             <CollapsibleNavbar/>
-            <Row>
+            <div className="new-content-admin">
+            <Row className='reservation-container'>
                 <Col lg={{span:"8", offset:"2"}}>
                     <Row >
                         <Col lg="12">
