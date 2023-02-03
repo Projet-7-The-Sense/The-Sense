@@ -31,15 +31,13 @@ import Row from 'react-bootstrap/esm/Row.js';
             <>
             <CollapsibleNavbar/>
             <div className="new-content-admin">
-            <Row>
+            <Row className='reservation-container'>
                 <Col lg={{span:"8", offset:"2"}}>
                     <h2>Reservations</h2>
                     <div className="news-admin">
                         {
                             reservation.map((reservation, key) => {
                                 if (reservation.user==user.id){
-
-                                
                                 return <>
                                 <Row>
                                     <Col lg="2">
@@ -61,12 +59,6 @@ import Row from 'react-bootstrap/esm/Row.js';
                                         <p>{reservation.room}</p>
                                     </Col>
                                 </Row>
-                                
-                                
-                                
-                                
-                                
-                                
                                 </>
                                 }
                             })

@@ -483,6 +483,10 @@ link {
 
 /** RESERVATION **/
 
+.reservation-container{
+    width: 100% !important;
+}
+
 .reservation-all{
     background-image: url("../public/img/image\ 7.svg");
     color: white;
@@ -576,14 +580,9 @@ link {
 
 .tab-reservation{
     padding-top: 7%;
-
     background-color: #000;
     color: white;
     padding-bottom: 5%;
-}
-
-.tab{
-    padding-left: 32%;
 }
 
 .tab-res{
@@ -635,42 +634,6 @@ link {
     padding-bottom: 3%;
 }
 
-/** ABOUT **/
-.container-a {
-    margin: 0% 10%;
-}
-.col div{
-    color: #3B4040;
-    margin: 0% 10%;
-}
-
-.p {
-    color: #3B4040;
-}
-
-.p1 {
-    color: #3B4040;
-    font-weight: bold;
-}
-
-iframe {
-    border: 1px solid black;
-    width: 100%;
-    margin: 5% 10%;
-}
-
-.form-contact{
-    margin-bottom: 5%;
-    height: 400px;
-    background-color: white;
-    background-image: url("../public/img/Vector\ 38.svg");
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: 75%;
-    text-align: center;
-
-    
-}
 /** NEWS **/
 
 .news-header {
@@ -717,6 +680,7 @@ iframe {
 }
 
 .news-card-wrapper .content-wrapper {
+    height: fit-content !important;
     background-color: lightgrey;
     padding: 30px;
     width: 95%;
@@ -765,6 +729,10 @@ iframe {
 .discover-equipement{
     height: 7.5vh;
     width: auto;
+}
+
+.image-desc-equip .row{
+    width: 100%;
 }
 
 .discover-equipement:hover{
@@ -879,12 +847,8 @@ iframe {
 }
 
 .title-equip{
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 3%;
-    padding-top: 3%;
+    margin: 10% 0% 10% 0%;
 }
-
 
 .title-equip p{
     font-family: Abel;
@@ -900,8 +864,6 @@ iframe {
     
 }
 
-
-
 .image-desc-equip h2{
     padding-left: 5%;
     padding-top: 10%;
@@ -914,105 +876,19 @@ iframe {
 
 /** ABOUT US **/
 
-@media only screen and (min-width: 992px) {
-    
-    .img-about{
-        background-image: url("../public/img/image\ 42.svg");
-        background-size: 100%;
-        background-repeat: no-repeat;
-        height: 700px;
-        text-align: center;
-    }
-    
-    .img-about img{
-        color: white;
-        width: 25%;
-        padding-top: 10%;
-    
-    }
-    .header-equip{
-        background-image: url("../public/img/bryce.svg");
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: bottom;
-    }
-    
-    .title-equip p{
-        font-size: 25px;
-    }
-    
+.img-about{
+    background-image: url("../public/img/image\ 42.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 700px;
+    text-align: center;
+}
 
-    
-    .img-d{
-        border-radius: 0px 15px 15px 0px;
-    }
-    
-    .img-l{
-        border-radius: 15px 0px 0px 15px;
-    }
-    
-    
-    .image-desc-equip p{
-        padding-left: 5%;
-        font-size: 25px;
-    }
-  }
+.img-about img{
+    color: white;
+    width: 25%;
+    padding-top: 10%;
 
-
-@media only screen and (max-width: 992px) {
-    .img-about{
-        background-image: url("../public/img/image\ 42.svg");
-        background-size: 300%;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 400px;
-        text-align: center;
-    }
-    
-    .img-about img{
-        color: white;
-        width: 25%;
-        padding-top: 70%;
-    
-    }
-
-    .header-equip{
-        background-image: url("../public/img/bryce.svg");
-        background-repeat: no-repeat;
-        background-size: 150%;
-        background-position: bottom;
-    }
-    
-
-    
-    .equipments-contents{
-        text-align: center;
-        
-    }  
-    .title-equip p{
-        font-size: 15px;
-    }
-    
-    #equip-l .row{
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    
-    .img-d{
-        border-radius: 15px;
-
-    }
-    
-    .img-l{
-        border-radius: 15px;
-    }
-     
-    .image-desc-equip p{
-
-        font-family: Abel;
-        font-size: 15px;
-        
-    }
 }
 
 .vector-about{
@@ -1026,7 +902,7 @@ iframe {
 
 .perso-all{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     background-image: url("../public/img/Logo.svg");
     background-repeat: no-repeat;
     background-size: 50%;
@@ -1042,24 +918,38 @@ iframe {
 .perso h2{
     font-family: Abel;
 }
+
 .perso h3{
     color: lightblue;
     font-family: Abel;
 }
+
 .perso h4{
     font-family: Abel;
     padding-left: 15%;
     padding-right: 15%;
 }
+
 .perso p{
     padding-left: 15%;
     padding-right: 15%;
 }
 
-iframe{
-    width: 600px;
-    height: 600px;
+.text-adaptative{
+    margin: 10% 10% 10% 10%;
 }
+
+.localisation{
+    width: 100%;
+    margin: 10% 0% 10% 0%;
+}
+
+iframe{
+    width: 100%;
+    height: -webkit-fill-available;
+    justify-content: center;
+}
+
 .red-hor{
     color: red;
 }
@@ -1068,19 +958,61 @@ iframe{
     color: blue;
 }
 
-.contact-input{
-    margin-top: 5%;
-    background-color: rgb(130 255 255 / 0%);
-    border-radius: 15px 15px 15px 15px;
-    padding: 2%;
-    width: 100%;
-}
-
-
 .hor-about{
     text-align: center;
-    padding-top: 25%;
+    margin: 10% 0% 10% 0%;
 }
+
+.text-area-height-set{
+    height: 150px;
+    resize: none;
+}
+
+.contact-first-padding{
+    width: 60%;
+    margin-left: 20%;
+}
+
+@media only screen and (max-width: 992px) {
+    .text-adaptative{
+        text-align: center;
+    }
+
+    .header-equip{
+        background-image: url("../public/img/bryce.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: bottom;
+    }
+
+    .perso-all{
+        flex-direction: column;
+    }
+
+    .perso{
+        margin-bottom: 5%;
+    }
+    
+    .title-equip p{
+        font-size: 25px;
+    }
+    
+    .img-d{
+        border-radius: 0px 15px 15px 0px;
+    }
+    
+    .img-l{
+        border-radius: 15px 0px 0px 15px;
+    }
+    
+    .image-desc-equip p{
+        padding-left: 5%;
+        font-size: 25px;
+    }
+  }
+
+
+
 /** SIGN **/
 
 .img-sign{
