@@ -50,12 +50,12 @@ import Row from 'react-bootstrap/esm/Row.js';
                                             <p className='red-page'>{reservation.player} Joueurs</p>
                                             <p>Prix total :</p>
                                             <h2>{reservation.price} €</h2>
-                                            <p>Un mail de confirmation vous a été envoyé à l’adresse mail suivante : {reservation.user}</p>
-                                            <p>En cas d’annulation, merci de nous contacter : </p>
+                                            <p>Un mail de confirmation vous a été envoyé à l'adresse mail suivante : {reservation.user}</p>
+                                            <p>En cas d'annulation, merci de nous contacter : </p>
                                             <p className='red-page'>- Par téléphone : 01 23 45 67 89</p>
                                             <p className='red-page'> - Par mail : gpasdidée@projet7.com</p>
-                                            <p>*Seules les annulations jusqu’à 48h à l’avance seront remboursées</p>
-                                            <p>Toute l’équipe de The Sense vous remercie pour votre réservation, nous avons hâte de vous (re)voir !</p>
+                                            <p>*Seules les annulations jusqu'à 48h à l'avance seront remboursées</p>
+                                            <p>Toute l'équipe de The Sense vous remercie pour votre réservation, nous avons hâte de vous (re)voir !</p>
                                             <img src="/img/Logo.png"></img>
                                         </div>
                                         
@@ -73,8 +73,8 @@ import Row from 'react-bootstrap/esm/Row.js';
                     </Row>
                 </Col>
             </Row>
-            </div>
         <Footer/>
+        </div>
         </>
         )}
     </>
