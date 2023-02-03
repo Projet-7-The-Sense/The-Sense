@@ -826,8 +826,8 @@ link {
     align-items: center;
 }
 
-/** EQUIPMENT **/
 
+/** EQUIPMENT **/
 
 
 .button-equipment{
@@ -1004,6 +1004,10 @@ link {
 
 }
 
+.personna-intro{
+    margin-top: -40%;
+}
+
 .perso-all{
     display: flex;
     flex-direction: row;
@@ -1117,6 +1121,9 @@ iframe{
     .image-desc-equip p{
         padding-left: 5%;
         font-size: 25px;
+    }
+    .gg-maps{
+        height: 500px;
     }
   }
 
