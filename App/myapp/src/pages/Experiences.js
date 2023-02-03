@@ -46,8 +46,8 @@ const Experiences = () => {
                     />
                 </div>
             </div>
+            <CarouselRoom/>
         </div>
-        <CarouselRoom/>
         <Footer/>
     </section>
 }

@@ -37,6 +37,8 @@ function Home() {
                 description="Vous pensez ne pas avoir peur du noir ? Que rien ne pourra vous effrayer ? Vous avez tord. Avec la DARK ROOM, toutes vos peurs deviendront réelles et en rien de temps, il ne vous restera plus que vos jambes pour vous enfuir. Vous vous penser suffisament fort pour affronter vos peurs ? Franchissez donc le seuil de la DARK ROOM. Vous avez hâte d'y entrer mais dans le noir... Personne nous verra mourir."
                 prezImg="/img/image 84.svg"
                 linkHidden={true}
+                bryceHidden={false}
+                vecteur=""
             />
         </div>
         <div className='best'>
@@ -123,7 +125,10 @@ function Home() {
                         }
             </div>
         </div>
-        <CriticCarousel/>
+        <div>
+            <h2>Qu'est ce qui vous retient ?</h2>
+            <CriticCarousel/>
+        </div>
         <div id='faq'>
             <Regroup/>
         </div>

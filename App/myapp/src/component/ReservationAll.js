@@ -80,9 +80,8 @@ const ReservationAll = (props) => {
                             <p>{count}</p>
                             <button onClick={() => setCount(clamp(count+1,4,8))}>+</button>
                         </div>
-
                         <Row>
-                            <Col lg={{span:"10", offset:"1"}}>
+                            <Col>
                                 <div className="tarif-room">
                                     <TarifRoom
                                         img="/img/LIGHT ROOM.png"
@@ -123,7 +122,7 @@ const ReservationAll = (props) => {
                         </div>
                         <div className="tab">
                             <Row>
-                                <Col lg="1">
+                                <Col>
                                     <div className="tab-left">
                                         <p>Mardi {day} Dec.</p>
                                         {(horTuesday).map((hor)=>{
@@ -135,7 +134,7 @@ const ReservationAll = (props) => {
                                             })}
                                     </div>
                                 </Col>
-                                <Col lg="1">
+                                <Col>
                                     <div className="tab-middle">
                                         <p>Mercredi {day+1} Dec.</p>
                                         {(horWednesday).map((hor)=>{
@@ -147,7 +146,7 @@ const ReservationAll = (props) => {
                                             })}
                                     </div>
                                 </Col>
-                                <Col lg="1">
+                                <Col>
                                     <div className="tab-middle">
                                         <p>Jeudi {day+2} Dec.</p>
                                         {(horThursday).map((hor)=>{
@@ -159,7 +158,7 @@ const ReservationAll = (props) => {
                                             })}
                                     </div>
                                 </Col>
-                                <Col lg="1">
+                                <Col>
                                     <div className="tab-middle">
                                         <p>Vendredi {day+3} Dec.</p>
                                         {(horFriday).map((hor)=>{
@@ -171,7 +170,7 @@ const ReservationAll = (props) => {
                                             })}
                                     </div>
                                 </Col>
-                                <Col lg="1">
+                                <Col>
                                     <div className="tab-middle">
                                         <p>Samedi {day+4} Dec.</p>
                                         {(horSaturday).map((hor)=>{
@@ -183,7 +182,7 @@ const ReservationAll = (props) => {
                                             })}
                                     </div>
                                 </Col>
-                                <Col lg="1">
+                                <Col>
                                     <div className="tab-middle">
                                         <p>Dimanche {day+5} Dec.</p>
                                         {(horSunday).map((hor)=>{

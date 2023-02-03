@@ -26,7 +26,10 @@ const AboutUs = () => {
         <CollapsibleNavbar/>
         <div className='header-equip'>
             <div className="img-about">
-                <img src="./img/Logo.png"></img>
+                <img src="./img/Logo.png"></img>  
+            </div>
+            <div classname='bryce-de-nice'>
+                <img className='et-tu-casses' src='./img/bryce.svg' alt='Bryce de Nice'/>
             </div>
             <div className='button-equipment'>
                 <a href='#banner'><img src='./img/DECOUVRIR.svg' alt='button discover image'/></a>
@@ -92,11 +95,11 @@ const AboutUs = () => {
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.5018395663483!2d4.846570815817648!3d45.76113207910556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea5e4b5e0f67%3A0xed466e201cea076d!2s207%20Rue%20Duguesclin%2C%2069003%20Lyon!5e0!3m2!1sfr!2sfr!4v1674829015888!5m2!1sfr!2sfr">
                 </iframe>
             </Col>
-            <Col md={{ span: 3, offset: 2 }}>
+            <Col lg={{ span: 3, offset: 2 }}>
                 <div className='hor-about'>
                 <h2>NOS HORAIRES</h2>
                     <Row>
-                        <Col>
+                        <Col className='right-hor-align'>
                             <p className='red-hor'>Lundi</p>
                             <p>Mardi</p>
                             <p>Mercredi</p>
@@ -105,7 +108,7 @@ const AboutUs = () => {
                             <p>Samedi</p>
                             <p>Dimanche</p>
                         </Col>
-                        <Col>
+                        <Col className='left-hor-align'>
                             <p className='red-hor'>FERME</p>
                             <p>10:00-22:00</p>
                             <p>10:00-22:00</p>
