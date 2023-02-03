@@ -62,7 +62,7 @@ export default function FormInsertReservation(props) {
         
         
         {!user?(
-            <Link to="/mon-compte"> Création de compte obligatoire</Link>
+            <Link to="/mon-compte" className="warn"> Création de compte obligatoire</Link>
         ):(
 
           <div className="tab-reservation">
@@ -158,30 +158,48 @@ export default function FormInsertReservation(props) {
 
               <Row>
                 <Col lg={{span:8, offset:"2"}} className="form-insert">
-                  <form onSubmit={handleSubmit(onSubmit)}>
-                    <input className="insert" {...register("user")}  type='hidden' defaultValue={user.id} required />
-                    <input className="insert" {...register("pseudo")} placeholder="pseudo" required/>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                    <input className="input-reservation" {...register("user")}  type='hidden' defaultValue={user.id} required />
+                    <input className="input-reservation" {...register("pseudo")} placeholder="pseudo" required/>
                     <p>Date :</p>
-                    <input className="insert" {...register("date")} value={dayRes}  required />
+                    <input className="input-reservation" {...register("date")} value={dayRes}  required />
                     <p> décembre</p>
                     <p>Horaire :</p>
-                    <input className="insert" {...register("hours")} value={horRes}  required />
+                    <input className="input-reservation" {...register("hours")} value={horRes}  required />
                     <p>Salle :</p>
-                    <input className="insert" {...register("room")} value={props.room} type='hidden' required />
-                    <input className="insert" {...register("player")} value={count}   required />               
-                    <input className="insert" {...register("price")} value={priceTotal}  required />
-                    <button  type="submit">Réserver</button>
-                  </form>
-                  <div className="button-tarif">
+                    <input className="input-reservation" {...register("room")} value={props.room}  required />
+                    <p>Nb de joueurs :</p>
+                    <input className="input-reservation" {...register("player")} value={count}   required />  
+                    <p>Prix :</p>             
+                    <input className="input-reservation" {...register("price")} value={priceTotal}  required />
+                    <p></p>
+                    <button className="button-reservation" type="submit"><img src="/img/blackBouton.png"></img></button>
+                    <p></p>
+                    <Link className="red"to="/">annuler</Link>
+                    </form>
+                    <div className="button-tarif">
                     <button className="button" onClick={() => setCount(clamp(count-1,4,8))}>-</button>
-                      <p>{count} joueurs</p>
+                        <p>{count} joueurs</p>
                     <button onClick={() => setCount(clamp(count+1,4,8))}>+</button>
 
-                  </div>
+                    </div>
 
-                  <p>{price} €/personne</p>
-                  <p>Total :</p>
-                  <p>{priceTotal} €</p>
+                    <p>{price} € /personne</p>
+                    <p>Total :</p>
+                    <p>{priceTotal} €</p>
+                    <div className="info-res">
+                        <h2 >INFORMATIONS IMPORTANTES</h2>
+                        <img src="/img/Line 22.png"></img>
+                        <p>La room que vous avez sélectionné est une room qui comporte certains passages physiques et/ou éprouvants. Cette room est donc déconseillée aux personnes cardiaques, sensibles, aux femmes enceintes et aux mineurs (un justificatif sera demandé).</p>
+                        <p>Dans ce cadre, nous vous conseilllons de :</p>
+                        <p>  - Prévoir des chaussures fermées</p>
+                        <p>- Prévoir des vétements confortables pouvant être légérement salis </p>
+                        <p>En arrivant sur place vous recevrez des consignes qu’il vous faudra respecter scrupuleusement pour votre sécurité.</p>
+                        <p>  *The Sense décline toute responsabilité en cas de non respect de ces consignes.</p>
+                    </div>
+
+                    
+                    
                 </Col>                       
               </Row>
             </div>

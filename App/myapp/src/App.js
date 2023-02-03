@@ -18,6 +18,9 @@ import { Maintaining } from './pages/Maintaining';
 import { getUserById } from './api/user';
 import roomsData from './RoomsData.json';
 import Reservation from './pages/reservation';
+import { PayPalScriptProvider } from "@paypal/react-paypal-js"
+
+const REACT_APP_PAYPAL_CLIENT_ID = "Ae_tG5NU9sxqx87JzAc6LdbQCSGoPpdqtlhFq7FCbvsYDDgTAu8Y_Lqs_wpWVCYs73qKsz_KAF3c66zK";
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -42,24 +45,26 @@ const App = () => {
   const roomValue = useMemo(() => ({ room, setRoom }), [room, setRoom]);
 
   return (
-    <Router>
-      <Switch>
-        <UserContext.Provider value={value}>
-          <RoomContext.Provider value={roomValue}>
-            <Route exact path="/"> {<Home />} </Route>
-            <Route exact path="/news"> {<News />} </Route>
-            <Route exact path="/experiences"> {<Experiences />} </Route>
-            <Route exact path="/equipements"> {<Equipments />} </Route>
-            <Route exact path="/a-propos-de-nous"> {<AboutUs />} </Route>
-            <Route exact path="/mon-compte"> {<Account />} </Route>
-            <Route exact path="/equipment"> {<Equipments />} </Route>
-            <Route exact path="/admin"> {<Admin />} </Route>
-            <Route exact path="/maintaining"> {<Maintaining />} </Route>
-            <Route exact path="/reservation"> {<Reservation />} </Route>
-          </RoomContext.Provider>
-        </UserContext.Provider>
-      </Switch>
-    </Router>
+    <PayPalScriptProvider options={{ "client-id": REACT_APP_PAYPAL_CLIENT_ID }}>
+      <Router>
+        <Switch>
+          <UserContext.Provider value={value}>
+            <RoomContext.Provider value={roomValue}>
+              <Route exact path="/"> {<Home />} </Route>
+              <Route exact path="/news"> {<News />} </Route>
+              <Route exact path="/experiences"> {<Experiences />} </Route>
+              <Route exact path="/equipements"> {<Equipments />} </Route>
+              <Route exact path="/a-propos-de-nous"> {<AboutUs />} </Route>
+              <Route exact path="/mon-compte"> {<Account />} </Route>
+              <Route exact path="/equipment"> {<Equipments />} </Route>
+              <Route exact path="/admin"> {<Admin />} </Route>
+              <Route exact path="/maintaining"> {<Maintaining />} </Route>
+              <Route exact path="/reservation"> {<Reservation />} </Route>
+            </RoomContext.Provider>
+          </UserContext.Provider>
+        </Switch>
+      </Router>
+    </PayPalScriptProvider>
   )
   
 }
