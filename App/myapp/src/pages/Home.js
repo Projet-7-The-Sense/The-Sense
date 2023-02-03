@@ -14,8 +14,6 @@ import PaypalCheckoutButton from '../component/PaypalCheckoutButton.js';
 function Home() {
     const [news, setNews] =useState([]);
 
-
-
     useEffect(()=>{
         const NewsFetched = getNews();
         NewsFetched
@@ -23,10 +21,10 @@ function Home() {
           .catch(error=>console.error("Erreur avec notre API :",error.message));
 
     },[]);
-    const product = {
-        description: "Dark room",
-        price: 18
-    }
+    // const product = {
+    //     description: "Dark room",
+    //     price: 18
+    // }
 
     return <div>
         <CollapsibleNavbar />
@@ -58,9 +56,11 @@ function Home() {
                 slogan="SHANGRI-LA : LA CITÉ PERDUE DE Z"
                 home="home"
                 
-            />        <div className="paypal-button-container">
-            <PaypalCheckoutButton product={product} />
-        </div>
+            />
+
+            {/* <div className="paypal-button-container">
+                <PaypalCheckoutButton product={product} />
+            </div> */}
 
             <Card
                 image="img/image 2.svg" 

@@ -12,7 +12,7 @@ import { createUser, alreadyExist } from "../api/user";
 import AccountField from "../component/AccountField";
 import NewsletterButton from "../component/NewsletterButton";
 import DeleteAccountButton from "../component/DeleteAccountButton";
-import { PasswordEncrypt } from "../helpers";
+import { PasswordHash } from "../helpers";
 
 const Account = () => {
     const { user, setUser } = useContext(UserContext);
@@ -27,7 +27,7 @@ const Account = () => {
                     console.log("There is already an existing account under the following adress email: " + data.id);
                     return;
                 }
-                const userFetched = createUser(data.id, PasswordEncrypt(data.password), data.firstname, data.lastname, data.phone_number, data.age, data.subscribeNewsletter);
+                const userFetched = createUser(data.id, PasswordHash(data.password), data.firstname, data.lastname, data.phone_number, data.age, data.subscribeNewsletter);
                 userFetched
                     .then(newUser => {
                         setUser(newUser);

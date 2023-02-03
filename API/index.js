@@ -49,10 +49,7 @@ app.get('/user/login', (req, res) => {
     dbConnect
         .collection('user')
         .findOne({
-            $and: [
-                {id: { $eq: req.query.id }},
-                {password: { $eq: req.query.password }}
-            ]
+            id: { $eq: req.query.id }
         })
         .then(result => res.status(200).json(result))
         .catch(err => res.sendStatus(400, "Failed to fetch the user"));
