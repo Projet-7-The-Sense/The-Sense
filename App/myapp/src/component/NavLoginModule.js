@@ -10,7 +10,6 @@ import { FaCog } from 'react-icons/fa';
 import {BsArrowRight} from 'react-icons/bs';
 import { getReservation } from '../api/reservation';
 import GoogleConscent from './GoogleConscent';
-import { PasswordDecrypt, PasswordEncrypt } from '../helpers';
 
 const NavLoginModule = () => {
     const { user, setUser } = useContext(UserContext);
@@ -25,7 +24,7 @@ const NavLoginModule = () => {
     },[]);
 
     const onSubmit = (data) => {
-      const userFetched = logUser(data.id, PasswordEncrypt(data.password));
+      const userFetched = logUser(data.id, data.password);
       userFetched
         .then(user => {
           setUser(user);

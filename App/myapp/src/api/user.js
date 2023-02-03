@@ -1,3 +1,5 @@
+import bcrypt from 'bcryptjs';
+
 export const getUsers = async () => {
     const response = await fetch(
         'http://localhost:4444/user/list', {
@@ -14,7 +16,7 @@ export const getUsers = async () => {
 
 export const logUser = async (id, psw) => {
     const response = await fetch(
-        'http://localhost:4444/user/login?id='+id+'&password='+psw, {
+        'http://localhost:4444/user/login?id='+id, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
@@ -22,7 +24,10 @@ export const logUser = async (id, psw) => {
             }
         }
     )
-    const user = await response.json();
+    let user = null;
+    const logged = bcrypt.compare(psw, response.json().password);
+    if (logged)
+        user = await response.json();
     return user;
 }
 

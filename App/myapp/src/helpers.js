@@ -8,6 +8,7 @@ export const clamp = (value, min, max) => {
     return value;
 };
 
-export const PasswordEncrypt = (password) => {
+export const PasswordHash = (password) => {
+    console.log(bcrypt.hashSync(password, 10));
     return bcrypt.hashSync(password, 10);
 };

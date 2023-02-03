@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import { useForm } from "react-hook-form";
 import { updateUser } from '../api/user';
 import { UserContext } from '../contexts/UserContext';
-import { PasswordEncrypt } from '../helpers';
+import { PasswordHash } from '../helpers';
 
 const AccountField = (props) => {
     const { user } = useContext(UserContext);
@@ -13,7 +13,7 @@ const AccountField = (props) => {
     const onSubmit = (data) => {
         console.log({...data})
         if (props.name == "password") {
-            updateUser(user.id, { password: PasswordEncrypt(data.password) });
+            updateUser(user.id, { password: PasswordHash(data.password) });
         } else {
             updateUser(user.id, {...data});
         }
