@@ -447,7 +447,11 @@ link {
 .best{
     background-image: url(../public/img/Vector\ 35.svg);
 }
+
+
 /** CAROUSEL **/
+
+
 .carousel-c{
     background-color: rgb(226, 223, 223);
     margin: 5%;
@@ -466,13 +470,13 @@ link {
 }
 
 .carousel-r{
-
-    margin: 5%;
+    margin: 0% 10%;
+    padding: 5% 0%;
 }
+
 .carousel-r img{
     width: 100%;
 }
-
 
 .carousel-r p{
     color: white;
@@ -480,6 +484,7 @@ link {
     backdrop-filter: blur(5px);
     margin: 5%;
 }
+
 
 
 /** FAQ **/
@@ -518,12 +523,25 @@ link {
 
 /** RESERVATION **/
 
+.reservation-holder{
+    width: 100%;
+    padding: 0px;
+}
+
 .reservation-container{
     width: 100% !important;
 }
 
+.reservation-container .row{
+    width: 100%;
+    padding: none;
+}
+
 .reservation-all{
+    background-color: #000;
     background-image: url("../public/img/image\ 7.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
     color: white;
     text-align: center;
     margin-top: 5%;
@@ -584,18 +602,16 @@ link {
 .tarif-room{
     text-align: justify;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     margin-top: 5%;
     margin-bottom: 5%;
     
 }
 
-
-
 .tarif-rooms{
     margin-left: 60px;
-    text-align: center;
-    
+    text-align: center;    
 }
 
 .tarif-rooms img{
@@ -729,43 +745,6 @@ link {
     width: 10%;
 }
 
-
-/** ABOUT **/
-.container-a {
-    margin: 0% 10%;
-}
-.col div{
-    color: #3B4040;
-    margin: 0% 10%;
-}
-
-.p {
-    color: #3B4040;
-}
-
-.p1 {
-    color: #3B4040;
-    font-weight: bold;
-}
-
-iframe {
-    border: 1px solid black;
-    width: 100%;
-    margin: 5% 10%;
-}
-
-.form-contact{
-    margin-bottom: 5%;
-    height: 400px;
-    background-color: white;
-    background-image: url("../public/img/Vector\ 38.svg");
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: 75%;
-    text-align: center;
-
-    
-}
 /** NEWS **/
 
 .news-header {
@@ -877,49 +856,38 @@ iframe {
     background-position: center;
 }
 
-@media only screen and (min-width: 992px) {
-    
-    .img-equipment{
-        background-image: url("../public/img/image\ 120.svg");
-        background-size: 100%;
-        background-repeat: no-repeat;
-        height: 700px;
-        text-align: center;
-    }
-    
-    .img-equipment h1{
-        color: white;
-        font-size: 120px;
-        padding-top: 18%;
-    
-    }
-    .header-equip{
-        background-image: url("../public/img/bryce.svg");
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: bottom;
-    }
-    
-    .title-equip p{
-        font-size: 25px;
-    }
-    
+.img-equipment{
+    background-image: url("../public/img/image\ 120.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 700px;
+    text-align: center;
+}
 
-    
-    .img-d{
-        border-radius: 0px 15px 15px 0px;
-    }
-    
-    .img-l{
-        border-radius: 15px 0px 0px 15px;
-    }
-    
-    
-    .image-desc-equip p{
-        padding-left: 5%;
-        font-size: 25px;
-    }
-  }
+.img-equipment h1{
+    color: white;
+    font-size: 120px;
+    padding-top: 18%;
+
+}
+
+.title-equip p{
+    font-size: 25px;
+}
+
+.img-d{
+    border-radius: 0px 15px 15px 0px;
+}
+
+.img-l{
+    border-radius: 15px 0px 0px 15px;
+}
+
+.image-desc-equip p{
+    padding-left: 5%;
+    font-size: 25px;
+}
+
 
 
 @media only screen and (max-width: 992px) {
@@ -938,15 +906,6 @@ iframe {
         padding-top: 70%;
     
     }
-
-    .header-equip{
-        background-image: url("../public/img/bryce.svg");
-        background-repeat: no-repeat;
-        background-size: 150%;
-        background-position: bottom;
-    }
-    
-
     
     .equipments-contents{
         text-align: center;
@@ -1008,11 +967,14 @@ iframe {
 
 /** ABOUT US **/
 
+.header-equip{
+    height: 100vh;
+}
+
 .img-about{
     background-image: url("../public/img/image\ 42.svg");
     background-size: 100%;
     background-repeat: no-repeat;
-    height: 700px;
     text-align: center;
 }
 
@@ -1020,7 +982,18 @@ iframe {
     color: white;
     width: 25%;
     padding-top: 10%;
+    position: relative;
+    z-index: 2;
+}
 
+.bryce-de-nice{
+    position: relative;
+    z-index: 1;
+}
+
+.et-tu-casses{
+    margin-top: -18%;
+    width: 100%;
 }
 
 .vector-about{
@@ -1110,11 +1083,16 @@ iframe{
         text-align: center;
     }
 
-    .header-equip{
-        background-image: url("../public/img/bryce.svg");
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: bottom;
+    .hor-about{
+        font-size: x-large;
+    }
+
+    .right-hor-align{
+        text-align: right;
+    }
+
+    .left-hor-align{
+        text-align: left;
     }
 
     .perso-all{
@@ -1144,8 +1122,8 @@ iframe{
   }
 
 
-
 /** SIGN **/
+
 
 .img-sign{
     background-image: url("../public/img/image\ 42.svg");
@@ -1598,6 +1576,7 @@ footer button:active{
 
 .experiences .exp-header .active {
     flex: 1 0 100%;
+    order: 4;
     padding: 0% 10% 0% 10%;
     margin-top: -10%;
 }
