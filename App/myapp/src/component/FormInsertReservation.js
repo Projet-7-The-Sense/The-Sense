@@ -2,13 +2,10 @@ import { useContext, useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-
-
 import { getReservation, InsertReservation } from "../api/reservation";
 import { UserContext } from "../contexts/UserContext";
 import { clamp } from "../helpers";
-
-
+import PaypalCheckoutButton from '../component/PaypalCheckoutButton.js';
 
 export default function FormInsertReservation(props) {
     const { user, setUser } = useContext(UserContext);
@@ -27,22 +24,63 @@ export default function FormInsertReservation(props) {
     const horFriday=["10h20","11h50","13h20","14h50","16h20","17h50","19h20","20h50","22h20","23h50"];
     const horSaturday=["10h20","11h50","13h20","14h50","16h20","17h50","19h20","20h50","22h20","23h50"];
     const horSunday=["10h20","11h50","13h20","14h50","16h20","17h50","19h20","20h50","-","-"];
+    const [payementWaiting, setPayementWaiting] = useState(null);
+    const [paidFor, setPaidFor] = useState(false);
+    const [error, setError] = useState(false);
+    const [reserveData, setReserveData] = useState(null);
 
+    useEffect(() => {
+        // Display success page
+        alert("Thank you for your purchase!");
+        setPayementWaiting(null);
+        reservate();
+    }, [paidFor]);
+
+    useEffect(() => {
+        // Display error message
+        alert(error);
+    }, [error]);
+
+    const handleApprove = (orderId) => {
+        // Fullfill the order
     
+        // If response is success
+        setPaidFor(true);
+        // Refresh user's account
+    
+        // if the response if error
+        // alert the user of the error message
+        setError("Your  payement was processed successfully!");
+    };
+    
+    const onApprove = async (data, actions) => {
+        const order = await actions.order.capture();
+        console.log("order", order);
+    
+        handleApprove(data.orderID);
+    }
+
     useEffect(()=>{
 
     },[deleted]);
 
+    const onSubmit = (data) => {
+        const product = {
+            description: data.room + " - " + data.player,
+            price: priceTotal
+        }
+        setReserveData(data);
+        setPayementWaiting(product);
+    }
 
-    const onSubmit = async (data) => {      
-      const res = await InsertReservation(data);
+    const reservate = async () => {
+      const res = await InsertReservation(reserveData);
       console.log(res);
-      console.log(data);
-      
+      console.log(reserveData);
 
       setDelete(deleted+1);
-      
     };
+
 
     if(count==6){
       price=(20*0.90);
@@ -174,6 +212,11 @@ export default function FormInsertReservation(props) {
                     <input className="input-reservation" {...register("price")} value={priceTotal}  required />
                     <p></p>
                     <button className="button-reservation" type="submit"><img src="/img/blackBouton.png"></img></button>
+                    {payementWaiting &&
+                        <div className="paypal-button-container">
+                            <PaypalCheckoutButton product={payementWaiting} onApprove={onApprove} />
+                        </div>
+                    }
                     <p></p>
                     <Link className="red"to="/">annuler</Link>
                     </form>

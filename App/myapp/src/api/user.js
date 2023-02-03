@@ -14,6 +14,10 @@ export const getUsers = async () => {
     return users;
 }
 
+const compare = async (psw, password) => {
+    return await bcrypt.compare(psw, password);
+}
+
 export const logUser = async (id, psw) => {
     const response = await fetch(
         'http://localhost:4444/user/login?id='+id, {
@@ -24,11 +28,10 @@ export const logUser = async (id, psw) => {
             }
         }
     )
-    let user = null;
-    const logged = bcrypt.compare(psw, response.json().password);
-    if (logged)
-        user = await response.json();
-    return user;
+    
+    const userFetched = await response.json();
+    const loggedUser = await bcrypt.compare(psw, userFetched.password);
+    return loggedUser ? userFetched : null;
 }
 
 export const alreadyExist = async (id) => {

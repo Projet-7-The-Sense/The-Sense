@@ -9,7 +9,6 @@ import ReservationAll from '../component/ReservationAll.js';
 import NewsSmallCard from '../component/NewsSmallCard';
 import { useEffect, useState } from 'react';
 import { getNews } from '../api/news.js';
-import PaypalCheckoutButton from '../component/PaypalCheckoutButton.js';
 
 function Home() {
     const [news, setNews] =useState([]);
@@ -21,10 +20,6 @@ function Home() {
           .catch(error=>console.error("Erreur avec notre API :",error.message));
 
     },[]);
-    // const product = {
-    //     description: "Dark room",
-    //     price: 18
-    // }
 
     return <div>
         <CollapsibleNavbar />
@@ -38,7 +33,7 @@ function Home() {
                 prezImg="/img/image 84.svg"
                 linkHidden={true}
                 bryceHidden={false}
-                vecteur=""
+                vecteur="/img/BRYCE FORME.svg"
             />
         </div>
         <div className='best'>
@@ -59,10 +54,6 @@ function Home() {
                 home="home"
                 
             />
-
-            {/* <div className="paypal-button-container">
-                <PaypalCheckoutButton product={product} />
-            </div> */}
 
             <Card
                 image="img/image 2.svg" 
